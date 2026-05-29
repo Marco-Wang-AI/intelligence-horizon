@@ -52,17 +52,25 @@ Chinese:
 
 ## Data Model Draft
 
-Future signal entries can follow this shape:
+Signal entries now live in `data/events.json`. A signal follows this shape:
 
 ```json
 {
   "date": "2026-05-26",
-  "title": "DeepMind leadership says society has only a few years to prepare",
-  "source": "Axios",
-  "url": "https://example.com/source",
+  "title": {
+    "en": "DeepMind leadership says society has only a few years to prepare",
+    "zh": "DeepMind 负责人称社会只剩几年准备时间"
+  },
+  "source": {
+    "name": "Axios",
+    "url": "https://example.com/source"
+  },
   "target": "AGI",
-  "delta_days": -90,
-  "confidence": "medium",
+  "deltaDays": -90,
+  "confidence": {
+    "en": "medium",
+    "zh": "中"
+  },
   "category": "expert_prediction",
   "rationale": "Near-term expert framing from a frontier AI leader."
 }
@@ -84,6 +92,17 @@ Optional later fields:
 - AI usage frequency.
 - Confidence level.
 - Free-form reason.
+
+The backend plan is documented in `docs/vote-backend.md`.
+
+## GitHub Participation
+
+This repo includes issue templates for:
+
+- Signal proposals.
+- Public Pulse survey improvements.
+
+Pull requests also have a short checklist so contributors remember sources, bilingual copy, and local checks.
 
 ## Contribution Ideas
 

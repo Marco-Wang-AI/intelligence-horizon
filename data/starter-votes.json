@@ -1,0 +1,10 @@
+[
+  { "agi": 2027, "asi": 2030, "work": 2028, "field": "ai" },
+  { "agi": 2028, "asi": 2031, "work": 2029, "field": "ai" },
+  { "agi": 2028, "asi": 2033, "work": 2030, "field": "education" },
+  { "agi": 2029, "asi": 2033, "work": 2029, "field": "design" },
+  { "agi": 2030, "asi": 2038, "work": 2033, "field": "health" },
+  { "agi": 2027, "asi": 2029, "work": 2027, "field": "student" },
+  { "agi": 2033, "asi": 2045, "work": 2033, "field": "other" },
+  { "agi": 2028, "asi": 2030, "work": 2028, "field": "finance" }
+]

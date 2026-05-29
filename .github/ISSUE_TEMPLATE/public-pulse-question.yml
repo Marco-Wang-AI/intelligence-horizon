@@ -1,0 +1,40 @@
+name: Public Pulse question
+description: Suggest a better survey question or answer option.
+title: "[Pulse]: "
+labels: ["public-pulse", "survey"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public Pulse should stay lightweight. A good question produces useful comparisons without making people feel like they are filling out a research grant.
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: What is wrong or missing?
+      placeholder: "Example: The field list does not separate product managers from software engineers."
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_question
+    attributes:
+      label: Proposed question or option
+      placeholder: "Write the exact copy you want to add or change."
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language impact
+      options:
+        - English only
+        - Chinese only
+        - Both English and Chinese
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it helps
+      placeholder: "What new comparison or insight would this unlock?"
+    validations:
+      required: true

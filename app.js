@@ -134,91 +134,33 @@ const names = {
   ],
 };
 
-const signals = {
-  en: [
-    {
-      date: "2026-05",
-      title: "DeepMind leadership says society has only a few years to prepare",
-      body: "Expert tone shifts from distant speculation toward near-term preparation.",
-      target: "AGI",
-      delta: "-90 days",
-      confidence: "medium",
-    },
-    {
-      date: "2025-01",
-      title: "OpenAI says it knows how to build traditionally understood AGI",
-      body: "A public confidence signal from a frontier lab, separated from delivery proof.",
-      target: "AGI",
-      delta: "-120 days",
-      confidence: "medium",
-    },
-    {
-      date: "2024-2026",
-      title: "Coding agents become useful daily tools",
-      body: "Claude Code, Codex-style workflows, and agent frameworks make autonomy feel less abstract.",
-      target: "AGI",
-      delta: "-60 days",
-      confidence: "low",
-    },
-    {
-      date: "Always",
-      title: "Benchmarks saturate faster than definitions stabilize",
-      body: "The clock should move with product reality, not leaderboard theater alone.",
-      target: "AGI",
-      delta: "+30 days",
-      confidence: "medium",
-      slow: true,
-    },
-  ],
-  zh: [
-    {
-      date: "2026-05",
-      title: "DeepMind 负责人称社会只剩几年准备时间",
-      body: "专家语气从远期猜测，转向更近的现实准备。",
-      target: "AGI",
-      delta: "-90 天",
-      confidence: "中",
-    },
-    {
-      date: "2025-01",
-      title: "OpenAI 称已知道如何构建传统意义上的 AGI",
-      body: "这是来自前沿实验室的公开信心信号，但仍要和真实交付分开看。",
-      target: "AGI",
-      delta: "-120 天",
-      confidence: "中",
-    },
-    {
-      date: "2024-2026",
-      title: "编码智能体成为日常可用工具",
-      body: "Claude Code、Codex 类工作流和智能体框架，让自主执行不再只是抽象概念。",
-      target: "AGI",
-      delta: "-60 天",
-      confidence: "低",
-    },
-    {
-      date: "长期",
-      title: "基准刷得很快，定义稳得很慢",
-      body: "时钟应该更多跟随产品现实，而不是只跟排行榜起舞。",
-      target: "AGI",
-      delta: "+30 天",
-      confidence: "中",
-      slow: true,
-    },
-  ],
-};
+let language = "en";
+let events = [];
+let starterVotes = [];
 
-const starterVotes = [
-  { agi: 2027, asi: 2030, work: 2028, field: "ai" },
-  { agi: 2028, asi: 2031, work: 2029, field: "ai" },
-  { agi: 2028, asi: 2033, work: 2030, field: "education" },
-  { agi: 2029, asi: 2033, work: 2029, field: "design" },
-  { agi: 2030, asi: 2038, work: 2033, field: "health" },
-  { agi: 2027, asi: 2029, work: 2027, field: "student" },
-  { agi: 2033, asi: 2045, work: 2033, field: "other" },
-  { agi: 2028, asi: 2030, work: 2028, field: "finance" },
+const fallbackEvents = [
+  {
+    id: "fallback-signal",
+    date: "2026-05",
+    target: "AGI",
+    deltaDays: -90,
+    confidence: { en: "medium", zh: "中" },
+    title: {
+      en: "DeepMind leadership says society has only a few years to prepare",
+      zh: "DeepMind 负责人称社会只剩几年准备时间",
+    },
+    body: {
+      en: "Expert tone shifts from distant speculation toward near-term preparation.",
+      zh: "专家语气从远期猜测，转向更近的现实准备。",
+    },
+  },
 ];
 
-let language = "en";
+const fallbackStarterVotes = [
+  { agi: 2027, asi: 2030, work: 2028, field: "ai" },
+  { agi: 2028, asi: 2031, work: 2029, field: "ai" },
+  { agi: 2029, asi: 2033, work: 2029, field: "design" },
+];
 
 function localVotes() {
   try {
@@ -226,6 +168,16 @@ function localVotes() {
   } catch {
     return [];
   }
+}
+
+async function fetchPublicVotes() {
+  return localVotes();
+}
+
+async function savePublicVote(vote) {
+  const votes = localVotes().concat(vote);
+  localStorage.setItem("ih_votes", JSON.stringify(votes));
+  return vote;
 }
 
 function median(values) {
@@ -239,11 +191,36 @@ function formatYear(value) {
   return Number(value).toFixed(1);
 }
 
-function allVotes() {
-  return starterVotes.concat(localVotes());
+function formatDelta(days) {
+  const sign = days > 0 ? "+" : "";
+  const unit = language === "zh" ? "天" : Math.abs(days) === 1 ? "day" : "days";
+  return language === "zh" ? `${sign}${days} ${unit}` : `${sign}${days} ${unit}`;
 }
 
-function renderLanguage() {
+async function allVotes() {
+  return starterVotes.concat(await fetchPublicVotes());
+}
+
+async function fetchJson(path, fallback) {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`Could not load ${path}`);
+    return await response.json();
+  } catch {
+    return fallback;
+  }
+}
+
+async function loadData() {
+  const [loadedEvents, loadedVotes] = await Promise.all([
+    fetchJson("./data/events.json", fallbackEvents),
+    fetchJson("./data/starter-votes.json", fallbackStarterVotes),
+  ]);
+  events = loadedEvents;
+  starterVotes = loadedVotes;
+}
+
+async function renderLanguage() {
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
@@ -254,7 +231,7 @@ function renderLanguage() {
   });
   renderNames();
   renderSignals();
-  updateVotes();
+  await updateVotes();
 }
 
 function renderNames() {
@@ -273,20 +250,20 @@ function renderNames() {
 
 function renderSignals() {
   const list = document.querySelector("#signal-list");
-  list.innerHTML = signals[language]
+  list.innerHTML = events
     .map(
       (item) => `
         <article class="signal-card">
           <span class="signal-date">${item.date}</span>
           <div>
-            <strong>${item.title}</strong>
-            <p>${item.body}</p>
+            <strong>${item.title[language]}</strong>
+            <p>${item.body[language]}</p>
             <div class="signal-meta">
               <span class="pill">${item.target}</span>
-              <span class="pill">${item.confidence}</span>
+              <span class="pill">${item.confidence[language]}</span>
             </div>
           </div>
-          <span class="pill delta ${item.slow ? "slow" : ""}">${item.delta}</span>
+          <span class="pill delta ${item.deltaDays > 0 ? "slow" : ""}">${formatDelta(item.deltaDays)}</span>
         </article>
       `,
     )
@@ -302,8 +279,8 @@ function renderBars(votes) {
     .join("");
 }
 
-function updateVotes() {
-  const votes = allVotes();
+async function updateVotes() {
+  const votes = await allVotes();
   const agiMedian = median(votes.map((vote) => Number(vote.agi)));
   const workMedian = median(votes.map((vote) => Number(vote.work)));
   document.querySelector("#public-median").textContent = formatYear(agiMedian);
@@ -319,7 +296,7 @@ document.querySelectorAll(".lang-button").forEach((button) => {
   });
 });
 
-document.querySelector("#vote-form").addEventListener("submit", (event) => {
+document.querySelector("#vote-form").addEventListener("submit", async (event) => {
   event.preventDefault();
   const form = new FormData(event.currentTarget);
   const nextVote = {
@@ -328,13 +305,12 @@ document.querySelector("#vote-form").addEventListener("submit", (event) => {
     work: Number(form.get("work")),
     field: String(form.get("field")),
   };
-  const votes = localVotes().concat(nextVote);
-  localStorage.setItem("ih_votes", JSON.stringify(votes));
+  await savePublicVote(nextVote);
   event.currentTarget.querySelector(".form-button").textContent = copy[language].submitted;
   setTimeout(() => {
     event.currentTarget.querySelector(".form-button").textContent = copy[language].submitVote;
   }, 1400);
-  updateVotes();
+  await updateVotes();
 });
 
-renderLanguage();
+loadData().then(renderLanguage);

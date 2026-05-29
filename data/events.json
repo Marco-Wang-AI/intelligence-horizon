@@ -1,0 +1,94 @@
+[
+  {
+    "id": "deepmind-few-years-2026-05",
+    "date": "2026-05",
+    "target": "AGI",
+    "deltaDays": -90,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "DeepMind leadership says society has only a few years to prepare",
+      "zh": "DeepMind 负责人称社会只剩几年准备时间"
+    },
+    "body": {
+      "en": "Expert tone shifts from distant speculation toward near-term preparation.",
+      "zh": "专家语气从远期猜测，转向更近的现实准备。"
+    },
+    "source": {
+      "name": "Axios",
+      "url": "https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis"
+    },
+    "category": "expert_prediction"
+  },
+  {
+    "id": "openai-traditional-agi-2025-01",
+    "date": "2025-01",
+    "target": "AGI",
+    "deltaDays": -120,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "OpenAI says it knows how to build traditionally understood AGI",
+      "zh": "OpenAI 称已知道如何构建传统意义上的 AGI"
+    },
+    "body": {
+      "en": "A public confidence signal from a frontier lab, separated from delivery proof.",
+      "zh": "这是来自前沿实验室的公开信心信号，但仍要和真实交付分开看。"
+    },
+    "source": {
+      "name": "OpenAI / press coverage",
+      "url": "https://techcrunch.com/2025/01/05/openai-is-beginning-to-turn-its-attention-to-superintelligence/"
+    },
+    "category": "frontier_lab_signal"
+  },
+  {
+    "id": "coding-agents-daily-tools-2024-2026",
+    "date": "2024-2026",
+    "target": "AGI",
+    "deltaDays": -60,
+    "confidence": {
+      "en": "low",
+      "zh": "低"
+    },
+    "title": {
+      "en": "Coding agents become useful daily tools",
+      "zh": "编码智能体成为日常可用工具"
+    },
+    "body": {
+      "en": "Claude Code, Codex-style workflows, and agent frameworks make autonomy feel less abstract.",
+      "zh": "Claude Code、Codex 类工作流和智能体框架，让自主执行不再只是抽象概念。"
+    },
+    "source": {
+      "name": "Product trend",
+      "url": ""
+    },
+    "category": "product_capability"
+  },
+  {
+    "id": "benchmarks-vs-definitions",
+    "date": "Always",
+    "target": "AGI",
+    "deltaDays": 30,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Benchmarks saturate faster than definitions stabilize",
+      "zh": "基准刷得很快，定义稳得很慢"
+    },
+    "body": {
+      "en": "The clock should move with product reality, not leaderboard theater alone.",
+      "zh": "时钟应该更多跟随产品现实，而不是只跟排行榜起舞。"
+    },
+    "source": {
+      "name": "Method note",
+      "url": ""
+    },
+    "category": "method_caution"
+  }
+]

@@ -1,0 +1,78 @@
+name: Signal proposal
+description: Propose an event that should move the AGI or ASI horizon.
+title: "[Signal]: "
+labels: ["signal", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping move the clock carefully. Good signals include public sources, a clear direction, and a reason why the proposed adjustment might be wrong.
+  - type: input
+    id: signal_title
+    attributes:
+      label: Signal title
+      description: Short, factual title.
+      placeholder: "Example: New coding agent completes long-horizon software tasks"
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Public source URL
+      description: Link to the interview, paper, product announcement, benchmark, or policy source.
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: Which horizon should move?
+      options:
+        - AGI
+        - ASI
+        - Both
+        - Uncertainty only
+    validations:
+      required: true
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Direction
+      options:
+        - Closer
+        - Farther
+        - No movement, but important context
+    validations:
+      required: true
+  - type: input
+    id: delta
+    attributes:
+      label: Suggested movement
+      description: Use days or months. Keep it modest unless the evidence is very strong.
+      placeholder: "Example: -30 days"
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why it matters
+      description: Explain the concrete capability, forecast, or deployment signal.
+    validations:
+      required: true
+  - type: textarea
+    id: counterargument
+    attributes:
+      label: Why this might be wrong
+      description: Give the best counterargument against moving the clock.
+    validations:
+      required: true
