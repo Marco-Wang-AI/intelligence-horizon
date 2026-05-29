@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intelligence Horizon | 智能地平线</title>
+    <meta
+      name="description"
+      content="A bilingual, open AGI and ASI horizon tracker comparing expert signals with public forecasts."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="Intelligence Horizon home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Intelligence Horizon</strong>
+          <small>智能地平线</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#signals" data-i18n="navSignals">Signals</a>
+        <a href="#pulse" data-i18n="navPulse">Public Pulse</a>
+        <a href="#method" data-i18n="navMethod">Method</a>
+        <a href="#open" data-i18n="navOpen">Open</a>
+      </nav>
+      <div class="language-switch" aria-label="Language switch">
+        <button class="lang-button active" type="button" data-lang="en">EN</button>
+        <button class="lang-button" type="button" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <picture class="hero-art">
+          <img src="./assets/horizon.png" alt="" />
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="eyebrow">A playful, evidence-based AGI / ASI clock</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Intelligence Horizon</h1>
+          <p class="hero-copy" data-i18n="heroCopy">
+            Track how the frontier AI timeline moves when experts speak, products ship, benchmarks fall, and ordinary people vote.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#pulse" data-i18n="voteCta">Add your forecast</a>
+            <a class="secondary-action" href="#signals" data-i18n="signalsCta">View latest moves</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard" aria-label="Horizon dashboard">
+        <article class="clock-panel agi">
+          <div>
+            <p class="panel-label" data-i18n="agiLabel">AGI horizon</p>
+            <h2 id="agi-date">2028.2</h2>
+          </div>
+          <div class="clock-ring" aria-hidden="true">
+            <span style="--progress: 62%"></span>
+          </div>
+          <p class="panel-note" data-i18n="agiNote">Expert-weighted median estimate from the sample signal log.</p>
+          <div class="movement faster">
+            <span data-i18n="agiMove">Moved 7 months closer this quarter</span>
+          </div>
+        </article>
+
+        <article class="clock-panel asi">
+          <div>
+            <p class="panel-label" data-i18n="asiLabel">ASI horizon</p>
+            <h2 id="asi-date">2031.6</h2>
+          </div>
+          <div class="clock-ring" aria-hidden="true">
+            <span style="--progress: 38%"></span>
+          </div>
+          <p class="panel-note" data-i18n="asiNote">A wider, more uncertain band for early superintelligence.</p>
+          <div class="movement slower">
+            <span data-i18n="asiMove">Still high uncertainty</span>
+          </div>
+        </article>
+
+        <article class="pulse-panel">
+          <p class="panel-label" data-i18n="publicLabel">Public pulse</p>
+          <h2 id="public-median">2029.0</h2>
+          <p class="panel-note" data-i18n="publicNote">Median AGI answer from starter votes plus local submissions.</p>
+          <div class="spark-bars" id="spark-bars" aria-hidden="true"></div>
+        </article>
+      </section>
+
+      <section class="names-section" aria-labelledby="names-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="namesEyebrow">Naming playground</p>
+          <h2 id="names-title" data-i18n="namesTitle">A clock should have a little wink.</h2>
+        </div>
+        <div class="name-grid" id="name-grid"></div>
+      </section>
+
+      <section class="content-band" id="signals">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="signalsEyebrow">Signal log</p>
+          <h2 data-i18n="signalsTitle">What moved the horizon?</h2>
+        </div>
+        <div class="signal-list" id="signal-list"></div>
+      </section>
+
+      <section class="split-band" id="pulse">
+        <div class="vote-copy">
+          <p class="eyebrow" data-i18n="pulseEyebrow">Public Pulse</p>
+          <h2 data-i18n="pulseTitle">Experts get one clock. Everyone else gets a pulse.</h2>
+          <p data-i18n="pulseCopy">
+            The fun part is comparing frontier-lab confidence with what builders, teachers, designers, founders, students, and skeptics feel in their own fields.
+          </p>
+          <div class="mini-stats">
+            <span><strong id="vote-count">42</strong><small data-i18n="votesLabel">votes</small></span>
+            <span><strong id="field-median">2029.5</strong><small data-i18n="fieldLabel">field automation median</small></span>
+          </div>
+        </div>
+
+        <form class="vote-form" id="vote-form">
+          <label>
+            <span data-i18n="formAgi">When do you think AGI arrives?</span>
+            <select name="agi" required>
+              <option value="2026">2026 or earlier</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2033">2031-2035</option>
+              <option value="2038">After 2035</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="formAsi">When do you think ASI arrives?</span>
+            <select name="asi" required>
+              <option value="2027">2027 or earlier</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2033">2031-2035</option>
+              <option value="2038">After 2035</option>
+              <option value="2045">Not sure / far away</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="formField">Your field</span>
+            <select name="field" required>
+              <option value="ai">AI / software</option>
+              <option value="education">Education</option>
+              <option value="design">Design / media</option>
+              <option value="health">Health / biotech</option>
+              <option value="finance">Finance / operations</option>
+              <option value="student">Student</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="formWork">When can AI do 90% of your field's work?</span>
+            <select name="work" required>
+              <option value="2026">Already / 2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2033">2031-2035</option>
+              <option value="2038">After 2035</option>
+            </select>
+          </label>
+          <button class="primary-action form-button" type="submit" data-i18n="submitVote">Submit local vote</button>
+          <p class="form-note" data-i18n="formNote">
+            MVP note: this prototype stores votes in your browser. Public collection can be added after the question set feels right.
+          </p>
+        </form>
+      </section>
+
+      <section class="content-band method" id="method">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="methodEyebrow">Method</p>
+          <h2 data-i18n="methodTitle">Small rules, visible judgment.</h2>
+        </div>
+        <div class="method-grid">
+          <article>
+            <h3 data-i18n="methodOneTitle">Signals move clocks</h3>
+            <p data-i18n="methodOneCopy">Each event has a direction, target, confidence, source, and day delta.</p>
+          </article>
+          <article>
+            <h3 data-i18n="methodTwoTitle">Votes move distributions</h3>
+            <p data-i18n="methodTwoCopy">Public answers are shown separately so expert signals and crowd instincts can disagree.</p>
+          </article>
+          <article>
+            <h3 data-i18n="methodThreeTitle">Disagreement is content</h3>
+            <p data-i18n="methodThreeCopy">Every questionable adjustment can become an issue, pull request, or weekly debate.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="open-band" id="open">
+        <div>
+          <p class="eyebrow" data-i18n="openEyebrow">Open project</p>
+          <h2 data-i18n="openTitle">Built for issues, pull requests, and timeline arguments.</h2>
+        </div>
+        <a class="secondary-action" href="./README.md" data-i18n="readmeCta">Open README draft</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>Intelligence Horizon / 智能地平线</span>
+      <span data-i18n="footer">A friendly clock for an uncertain future.</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
