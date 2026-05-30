@@ -1,5 +1,7 @@
 # Contributing to Almost O'Clock
 
+[中文贡献说明](./CONTRIBUTING.zh-CN.md)
+
 Thanks for helping move the clock carefully.
 
 ## Good Contributions
@@ -49,4 +51,3 @@ Useful signals usually include at least one of these:
 ## Tone
 
 This project is curious, playful, and evidence-seeking. It is not trying to make people panic.
-

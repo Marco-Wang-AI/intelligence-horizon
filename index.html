@@ -21,8 +21,8 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#definitions" data-i18n="navDefinitions">Definitions</a>
-        <a href="#signals" data-i18n="navSignals">Signals</a>
-        <a href="#pulse" data-i18n="navPulse">Public Pulse</a>
+        <a href="#signals" data-i18n="navSignals">Updates</a>
+        <a href="#pulse" data-i18n="navPulse">Vote</a>
         <a href="#open" data-i18n="navOpen">Open</a>
       </nav>
       <div class="language-switch" aria-label="Language switch">
@@ -38,14 +38,14 @@
         </picture>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="eyebrow">A playful AGI / ASI clock</p>
+          <p class="eyebrow" data-i18n="eyebrow">AGI / ASI, minus the doom</p>
           <h1 id="hero-title" data-i18n="heroTitle">Almost O'Clock</h1>
           <p class="hero-copy" data-i18n="heroCopy">
-            A friendly clock for asking one very human question: is general intelligence almost here?
+            A lighthearted clock for the question everyone keeps asking: are we almost there?
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="#pulse" data-i18n="voteCta">Add your forecast</a>
-            <a class="secondary-action" href="#signals" data-i18n="signalsCta">View latest moves</a>
+            <a class="secondary-action" href="#signals" data-i18n="signalsCta">See what changed</a>
           </div>
         </div>
       </section>
@@ -53,43 +53,43 @@
       <section class="dashboard" aria-label="Horizon dashboard">
         <article class="clock-panel agi">
           <div>
-            <p class="panel-label" data-i18n="agiLabel">AGI horizon</p>
+            <p class="panel-label" data-i18n="agiLabel">AGI clock</p>
             <h2 id="agi-date">2028.2</h2>
           </div>
-          <div class="clock-ring" aria-hidden="true">
-            <span style="--progress: 62%"></span>
+          <div class="clock-ring" style="--progress: 62%" aria-hidden="true">
+            <span></span>
           </div>
           <dl class="clock-compare">
             <div>
-              <dt data-i18n="expertLabel">Expert signal</dt>
+              <dt data-i18n="expertLabel">Expert forecast</dt>
               <dd id="agi-expert">2028.2</dd>
             </div>
             <div>
-              <dt data-i18n="publicLabelShort">Public pulse</dt>
+              <dt data-i18n="publicLabelShort">Crowd forecast</dt>
               <dd id="agi-public">2028.0</dd>
             </div>
           </dl>
-          <p class="panel-note" data-i18n="agiNote">Expert signal and public pulse shown side by side.</p>
+          <p class="panel-note" data-i18n="agiNote">A quick compare: what labs and experts imply vs. what visitors think.</p>
           <div class="movement faster">
-            <span data-i18n="agiMove">Moved 7 months closer this quarter</span>
+            <span data-i18n="agiMove">7 months earlier this quarter</span>
           </div>
         </article>
 
         <article class="clock-panel asi">
           <div>
-            <p class="panel-label" data-i18n="asiLabel">ASI horizon</p>
+            <p class="panel-label" data-i18n="asiLabel">ASI clock</p>
             <h2 id="asi-date">2031.6</h2>
           </div>
-          <div class="clock-ring" aria-hidden="true">
-            <span style="--progress: 38%"></span>
+          <div class="clock-ring" style="--progress: 38%" aria-hidden="true">
+            <span></span>
           </div>
           <dl class="clock-compare">
             <div>
-              <dt data-i18n="expertLabel">Expert signal</dt>
+              <dt data-i18n="expertLabel">Expert forecast</dt>
               <dd id="asi-expert">2031.6</dd>
             </div>
             <div>
-              <dt data-i18n="publicLabelShort">Public pulse</dt>
+              <dt data-i18n="publicLabelShort">Crowd forecast</dt>
               <dd id="asi-public">2031.0</dd>
             </div>
           </dl>
@@ -103,7 +103,7 @@
       <section class="definitions-section" id="definitions" aria-labelledby="definitions-title">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="definitionsEyebrow">Working definitions</p>
-          <h2 id="definitions-title" data-i18n="definitionsTitle">Before we count down, we say what we mean.</h2>
+          <h2 id="definitions-title" data-i18n="definitionsTitle">First, what are we even counting down to?</h2>
         </div>
         <div class="definition-grid">
           <article class="definition-card">
@@ -112,7 +112,7 @@
             <p data-i18n="agiDefinitionCopy">
               Highly autonomous AI that can outperform humans at most economically valuable work.
             </p>
-            <a href="https://openai.com/charter" target="_blank" rel="noreferrer" data-i18n="definitionSource">Source / reference</a>
+            <a href="https://openai.com/charter" target="_blank" rel="noreferrer" data-i18n="definitionSource">Reference</a>
             <ol class="definition-list" id="agi-definition-list"></ol>
           </article>
           <article class="definition-card">
@@ -121,7 +121,7 @@
             <p data-i18n="asiDefinitionCopy">
               AI that greatly exceeds human cognitive performance in virtually all domains of interest.
             </p>
-            <a href="https://aisafety.info/questions/6207/" target="_blank" rel="noreferrer" data-i18n="definitionSource">Source / reference</a>
+            <a href="https://aisafety.info/questions/6207/" target="_blank" rel="noreferrer" data-i18n="definitionSource">Reference</a>
             <ol class="definition-list" id="asi-definition-list"></ol>
           </article>
         </div>
@@ -129,22 +129,22 @@
 
       <section class="content-band" id="signals">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="signalsEyebrow">Signal log</p>
-          <h2 data-i18n="signalsTitle">What moved the horizon?</h2>
+          <p class="eyebrow" data-i18n="signalsEyebrow">Clock notes</p>
+          <h2 data-i18n="signalsTitle">Why did the clock move?</h2>
         </div>
         <div class="signal-list" id="signal-list"></div>
       </section>
 
       <section class="split-band" id="pulse">
         <div class="vote-copy">
-          <p class="eyebrow" data-i18n="pulseEyebrow">Public Pulse</p>
-          <h2 data-i18n="pulseTitle">Experts get one clock. Everyone else gets a pulse.</h2>
+          <p class="eyebrow" data-i18n="pulseEyebrow">Crowd forecast</p>
+          <h2 data-i18n="pulseTitle">Pick a year. Add a definition if you feel brave.</h2>
           <p data-i18n="pulseCopy">
-            The fun part is comparing frontier-lab confidence with what builders, teachers, designers, founders, students, and skeptics feel in their own fields.
+            Dates are only half the fun. The other half is watching people disagree about what AGI and ASI actually mean.
           </p>
           <div class="mini-stats">
             <span><strong id="vote-count">42</strong><small data-i18n="votesLabel">votes</small></span>
-            <span><strong id="field-median">2029.5</strong><small data-i18n="fieldLabel">field automation median</small></span>
+            <span><strong id="field-median">2029.5</strong><small data-i18n="fieldLabel">your-field median</small></span>
           </div>
         </div>
 
@@ -207,7 +207,7 @@
           </label>
           <button class="primary-action form-button" type="submit" data-i18n="submitVote">Submit local vote</button>
           <p class="form-note" data-i18n="formNote">
-            MVP note: this prototype stores votes in your browser. Public collection can be added after the question set feels right.
+            Prototype note: votes are stored in your browser for now. Shared public results come next.
           </p>
         </form>
       </section>
@@ -215,15 +215,15 @@
       <section class="open-band" id="open">
         <div>
           <p class="eyebrow" data-i18n="openEyebrow">Open project</p>
-          <h2 data-i18n="openTitle">Built for issues, pull requests, and timeline arguments.</h2>
+          <h2 data-i18n="openTitle">Open source, because arguing about timelines is better with receipts.</h2>
         </div>
-        <a class="secondary-action" href="./README.md" data-i18n="readmeCta">Open README draft</a>
+        <a class="secondary-action" href="./README.md" data-i18n="readmeCta">Open README</a>
       </section>
     </main>
 
     <footer>
       <span>Almost O'Clock / 快了钟</span>
-      <span data-i18n="footer">A friendly clock for an uncertain future.</span>
+      <span data-i18n="footer">No doom. Just receipts, guesses, and a clock that keeps changing.</span>
     </footer>
 
     <script src="./app.js"></script>

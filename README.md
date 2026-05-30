@@ -2,10 +2,12 @@
 
 A bilingual, open AGI and ASI clock.
 
+[中文说明](./README.zh-CN.md)
+
 This project compares two kinds of signals:
 
 - Expert and frontier-lab signals: interviews, product releases, model capabilities, policy statements, benchmark shifts.
-- Public pulse signals: lightweight votes from people in different fields about AGI, ASI, and domain-level automation.
+- Crowd forecasts: lightweight votes from people in different fields about AGI, ASI, and domain-level automation.
 
 The tone is intentionally friendly rather than apocalyptic. It is inspired by public clock projects, but it is not a doomsday clock.
 
@@ -14,7 +16,7 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Static bilingual website.
 - Light visual identity.
 - Two horizon clocks: AGI and ASI.
-- Signal log with direction, confidence, and clock movement.
+- Clock notes with direction, confidence, and clock movement.
 - Local public-vote prototype stored in the browser.
 - Optional one-sentence AGI and ASI definition submissions.
 - Community definition leaderboard.
@@ -83,6 +85,10 @@ Pull requests also have a short checklist so contributors remember sources, bili
 - Improve the public-vote questions.
 - Add a backend for public vote collection.
 - Add weekly update posts.
+
+## Launch Copy
+
+Short launch drafts for X/Twitter and WeChat are in `docs/launch-copy.md`.
 
 ## Local Preview
 

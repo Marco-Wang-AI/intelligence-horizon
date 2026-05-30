@@ -329,12 +329,14 @@ h3 {
 }
 
 .clock-ring {
+  position: relative;
   width: 112px;
   height: 112px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: conic-gradient(var(--coral) var(--progress), #e8eeee 0);
+  box-shadow: inset 0 0 0 1px rgba(23, 33, 38, 0.08);
 }
 
 .asi .clock-ring {
@@ -342,12 +344,58 @@ h3 {
 }
 
 .clock-ring span {
+  position: relative;
   display: block;
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: var(--paper-strong);
+  background:
+    radial-gradient(circle at center, var(--ink) 0 3px, transparent 4px),
+    repeating-conic-gradient(from -2deg, rgba(23, 33, 38, 0.34) 0 4deg, transparent 4deg 30deg),
+    var(--paper-strong);
   border: 1px solid var(--line);
+}
+
+.clock-ring span::before,
+.clock-ring span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 3px;
+  border-radius: 999px;
+  transform-origin: 50% 100%;
+}
+
+.clock-ring span::before {
+  height: 25px;
+  background: var(--ink);
+  transform: translateX(-50%) rotate(48deg);
+  animation: tick-hand 18s linear infinite;
+}
+
+.clock-ring span::after {
+  height: 18px;
+  background: var(--coral);
+  transform: translateX(-50%) rotate(312deg);
+  animation: tick-hand 54s linear infinite reverse;
+}
+
+.asi .clock-ring span::after {
+  background: var(--blue);
+}
+
+@keyframes tick-hand {
+  to {
+    transform: translateX(-50%) rotate(408deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clock-ring span::before,
+  .clock-ring span::after {
+    animation: none;
+  }
 }
 
 .movement {

@@ -13,8 +13,8 @@
       "zh": "DeepMind 负责人称社会只剩几年准备时间"
     },
     "body": {
-      "en": "Expert tone shifts from distant speculation toward near-term preparation.",
-      "zh": "专家语气从远期猜测，转向更近的现实准备。"
+      "en": "A frontier-lab leader frames AGI as something to prepare for soon, not someday.",
+      "zh": "前沿实验室负责人把 AGI 说成了需要尽快准备的事，而不是很遥远的概念。"
     },
     "source": {
       "name": "Axios",
@@ -36,8 +36,8 @@
       "zh": "OpenAI 称已知道如何构建传统意义上的 AGI"
     },
     "body": {
-      "en": "A public confidence signal from a frontier lab, separated from delivery proof.",
-      "zh": "这是来自前沿实验室的公开信心信号，但仍要和真实交付分开看。"
+      "en": "A strong public confidence marker, though not the same thing as shipping it.",
+      "zh": "这是一个很强的公开信心信号，但还不等于已经真正做出来。"
     },
     "source": {
       "name": "OpenAI / press coverage",
@@ -59,8 +59,8 @@
       "zh": "编码智能体成为日常可用工具"
     },
     "body": {
-      "en": "Claude Code, Codex-style workflows, and agent frameworks make autonomy feel less abstract.",
-      "zh": "Claude Code、Codex 类工作流和智能体框架，让自主执行不再只是抽象概念。"
+      "en": "Coding agents make autonomy feel less like a demo and more like a daily workflow.",
+      "zh": "编码智能体让“自主执行”不再只是演示，而是开始进入日常工作流。"
     },
     "source": {
       "name": "Product trend",
@@ -82,8 +82,8 @@
       "zh": "基准刷得很快，定义稳得很慢"
     },
     "body": {
-      "en": "The clock should move with product reality, not leaderboard theater alone.",
-      "zh": "时钟应该更多跟随产品现实，而不是只跟排行榜起舞。"
+      "en": "Leaderboards are useful, but the clock should not chase every benchmark headline.",
+      "zh": "排行榜有参考价值，但这只钟不能每看到一个榜单标题就跟着乱跳。"
     },
     "source": {
       "name": "Method note",
