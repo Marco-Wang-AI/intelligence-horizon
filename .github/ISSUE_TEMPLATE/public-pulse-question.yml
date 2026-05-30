@@ -1,12 +1,12 @@
-name: Public Pulse question
-description: Suggest a better survey question or answer option.
+name: Public Pulse question or definition
+description: Suggest a better survey question, answer option, or definition prompt.
 title: "[Pulse]: "
 labels: ["public-pulse", "survey"]
 body:
   - type: markdown
     attributes:
       value: |
-        Public Pulse should stay lightweight. A good question produces useful comparisons without making people feel like they are filling out a research grant.
+        Public Pulse should stay lightweight. A good question or definition prompt produces useful comparisons without making people feel like they are filling out a research grant.
   - type: textarea
     id: current_problem
     attributes:

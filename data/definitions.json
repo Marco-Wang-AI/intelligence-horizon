@@ -1,0 +1,48 @@
+{
+  "agi": [
+    {
+      "text": {
+        "en": "AGI is AI that can reliably do most economically valuable knowledge work with minimal human help.",
+        "zh": "AGI 是能在极少人类帮助下，可靠完成大多数有经济价值知识工作的 AI。"
+      },
+      "votes": 18
+    },
+    {
+      "text": {
+        "en": "AGI is when AI can learn a new field, plan a project, and finish useful work across domains.",
+        "zh": "AGI 是 AI 能学习新领域、规划项目，并跨领域完成有用工作的时候。"
+      },
+      "votes": 14
+    },
+    {
+      "text": {
+        "en": "AGI is not one benchmark. It is general, autonomous competence in the real world.",
+        "zh": "AGI 不是某个基准分数，而是真实世界里的通用、自主能力。"
+      },
+      "votes": 11
+    }
+  ],
+  "asi": [
+    {
+      "text": {
+        "en": "ASI is AI that is far better than the best humans at nearly every important cognitive task.",
+        "zh": "ASI 是在几乎所有重要认知任务上，都远强于最优秀人类的 AI。"
+      },
+      "votes": 16
+    },
+    {
+      "text": {
+        "en": "ASI begins when AI can improve science, strategy, and invention faster than human institutions can follow.",
+        "zh": "当 AI 推动科学、战略和发明的速度快到人类机构跟不上时，ASI 就开始了。"
+      },
+      "votes": 12
+    },
+    {
+      "text": {
+        "en": "ASI is the point where intelligence becomes a system-level force, not just a tool.",
+        "zh": "ASI 是智能从工具变成系统级力量的那个节点。"
+      },
+      "votes": 9
+    }
+  ]
+}

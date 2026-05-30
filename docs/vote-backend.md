@@ -30,6 +30,19 @@ Columns:
 - `region`: text, optional
 - `confidence`: text, optional
 
+Optional definition submissions can either live in the same table at first, or move into a separate table once ranking matters.
+
+Table name: `definition_votes`
+
+Columns:
+
+- `id`: uuid, primary key, default generated value
+- `created_at`: timestamp, default now
+- `type`: text, required, one of `agi` or `asi`
+- `definition`: text, required
+- `language`: text, optional
+- `upvotes`: numeric, default 1
+
 ## API Shape
 
 The frontend already has two functions that form the backend boundary:
@@ -48,6 +61,8 @@ async function savePublicVote(vote) {
 
 When the backend is ready, only these functions should change. The page rendering can stay the same.
 
+Definition submissions follow the same boundary through `savePublicVote()` for now. If the definition leaderboard becomes a real public feature, split that logic into `fetchPublicDefinitions()` and `savePublicDefinition()`.
+
 ## Supabase Policy Sketch
 
 Read:
@@ -63,4 +78,3 @@ Later:
 
 - Add a lightweight rate limit using Cloudflare Turnstile or a serverless edge function.
 - Store only coarse demographic buckets, not personally identifying details.
-

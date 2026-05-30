@@ -1,142 +1,114 @@
 const copy = {
   en: {
+    navDefinitions: "Definitions",
     navSignals: "Signals",
     navPulse: "Public Pulse",
-    navMethod: "Method",
     navOpen: "Open",
-    eyebrow: "A playful, evidence-based AGI / ASI clock",
-    heroTitle: "Intelligence Horizon",
+    eyebrow: "A playful AGI / ASI clock",
+    heroTitle: "Almost O'Clock",
     heroCopy:
-      "Track how the frontier AI timeline moves when experts speak, products ship, benchmarks fall, and ordinary people vote.",
+      "A friendly clock for asking one very human question: is general intelligence almost here?",
     voteCta: "Add your forecast",
     signalsCta: "View latest moves",
     agiLabel: "AGI horizon",
-    agiNote: "Expert-weighted median estimate from the sample signal log.",
+    expertLabel: "Expert signal",
+    publicLabelShort: "Public pulse",
+    agiNote: "Expert signal and public pulse shown side by side.",
     agiMove: "Moved 7 months closer this quarter",
     asiLabel: "ASI horizon",
     asiNote: "A wider, more uncertain band for early superintelligence.",
     asiMove: "Still high uncertainty",
-    publicLabel: "Public pulse",
-    publicNote: "Median AGI answer from starter votes plus local submissions.",
-    namesEyebrow: "Naming playground",
-    namesTitle: "A clock should have a little wink.",
+    definitionsEyebrow: "Working definitions",
+    definitionsTitle: "Before we count down, we say what we mean.",
+    agiDefinitionTitle: "Current working definition",
+    agiDefinitionCopy:
+      "Highly autonomous AI that can outperform humans at most economically valuable work.",
+    asiDefinitionTitle: "Current working definition",
+    asiDefinitionCopy:
+      "AI that greatly exceeds human cognitive performance in virtually all domains of interest.",
+    definitionSource: "Source / reference",
     signalsEyebrow: "Signal log",
-    signalsTitle: "What moved the horizon?",
+    signalsTitle: "What moved the clock?",
     pulseEyebrow: "Public Pulse",
-    pulseTitle: "Experts get one clock. Everyone else gets a pulse.",
+    pulseTitle: "Vote on the date. Optionally define the thing.",
     pulseCopy:
-      "The fun part is comparing frontier-lab confidence with what builders, teachers, designers, founders, students, and skeptics feel in their own fields.",
+      "The interesting part is not only when people think AGI or ASI arrives, but what they think those words should mean.",
     votesLabel: "votes",
     fieldLabel: "field automation median",
     formAgi: "When do you think AGI arrives?",
     formAsi: "When do you think ASI arrives?",
     formField: "Your field",
     formWork: "When can AI do 90% of your field's work?",
+    formAgiDefinition: "Optional: define AGI in one sentence",
+    formAsiDefinition: "Optional: define ASI in one sentence",
+    agiDefinitionPlaceholder: "AGI is...",
+    asiDefinitionPlaceholder: "ASI is...",
     submitVote: "Submit local vote",
     formNote:
       "MVP note: this prototype stores votes in your browser. Public collection can be added after the question set feels right.",
-    methodEyebrow: "Method",
-    methodTitle: "Small rules, visible judgment.",
-    methodOneTitle: "Signals move clocks",
-    methodOneCopy: "Each event has a direction, target, confidence, source, and day delta.",
-    methodTwoTitle: "Votes move distributions",
-    methodTwoCopy:
-      "Public answers are shown separately so expert signals and crowd instincts can disagree.",
-    methodThreeTitle: "Disagreement is content",
-    methodThreeCopy:
-      "Every questionable adjustment can become an issue, pull request, or weekly debate.",
     openEyebrow: "Open project",
     openTitle: "Built for issues, pull requests, and timeline arguments.",
     readmeCta: "Open README draft",
-    footer: "A friendly clock for an uncertain future.",
+    footer: "A friendly clock for a very fuzzy future.",
     submitted: "Vote added",
   },
   zh: {
+    navDefinitions: "定义",
     navSignals: "信号",
     navPulse: "公众脉搏",
-    navMethod: "方法",
     navOpen: "开源",
-    eyebrow: "一个轻松、有证据的 AGI / ASI 小钟",
-    heroTitle: "智能地平线",
+    eyebrow: "一个轻松的 AGI / ASI 小钟",
+    heroTitle: "快了钟",
     heroCopy:
-      "当专家表态、产品发布、基准被刷新、普通人投票时，一起看看智能时代的地平线怎么移动。",
+      "一个友好的小钟，用来问那个很人类的问题：通用智能是不是快来了？",
     voteCta: "加入你的预测",
     signalsCta: "查看最近拨动",
     agiLabel: "AGI 地平线",
-    agiNote: "基于样例信号日志的专家加权中位预测。",
+    expertLabel: "专家信号",
+    publicLabelShort: "公众脉搏",
+    agiNote: "把专家信号和公众脉搏放在一起看。",
     agiMove: "本季度向前拨快 7 个月",
     asiLabel: "ASI 地平线",
     asiNote: "早期超级智能的不确定性更高，区间更宽。",
     asiMove: "仍处于高不确定区间",
-    publicLabel: "公众脉搏",
-    publicNote: "来自初始样例票和本地提交的 AGI 中位数。",
-    namesEyebrow: "起名游乐场",
-    namesTitle: "一个钟，也可以有点梗。",
+    definitionsEyebrow: "工作定义",
+    definitionsTitle: "倒数之前，先说清楚我们在数什么。",
+    agiDefinitionTitle: "当前工作定义",
+    agiDefinitionCopy: "高度自主，并能在大多数有经济价值工作上超过人类的 AI。",
+    asiDefinitionTitle: "当前工作定义",
+    asiDefinitionCopy: "在几乎所有重要认知领域都大幅超过人类表现的 AI。",
+    definitionSource: "来源 / 参考",
     signalsEyebrow: "信号日志",
-    signalsTitle: "什么让地平线移动了？",
+    signalsTitle: "什么拨动了这只钟？",
     pulseEyebrow: "公众脉搏",
-    pulseTitle: "专家有专家钟，大家有大家的脉搏。",
+    pulseTitle: "投一个时间，也可以顺手定义一下。",
     pulseCopy:
-      "有意思的地方是，把前沿实验室的判断，和开发者、老师、设计师、创业者、学生、怀疑者在自己领域里的体感放在一起看。",
+      "有意思的不只是大家认为 AGI 或 ASI 什么时候到来，也包括大家到底认为这些词是什么意思。",
     votesLabel: "票",
     fieldLabel: "领域自动化中位数",
     formAgi: "你认为 AGI 什么时候到来？",
     formAsi: "你认为 ASI 什么时候到来？",
     formField: "你的行业",
     formWork: "AI 什么时候能完成你所在领域 90% 的工作？",
+    formAgiDefinition: "可选：用一句话定义 AGI",
+    formAsiDefinition: "可选：用一句话定义 ASI",
+    agiDefinitionPlaceholder: "AGI 是……",
+    asiDefinitionPlaceholder: "ASI 是……",
     submitVote: "提交本地投票",
     formNote:
       "MVP 说明：这个原型先把投票存在你的浏览器里。等问题设计稳定后，再接公开收集。",
-    methodEyebrow: "方法",
-    methodTitle: "规则小一点，判断透明一点。",
-    methodOneTitle: "信号拨动时钟",
-    methodOneCopy: "每个事件都有方向、目标、置信度、来源和天数调整。",
-    methodTwoTitle: "投票形成分布",
-    methodTwoCopy: "公众答案单独展示，这样专家信号和群众直觉可以互相不服。",
-    methodThreeTitle: "分歧也是内容",
-    methodThreeCopy: "每个有争议的调整，都可以变成 issue、PR 或每周讨论。",
     openEyebrow: "开源项目",
     openTitle: "为 issue、pull request 和时间线争论而生。",
     readmeCta: "打开 README 草稿",
-    footer: "给不确定未来的一只友好小钟。",
+    footer: "给模糊未来的一只友好小钟。",
     submitted: "已加入投票",
   },
-};
-
-const names = {
-  en: [
-    ["Intelligence Horizon", "calm, global, flexible"],
-    ["Horizon Pulse", "keeps the public-vote idea in the name"],
-    ["Maybe Soon", "a softer meme name for AGI timing"],
-    ["The Maybe Clock", "funny without sounding unserious"],
-    ["Almost O'Clock", "playful and very shareable"],
-    ["T-minus Maybe", "countdown energy, but with humility"],
-    ["The Generality Gauge", "nerdy but memorable"],
-    ["Frontier Pulse", "works well with voting"],
-    ["When AGI?", "blunt, search-friendly, a little cheeky"],
-    ["Soonish", "tiny, memeable, easy to remember"],
-    ["Future's Loading Bar", "visual, playful, product-friendly"],
-    ["The Tomorrow Meter", "soft and optimistic"],
-  ],
-  zh: [
-    ["智能地平线", "稳、漂亮，适合国际项目"],
-    ["地平线报时", "中文感更强，也保留时钟意象"],
-    ["快了钟", "短、好记、带一点互联网梗"],
-    ["快乐钟", "和“快了钟”谐音，更轻松"],
-    ["差不多钟", "松弛、有梗，适合做副栏目"],
-    ["差不多两年钟", "直接玩大佬采访的梗"],
-    ["通用智能还有多久", "中文搜索友好"],
-    ["智能几更天", "轻松，有一点中文韵味"],
-    ["快到 AGI 了吗", "适合社交传播和投票"],
-    ["还有几步", "短，适合中文社交传播"],
-    ["未来进度条", "比倒计时更不焦虑"],
-    ["智能风向标", "适合专家信号和公众投票并存"],
-  ],
 };
 
 let language = "en";
 let events = [];
 let starterVotes = [];
+let starterDefinitions = { agi: [], asi: [] };
 
 const fallbackEvents = [
   {
@@ -162,9 +134,38 @@ const fallbackStarterVotes = [
   { agi: 2029, asi: 2033, work: 2029, field: "design" },
 ];
 
+const fallbackDefinitions = {
+  agi: [
+    {
+      text: {
+        en: "AGI is AI that can reliably do most economically valuable knowledge work with minimal human help.",
+        zh: "AGI 是能在极少人类帮助下，可靠完成大多数有经济价值知识工作的 AI。",
+      },
+      votes: 18,
+    },
+  ],
+  asi: [
+    {
+      text: {
+        en: "ASI is AI that is far better than the best humans at nearly every important cognitive task.",
+        zh: "ASI 是在几乎所有重要认知任务上，都远强于最优秀人类的 AI。",
+      },
+      votes: 16,
+    },
+  ],
+};
+
 function localVotes() {
   try {
     return JSON.parse(localStorage.getItem("ih_votes") || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function localDefinitions() {
+  try {
+    return JSON.parse(localStorage.getItem("ih_definitions") || "[]");
   } catch {
     return [];
   }
@@ -174,9 +175,23 @@ async function fetchPublicVotes() {
   return localVotes();
 }
 
+async function fetchPublicDefinitions() {
+  return localDefinitions();
+}
+
 async function savePublicVote(vote) {
   const votes = localVotes().concat(vote);
   localStorage.setItem("ih_votes", JSON.stringify(votes));
+  const definitions = [];
+  if (vote.agiDefinition) {
+    definitions.push({ type: "agi", text: { en: vote.agiDefinition, zh: vote.agiDefinition }, votes: 1 });
+  }
+  if (vote.asiDefinition) {
+    definitions.push({ type: "asi", text: { en: vote.asiDefinition, zh: vote.asiDefinition }, votes: 1 });
+  }
+  if (definitions.length) {
+    localStorage.setItem("ih_definitions", JSON.stringify(localDefinitions().concat(definitions)));
+  }
   return vote;
 }
 
@@ -212,12 +227,14 @@ async function fetchJson(path, fallback) {
 }
 
 async function loadData() {
-  const [loadedEvents, loadedVotes] = await Promise.all([
+  const [loadedEvents, loadedVotes, loadedDefinitions] = await Promise.all([
     fetchJson("./data/events.json", fallbackEvents),
     fetchJson("./data/starter-votes.json", fallbackStarterVotes),
+    fetchJson("./data/definitions.json", fallbackDefinitions),
   ]);
   events = loadedEvents;
   starterVotes = loadedVotes;
+  starterDefinitions = loadedDefinitions;
 }
 
 async function renderLanguage() {
@@ -226,26 +243,16 @@ async function renderLanguage() {
     const key = node.dataset.i18n;
     node.textContent = copy[language][key] || node.textContent;
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    const key = node.dataset.i18nPlaceholder;
+    node.setAttribute("placeholder", copy[language][key] || node.getAttribute("placeholder"));
+  });
   document.querySelectorAll(".lang-button").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === language);
   });
-  renderNames();
   renderSignals();
+  await renderDefinitions();
   await updateVotes();
-}
-
-function renderNames() {
-  const grid = document.querySelector("#name-grid");
-  grid.innerHTML = names[language]
-    .map(
-      ([name, note]) => `
-        <article class="name-card">
-          <strong>${name}</strong>
-          <p>${note}</p>
-        </article>
-      `,
-    )
-    .join("");
 }
 
 function renderSignals() {
@@ -270,23 +277,36 @@ function renderSignals() {
     .join("");
 }
 
-function renderBars(votes) {
-  const years = [2026, 2027, 2028, 2029, 2030, 2033, 2038];
-  const counts = years.map((year) => votes.filter((vote) => Number(vote.agi) === year).length);
-  const max = Math.max(...counts, 1);
-  document.querySelector("#spark-bars").innerHTML = counts
-    .map((count) => `<span style="height:${Math.max(10, (count / max) * 74)}px"></span>`)
-    .join("");
+async function renderDefinitions() {
+  const publicDefinitions = await fetchPublicDefinitions();
+  ["agi", "asi"].forEach((type) => {
+    const list = document.querySelector(`#${type}-definition-list`);
+    const starter = starterDefinitions[type].map((definition) => ({ ...definition, type }));
+    const items = starter.concat(publicDefinitions.filter((definition) => definition.type === type));
+    list.innerHTML = items
+      .sort((a, b) => Number(b.votes || 0) - Number(a.votes || 0))
+      .slice(0, 5)
+      .map(
+        (definition) => `
+          <li>
+            <span>${definition.text[language] || definition.text.en}</span>
+            <small>${Number(definition.votes || 1)} ${copy[language].votesLabel}</small>
+          </li>
+        `,
+      )
+      .join("");
+  });
 }
 
 async function updateVotes() {
   const votes = await allVotes();
   const agiMedian = median(votes.map((vote) => Number(vote.agi)));
+  const asiMedian = median(votes.map((vote) => Number(vote.asi)));
   const workMedian = median(votes.map((vote) => Number(vote.work)));
-  document.querySelector("#public-median").textContent = formatYear(agiMedian);
+  document.querySelector("#agi-public").textContent = formatYear(agiMedian);
+  document.querySelector("#asi-public").textContent = formatYear(asiMedian);
   document.querySelector("#vote-count").textContent = votes.length + 34;
   document.querySelector("#field-median").textContent = formatYear(workMedian);
-  renderBars(votes);
 }
 
 document.querySelectorAll(".lang-button").forEach((button) => {
@@ -304,12 +324,15 @@ document.querySelector("#vote-form").addEventListener("submit", async (event) =>
     asi: Number(form.get("asi")),
     work: Number(form.get("work")),
     field: String(form.get("field")),
+    agiDefinition: String(form.get("agiDefinition") || "").trim(),
+    asiDefinition: String(form.get("asiDefinition") || "").trim(),
   };
   await savePublicVote(nextVote);
   event.currentTarget.querySelector(".form-button").textContent = copy[language].submitted;
   setTimeout(() => {
     event.currentTarget.querySelector(".form-button").textContent = copy[language].submitVote;
   }, 1400);
+  await renderDefinitions();
   await updateVotes();
 });
 

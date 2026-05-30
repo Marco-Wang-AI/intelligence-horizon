@@ -1,6 +1,6 @@
-# Intelligence Horizon / 智能地平线
+# Almost O'Clock / 快了钟
 
-A bilingual, open AGI and ASI horizon tracker.
+A bilingual, open AGI and ASI clock.
 
 This project compares two kinds of signals:
 
@@ -16,39 +16,8 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Two horizon clocks: AGI and ASI.
 - Signal log with direction, confidence, and clock movement.
 - Local public-vote prototype stored in the browser.
-- Naming playground for English and Chinese candidates.
-
-## Possible Names
-
-English:
-
-- Intelligence Horizon
-- Horizon Pulse
-- Maybe Soon
-- The Maybe Clock
-- Almost O'Clock
-- T-minus Maybe
-- The Generality Gauge
-- Frontier Pulse
-- When AGI?
-- Soonish
-- Future's Loading Bar
-- The Tomorrow Meter
-
-Chinese:
-
-- 智能地平线
-- 地平线报时
-- 快了钟
-- 快乐钟
-- 差不多钟
-- 差不多两年钟
-- 通用智能还有多久
-- 智能几更天
-- 快到 AGI 了吗
-- 还有几步
-- 未来进度条
-- 智能风向标
+- Optional one-sentence AGI and ASI definition submissions.
+- Community definition leaderboard.
 
 ## Data Model Draft
 
@@ -84,6 +53,8 @@ Starter questions:
 - When do you think ASI arrives?
 - What field are you in?
 - When can AI do 90% of your field's work?
+- Optional: define AGI in one sentence.
+- Optional: define ASI in one sentence.
 
 Optional later fields:
 

@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Intelligence Horizon | 智能地平线</title>
+    <title>Almost O'Clock | 快了钟</title>
     <meta
       name="description"
-      content="A bilingual, open AGI and ASI horizon tracker comparing expert signals with public forecasts."
+      content="A bilingual, playful AGI and ASI clock comparing expert signals with public forecasts."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="topbar" aria-label="Site header">
-      <a class="brand" href="#top" aria-label="Intelligence Horizon home">
+      <a class="brand" href="#top" aria-label="Almost O'Clock home">
         <span class="brand-mark" aria-hidden="true"></span>
         <span>
-          <strong>Intelligence Horizon</strong>
-          <small>智能地平线</small>
+          <strong>Almost O'Clock</strong>
+          <small>快了钟</small>
         </span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#definitions" data-i18n="navDefinitions">Definitions</a>
         <a href="#signals" data-i18n="navSignals">Signals</a>
         <a href="#pulse" data-i18n="navPulse">Public Pulse</a>
-        <a href="#method" data-i18n="navMethod">Method</a>
         <a href="#open" data-i18n="navOpen">Open</a>
       </nav>
       <div class="language-switch" aria-label="Language switch">
@@ -38,10 +38,10 @@
         </picture>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="eyebrow">A playful, evidence-based AGI / ASI clock</p>
-          <h1 id="hero-title" data-i18n="heroTitle">Intelligence Horizon</h1>
+          <p class="eyebrow" data-i18n="eyebrow">A playful AGI / ASI clock</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Almost O'Clock</h1>
           <p class="hero-copy" data-i18n="heroCopy">
-            Track how the frontier AI timeline moves when experts speak, products ship, benchmarks fall, and ordinary people vote.
+            A friendly clock for asking one very human question: is general intelligence almost here?
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="#pulse" data-i18n="voteCta">Add your forecast</a>
@@ -59,7 +59,17 @@
           <div class="clock-ring" aria-hidden="true">
             <span style="--progress: 62%"></span>
           </div>
-          <p class="panel-note" data-i18n="agiNote">Expert-weighted median estimate from the sample signal log.</p>
+          <dl class="clock-compare">
+            <div>
+              <dt data-i18n="expertLabel">Expert signal</dt>
+              <dd id="agi-expert">2028.2</dd>
+            </div>
+            <div>
+              <dt data-i18n="publicLabelShort">Public pulse</dt>
+              <dd id="agi-public">2028.0</dd>
+            </div>
+          </dl>
+          <p class="panel-note" data-i18n="agiNote">Expert signal and public pulse shown side by side.</p>
           <div class="movement faster">
             <span data-i18n="agiMove">Moved 7 months closer this quarter</span>
           </div>
@@ -73,26 +83,48 @@
           <div class="clock-ring" aria-hidden="true">
             <span style="--progress: 38%"></span>
           </div>
+          <dl class="clock-compare">
+            <div>
+              <dt data-i18n="expertLabel">Expert signal</dt>
+              <dd id="asi-expert">2031.6</dd>
+            </div>
+            <div>
+              <dt data-i18n="publicLabelShort">Public pulse</dt>
+              <dd id="asi-public">2031.0</dd>
+            </div>
+          </dl>
           <p class="panel-note" data-i18n="asiNote">A wider, more uncertain band for early superintelligence.</p>
           <div class="movement slower">
             <span data-i18n="asiMove">Still high uncertainty</span>
           </div>
         </article>
-
-        <article class="pulse-panel">
-          <p class="panel-label" data-i18n="publicLabel">Public pulse</p>
-          <h2 id="public-median">2029.0</h2>
-          <p class="panel-note" data-i18n="publicNote">Median AGI answer from starter votes plus local submissions.</p>
-          <div class="spark-bars" id="spark-bars" aria-hidden="true"></div>
-        </article>
       </section>
 
-      <section class="names-section" aria-labelledby="names-title">
+      <section class="definitions-section" id="definitions" aria-labelledby="definitions-title">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="namesEyebrow">Naming playground</p>
-          <h2 id="names-title" data-i18n="namesTitle">A clock should have a little wink.</h2>
+          <p class="eyebrow" data-i18n="definitionsEyebrow">Working definitions</p>
+          <h2 id="definitions-title" data-i18n="definitionsTitle">Before we count down, we say what we mean.</h2>
         </div>
-        <div class="name-grid" id="name-grid"></div>
+        <div class="definition-grid">
+          <article class="definition-card">
+            <p class="panel-label">AGI</p>
+            <h3 data-i18n="agiDefinitionTitle">Current working definition</h3>
+            <p data-i18n="agiDefinitionCopy">
+              Highly autonomous AI that can outperform humans at most economically valuable work.
+            </p>
+            <a href="https://openai.com/charter" target="_blank" rel="noreferrer" data-i18n="definitionSource">Source / reference</a>
+            <ol class="definition-list" id="agi-definition-list"></ol>
+          </article>
+          <article class="definition-card">
+            <p class="panel-label">ASI</p>
+            <h3 data-i18n="asiDefinitionTitle">Current working definition</h3>
+            <p data-i18n="asiDefinitionCopy">
+              AI that greatly exceeds human cognitive performance in virtually all domains of interest.
+            </p>
+            <a href="https://aisafety.info/questions/6207/" target="_blank" rel="noreferrer" data-i18n="definitionSource">Source / reference</a>
+            <ol class="definition-list" id="asi-definition-list"></ol>
+          </article>
+        </div>
       </section>
 
       <section class="content-band" id="signals">
@@ -165,32 +197,19 @@
               <option value="2038">After 2035</option>
             </select>
           </label>
+          <label class="wide-field">
+            <span data-i18n="formAgiDefinition">Optional: define AGI in one sentence</span>
+            <textarea name="agiDefinition" rows="3" maxlength="180" data-i18n-placeholder="agiDefinitionPlaceholder" placeholder="AGI is..."></textarea>
+          </label>
+          <label class="wide-field">
+            <span data-i18n="formAsiDefinition">Optional: define ASI in one sentence</span>
+            <textarea name="asiDefinition" rows="3" maxlength="180" data-i18n-placeholder="asiDefinitionPlaceholder" placeholder="ASI is..."></textarea>
+          </label>
           <button class="primary-action form-button" type="submit" data-i18n="submitVote">Submit local vote</button>
           <p class="form-note" data-i18n="formNote">
             MVP note: this prototype stores votes in your browser. Public collection can be added after the question set feels right.
           </p>
         </form>
-      </section>
-
-      <section class="content-band method" id="method">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="methodEyebrow">Method</p>
-          <h2 data-i18n="methodTitle">Small rules, visible judgment.</h2>
-        </div>
-        <div class="method-grid">
-          <article>
-            <h3 data-i18n="methodOneTitle">Signals move clocks</h3>
-            <p data-i18n="methodOneCopy">Each event has a direction, target, confidence, source, and day delta.</p>
-          </article>
-          <article>
-            <h3 data-i18n="methodTwoTitle">Votes move distributions</h3>
-            <p data-i18n="methodTwoCopy">Public answers are shown separately so expert signals and crowd instincts can disagree.</p>
-          </article>
-          <article>
-            <h3 data-i18n="methodThreeTitle">Disagreement is content</h3>
-            <p data-i18n="methodThreeCopy">Every questionable adjustment can become an issue, pull request, or weekly debate.</p>
-          </article>
-        </div>
       </section>
 
       <section class="open-band" id="open">
@@ -203,7 +222,7 @@
     </main>
 
     <footer>
-      <span>Intelligence Horizon / 智能地平线</span>
+      <span>Almost O'Clock / 快了钟</span>
       <span data-i18n="footer">A friendly clock for an uncertain future.</span>
     </footer>
 

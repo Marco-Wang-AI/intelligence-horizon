@@ -1,4 +1,4 @@
-# Contributing to Intelligence Horizon
+# Contributing to Almost O'Clock
 
 Thanks for helping move the clock carefully.
 
