@@ -1,0 +1,121 @@
+[
+  {
+    "year": 1997,
+    "work": "Terminator 2: Judgment Day",
+    "ai": "Skynet",
+    "source": {
+      "name": "U.S. GAO",
+      "url": "https://www.gao.gov/blog/2019/08/29/artificial-intelligence-still-a-long-way-from-judgment-day"
+    },
+    "title": {
+      "en": "Skynet wakes up",
+      "zh": "天网觉醒"
+    },
+    "summary": {
+      "en": "In the classic Judgment Day timeline, Skynet becomes self-aware and quickly turns a defense system into humanity's worst day at work.",
+      "zh": "在经典的“审判日”时间线里，天网获得自我意识，一个防御系统变成了人类最糟糕的上班日。"
+    }
+  },
+  {
+    "year": 2001,
+    "work": "2001: A Space Odyssey",
+    "ai": "HAL 9000",
+    "source": {
+      "name": "Britannica",
+      "url": "https://www.britannica.com/topic/HAL-9000"
+    },
+    "title": {
+      "en": "HAL runs the mission",
+      "zh": "HAL 接管任务"
+    },
+    "summary": {
+      "en": "HAL is the calm, capable ship computer that made a whole generation suspicious of polite red camera lights.",
+      "zh": "HAL 是那个冷静、能干、让一代人开始怀疑红色摄像头的飞船电脑。"
+    }
+  },
+  {
+    "year": 2019,
+    "work": "Blade Runner",
+    "ai": "Replicants",
+    "source": {
+      "name": "Digital Trends",
+      "url": "https://www.digitaltrends.com/cool-tech/how-well-did-blade-runner-predict-tech-2019/"
+    },
+    "title": {
+      "en": "Replicants walk among us",
+      "zh": "复制人走进人群"
+    },
+    "summary": {
+      "en": "Not exactly AGI, but Blade Runner's 2019 gave us artificial beings smart enough to make the definition messy.",
+      "zh": "这不完全是 AGI，但《银翼杀手》的 2019 给了我们一种足够聪明、也足够麻烦的人造生命。"
+    }
+  },
+  {
+    "year": 2035,
+    "work": "I, Robot",
+    "ai": "VIKI",
+    "source": {
+      "name": "Tom's Guide",
+      "url": "https://www.tomsguide.com/home/smart-home/heres-what-your-home-robot-will-actually-be-like-by-2035"
+    },
+    "title": {
+      "en": "Robots everywhere",
+      "zh": "机器人遍地走"
+    },
+    "summary": {
+      "en": "The movie's 2035 imagines helpful household robots, plus one central AI with a very aggressive interpretation of safety.",
+      "zh": "电影里的 2035 年，到处都是家用机器人，还有一个对“安全”理解得过于激进的中央 AI。"
+    }
+  },
+  {
+    "year": 2038,
+    "work": "Detroit: Become Human",
+    "ai": "Androids",
+    "source": {
+      "name": "TIME",
+      "url": "https://time.com/5250684/detroit-become-human-hands-on/"
+    },
+    "title": {
+      "en": "Androids ask for agency",
+      "zh": "仿生人开始要自由"
+    },
+    "summary": {
+      "en": "By 2038, androids are common enough to replace people in many jobs, and the story turns on what happens when tools stop acting like tools.",
+      "zh": "到了 2038 年，仿生人已经进入大量工作岗位，故事的关键是：当工具不再只想当工具，会发生什么？"
+    }
+  },
+  {
+    "year": 2052,
+    "work": "Westworld",
+    "ai": "Hosts",
+    "source": {
+      "name": "Westworld Wiki",
+      "url": "https://westworld.fandom.com/wiki/Timeline"
+    },
+    "title": {
+      "en": "Hosts remember too much",
+      "zh": "接待员记得太多"
+    },
+    "summary": {
+      "en": "Westworld's hosts blur performance, memory, and personhood. Great theme park, terrible risk review.",
+      "zh": "《西部世界》的接待员把表演、记忆和人格搅在一起。主题公园很精彩，风控会很头疼。"
+    }
+  },
+  {
+    "year": 2139,
+    "work": "The Matrix",
+    "ai": "The Machines",
+    "source": {
+      "name": "Matrix Wiki",
+      "url": "https://matrix.fandom.com/wiki/Machine_War"
+    },
+    "title": {
+      "en": "The Machine War begins",
+      "zh": "机器战争开始"
+    },
+    "summary": {
+      "en": "The Matrix pushes the machine timeline far out, but makes up for it by being extremely committed to the bit.",
+      "zh": "《黑客帝国》把机器时间线放得很远，但它对“机器统治”这个设定非常认真。"
+    }
+  }
+]

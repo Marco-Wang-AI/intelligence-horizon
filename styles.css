@@ -238,6 +238,7 @@ h3 {
 
 .dashboard,
 .definitions-section,
+.fiction-section,
 .content-band,
 .split-band,
 .open-band {
@@ -255,6 +256,7 @@ h3 {
 
 .clock-panel,
 .definition-card,
+.fiction-item,
 .signal-card,
 .vote-form,
 .method-grid article {
@@ -432,6 +434,7 @@ h3 {
 }
 
 .definitions-section,
+.fiction-section,
 .content-band,
 .split-band,
 .open-band {
@@ -500,6 +503,107 @@ h3 {
   margin-top: 4px;
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+.fiction-section {
+  border-top: 1px solid var(--line);
+}
+
+.fiction-timeline {
+  display: grid;
+  grid-auto-columns: minmax(175px, 1fr);
+  grid-auto-flow: column;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 4px 4px 28px;
+  scroll-snap-type: x proximity;
+}
+
+.fiction-timeline::before {
+  content: "";
+  position: absolute;
+}
+
+.fiction-item {
+  position: relative;
+  min-height: 172px;
+  padding: 18px;
+  box-shadow: none;
+  scroll-snap-align: start;
+  cursor: help;
+}
+
+.fiction-item::before {
+  content: "";
+  position: absolute;
+  top: 62px;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--coral), var(--yellow), var(--blue));
+  opacity: 0.54;
+}
+
+.fiction-year {
+  display: block;
+  margin-bottom: 34px;
+  color: var(--teal);
+  font-size: 1.55rem;
+  font-weight: 860;
+}
+
+.fiction-item strong,
+.fiction-item small {
+  display: block;
+}
+
+.fiction-item strong {
+  line-height: 1.15;
+}
+
+.fiction-item small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.fiction-popover {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(100% - 12px);
+  z-index: 8;
+  min-width: 230px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.fiction-popover p:not(.panel-label) {
+  margin-bottom: 10px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.fiction-popover a {
+  color: var(--teal);
+  font-weight: 760;
+}
+
+.fiction-item:hover .fiction-popover,
+.fiction-item:focus .fiction-popover,
+.fiction-item:focus-within .fiction-popover {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .signal-list {
@@ -797,6 +901,15 @@ footer {
 
   .clock-panel {
     grid-template-columns: 1fr;
+  }
+
+  .fiction-timeline {
+    grid-auto-columns: minmax(230px, 82vw);
+  }
+
+  .fiction-popover {
+    bottom: auto;
+    top: 12px;
   }
 
   .clock-compare {

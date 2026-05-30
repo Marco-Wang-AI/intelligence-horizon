@@ -7,7 +7,7 @@ A bilingual, open AGI and ASI clock.
 This project compares two kinds of signals:
 
 - Expert and frontier-lab signals: interviews, product releases, model capabilities, policy statements, benchmark shifts.
-- Crowd forecasts: lightweight votes from people in different fields about AGI, ASI, and domain-level automation.
+- Public takes: lightweight votes from people in different fields about AGI, ASI, and domain-level automation.
 
 The tone is intentionally friendly rather than apocalyptic. It is inspired by public clock projects, but it is not a doomsday clock.
 
@@ -17,6 +17,7 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Light visual identity.
 - Two horizon clocks: AGI and ASI.
 - Clock notes with direction, confidence, and clock movement.
+- A sci-fi timeline for fictional AI milestones.
 - Local public-vote prototype stored in the browser.
 - Optional one-sentence AGI and ASI definition submissions.
 - Community definition leaderboard.

@@ -41,7 +41,7 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 
 AGI / ASI 到底是不是快来了？
 
-现在可以看专家预测、大家预测、拨钟记录，也可以投票写下你认为 AGI / ASI 是什么。
+现在可以看专家预测、大众感受、拨钟记录，也可以投票写下你认为 AGI / ASI 是什么。
 
 欢迎来玩，也欢迎提建议：
 
@@ -60,4 +60,3 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 先做了一个开源小版本，欢迎拍砖：
 
 https://marco-wang-ai.github.io/intelligence-horizon/
-

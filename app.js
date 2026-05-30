@@ -1,6 +1,7 @@
 const copy = {
   en: {
     navDefinitions: "Definitions",
+    navFiction: "Fiction",
     navSignals: "Updates",
     navPulse: "Vote",
     navOpen: "Open",
@@ -12,8 +13,8 @@ const copy = {
     signalsCta: "See what changed",
     agiLabel: "AGI clock",
     expertLabel: "Expert forecast",
-    publicLabelShort: "Crowd forecast",
-    agiNote: "A quick compare: what labs and experts imply vs. what visitors think.",
+    publicLabelShort: "Public take",
+    agiNote: "A quick compare: expert forecasts vs. public intuition.",
     agiMove: "7 months earlier this quarter",
     asiLabel: "ASI clock",
     asiNote: "A wider, more uncertain band for early superintelligence.",
@@ -27,9 +28,13 @@ const copy = {
     asiDefinitionCopy:
       "AI that greatly exceeds human cognitive performance in virtually all domains of interest.",
     definitionSource: "Reference",
+    fictionEyebrow: "Sci-fi receipts",
+    fictionTitle: "Pop culture has been setting AI dates for decades.",
+    fictionCopy:
+      "A very unserious timeline of when famous stories imagined AI waking up, taking over, or becoming impossible to ignore.",
     signalsEyebrow: "Clock notes",
     signalsTitle: "Why did the clock move?",
-    pulseEyebrow: "Crowd forecast",
+    pulseEyebrow: "Public take",
     pulseTitle: "Pick a year. Add a definition if you feel brave.",
     pulseCopy:
       "Dates are only half the fun. The other half is watching people disagree about what AGI and ASI actually mean.",
@@ -54,6 +59,7 @@ const copy = {
   },
   zh: {
     navDefinitions: "定义",
+    navFiction: "科幻",
     navSignals: "动态",
     navPulse: "投票",
     navOpen: "开源",
@@ -65,8 +71,8 @@ const copy = {
     signalsCta: "看看为什么变了",
     agiLabel: "AGI 时钟",
     expertLabel: "专家预测",
-    publicLabelShort: "大家预测",
-    agiNote: "一边看专家怎么说，一边看大家怎么猜。",
+    publicLabelShort: "大众感受",
+    agiNote: "一边看专家预测，一边看大众感受。",
     agiMove: "本季度拨快 7 个月",
     asiLabel: "ASI 时钟",
     asiNote: "超级智能更难判断，所以这里的不确定性更高。",
@@ -78,9 +84,12 @@ const copy = {
     asiDefinitionTitle: "当前工作定义",
     asiDefinitionCopy: "在几乎所有重要认知领域都大幅超过人类表现的 AI。",
     definitionSource: "参考来源",
+    fictionEyebrow: "科幻彩蛋",
+    fictionTitle: "科幻作品早就给 AI 排过时间表。",
+    fictionCopy: "一个不太严肃的时间轴：看看电影、游戏和小说里，AI 都是在哪一年开始不太听话的。",
     signalsEyebrow: "拨钟记录",
     signalsTitle: "最近为什么拨快或拨慢？",
-    pulseEyebrow: "大家怎么猜",
+    pulseEyebrow: "大众感受",
     pulseTitle: "选一个年份，也可以顺手写一句定义。",
     pulseCopy:
       "只猜时间还不够好玩。AGI、ASI 到底算什么，每个人心里的答案可能都不一样。",
@@ -109,6 +118,7 @@ let language = "en";
 let events = [];
 let starterVotes = [];
 let starterDefinitions = { agi: [], asi: [] };
+let fictionTimeline = [];
 
 const fallbackEvents = [
   {
@@ -154,6 +164,20 @@ const fallbackDefinitions = {
     },
   ],
 };
+
+const fallbackFictionTimeline = [
+  {
+    year: 1997,
+    work: "Terminator 2: Judgment Day",
+    ai: "Skynet",
+    source: { name: "U.S. GAO", url: "https://www.gao.gov/blog/2019/08/29/artificial-intelligence-still-a-long-way-from-judgment-day" },
+    title: { en: "Skynet wakes up", zh: "天网觉醒" },
+    summary: {
+      en: "Skynet becomes self-aware and turns a defense system into humanity's worst day at work.",
+      zh: "天网获得自我意识，一个防御系统变成了人类最糟糕的上班日。",
+    },
+  },
+];
 
 function localVotes() {
   try {
@@ -227,14 +251,16 @@ async function fetchJson(path, fallback) {
 }
 
 async function loadData() {
-  const [loadedEvents, loadedVotes, loadedDefinitions] = await Promise.all([
+  const [loadedEvents, loadedVotes, loadedDefinitions, loadedFictionTimeline] = await Promise.all([
     fetchJson("./data/events.json", fallbackEvents),
     fetchJson("./data/starter-votes.json", fallbackStarterVotes),
     fetchJson("./data/definitions.json", fallbackDefinitions),
+    fetchJson("./data/fiction-timeline.json", fallbackFictionTimeline),
   ]);
   events = loadedEvents;
   starterVotes = loadedVotes;
   starterDefinitions = loadedDefinitions;
+  fictionTimeline = loadedFictionTimeline;
 }
 
 async function renderLanguage() {
@@ -252,6 +278,7 @@ async function renderLanguage() {
   });
   renderSignals();
   await renderDefinitions();
+  renderFictionTimeline();
   await updateVotes();
 }
 
@@ -271,6 +298,27 @@ function renderSignals() {
             </div>
           </div>
           <span class="pill delta ${item.deltaDays > 0 ? "slow" : ""}">${formatDelta(item.deltaDays)}</span>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderFictionTimeline() {
+  const timeline = document.querySelector("#fiction-timeline");
+  if (!timeline) return;
+  timeline.innerHTML = fictionTimeline
+    .map(
+      (item) => `
+        <article class="fiction-item" tabindex="0">
+          <span class="fiction-year">${item.year}</span>
+          <strong>${item.work}</strong>
+          <small>${item.ai}</small>
+          <div class="fiction-popover">
+            <p class="panel-label">${item.title[language]}</p>
+            <p>${item.summary[language]}</p>
+            <a href="${item.source.url}" target="_blank" rel="noreferrer">${item.source.name}</a>
+          </div>
         </article>
       `,
     )
