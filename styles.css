@@ -511,26 +511,21 @@ h3 {
 
 .fiction-timeline {
   display: grid;
-  grid-auto-columns: minmax(175px, 1fr);
+  grid-auto-columns: minmax(230px, 1fr);
   grid-auto-flow: column;
   gap: 12px;
   overflow-x: auto;
-  padding: 4px 4px 28px;
+  padding: 4px 4px 24px;
   scroll-snap-type: x proximity;
-}
-
-.fiction-timeline::before {
-  content: "";
-  position: absolute;
 }
 
 .fiction-item {
   position: relative;
-  min-height: 172px;
+  min-height: 308px;
   padding: 18px;
   box-shadow: none;
   scroll-snap-align: start;
-  cursor: help;
+  overflow: hidden;
 }
 
 .fiction-item::before {
@@ -567,42 +562,32 @@ h3 {
   font-weight: 760;
 }
 
-.fiction-popover {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: calc(100% - 12px);
-  z-index: 8;
-  min-width: 230px;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--paper-strong);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(8px);
+.fiction-detail {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  opacity: 0.78;
+  transform: translateY(4px);
   transition:
     opacity 160ms ease,
     transform 160ms ease;
 }
 
-.fiction-popover p:not(.panel-label) {
+.fiction-detail p:not(.panel-label) {
   margin-bottom: 10px;
   color: var(--muted);
   line-height: 1.45;
 }
 
-.fiction-popover a {
+.fiction-detail a {
   color: var(--teal);
   font-weight: 760;
 }
 
-.fiction-item:hover .fiction-popover,
-.fiction-item:focus .fiction-popover,
-.fiction-item:focus-within .fiction-popover {
+.fiction-item:hover .fiction-detail,
+.fiction-item:focus .fiction-detail,
+.fiction-item:focus-within .fiction-detail {
   opacity: 1;
-  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -768,6 +753,13 @@ h3 {
   max-width: 780px;
 }
 
+.open-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -824,6 +816,10 @@ footer {
   footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .open-actions {
+    justify-content: flex-start;
   }
 }
 
@@ -905,11 +901,6 @@ footer {
 
   .fiction-timeline {
     grid-auto-columns: minmax(230px, 82vw);
-  }
-
-  .fiction-popover {
-    bottom: auto;
-    top: 12px;
   }
 
   .clock-compare {

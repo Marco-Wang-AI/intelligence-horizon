@@ -1,0 +1,367 @@
+.concept-page {
+  background:
+    radial-gradient(circle at 20% 8%, rgba(242, 189, 87, 0.18), transparent 28%),
+    radial-gradient(circle at 84% 18%, rgba(92, 168, 214, 0.16), transparent 32%),
+    var(--paper);
+}
+
+.concept-hero,
+.concept-grid {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.concept-hero {
+  padding: 92px 0 36px;
+}
+
+.concept-hero h1 {
+  max-width: 900px;
+}
+
+.concept-hero p:not(.eyebrow) {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.concept-grid {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 80px;
+}
+
+.concept-card {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.76fr) minmax(320px, 1fr) minmax(190px, 0.55fr);
+  gap: 22px;
+  align-items: center;
+  min-height: 430px;
+  padding: clamp(20px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 248, 0.86);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.concept-card h2 {
+  font-size: clamp(2.1rem, 4.2vw, 4.6rem);
+}
+
+.concept-copy p:not(.eyebrow),
+.concept-notes {
+  color: var(--muted);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.concept-notes {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.mega-dial,
+.orbit-stage,
+.film-strip {
+  min-height: 330px;
+}
+
+.mega-dial {
+  display: grid;
+  place-items: center;
+}
+
+.dial-ring {
+  position: relative;
+  width: min(330px, 80vw);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, var(--paper-strong) 0 42%, transparent 43%),
+    conic-gradient(var(--coral) 0 66%, #e8eeee 66% 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(23, 33, 38, 0.08),
+    0 24px 70px rgba(232, 121, 97, 0.22);
+}
+
+.dial-ring::before {
+  content: "";
+  position: absolute;
+  inset: 16%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(rgba(23, 33, 38, 0.28) 0 3deg, transparent 3deg 18deg);
+  mask: radial-gradient(circle, transparent 0 58%, black 59%);
+}
+
+.dial-ring strong,
+.dial-ring small {
+  position: relative;
+  z-index: 2;
+  display: block;
+  text-align: center;
+}
+
+.dial-ring strong {
+  font-size: 3.2rem;
+}
+
+.dial-ring small {
+  margin-top: 58px;
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.dial-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 5px;
+  height: 112px;
+  border-radius: 999px;
+  background: var(--ink);
+  transform: translateX(-50%) rotate(58deg);
+  transform-origin: 50% 100%;
+}
+
+.node {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--paper-strong);
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 4px rgba(47, 139, 145, 0.16);
+}
+
+.n1 {
+  top: 12%;
+  right: 28%;
+}
+
+.n2 {
+  right: 6%;
+  top: 50%;
+}
+
+.n3 {
+  left: 18%;
+  bottom: 16%;
+  background: var(--yellow);
+}
+
+.orbit-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(47, 139, 145, 0.28);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+
+.orbit-one {
+  width: 330px;
+  height: 210px;
+}
+
+.orbit-two {
+  width: 430px;
+  height: 275px;
+  border-color: rgba(232, 121, 97, 0.25);
+  transform: rotate(18deg);
+}
+
+.orbit-center {
+  width: 156px;
+  height: 156px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.9), transparent 28%),
+    conic-gradient(from 210deg, var(--yellow), var(--green), var(--blue), var(--coral), var(--yellow));
+  box-shadow: 0 24px 80px rgba(92, 168, 214, 0.28);
+}
+
+.orbit-center strong {
+  font-size: 2rem;
+}
+
+.orbit-center small {
+  color: rgba(23, 33, 38, 0.72);
+  font-weight: 800;
+}
+
+.star {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.s1 {
+  top: 18%;
+  left: 25%;
+}
+
+.s2 {
+  top: 30%;
+  right: 16%;
+  background: var(--coral);
+}
+
+.s3 {
+  bottom: 20%;
+  right: 30%;
+  background: var(--blue);
+}
+
+.s4 {
+  bottom: 32%;
+  left: 15%;
+  background: var(--yellow);
+}
+
+.film-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 12px;
+  align-content: center;
+}
+
+.film-strip div {
+  position: relative;
+  min-height: 230px;
+  padding: 18px;
+  border: 1px solid rgba(23, 33, 38, 0.16);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(255, 253, 248, 0.74)),
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(23, 33, 38, 0.08) 18px 20px);
+}
+
+.film-strip div::before,
+.film-strip div::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 8px, transparent 8px 16px);
+  opacity: 0.28;
+}
+
+.film-strip div::before {
+  top: 12px;
+}
+
+.film-strip div::after {
+  bottom: 12px;
+}
+
+.film-strip span,
+.film-strip strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.film-strip span {
+  color: var(--teal);
+  font-size: 1.8rem;
+  font-weight: 860;
+}
+
+.film-strip strong {
+  margin-top: 112px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 980px) {
+  .concept-card {
+    grid-template-columns: 1fr;
+  }
+
+  .film-strip {
+    overflow-x: auto;
+    grid-auto-flow: column;
+    grid-auto-columns: 170px;
+    grid-template-columns: none;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .concept-hero {
+    padding-top: 64px;
+  }
+
+  .concept-hero h1 {
+    font-size: 2.25rem;
+    line-height: 1.02;
+    word-break: break-word;
+  }
+
+  .concept-hero p:not(.eyebrow) {
+    font-size: 1rem;
+  }
+
+  .concept-card {
+    min-height: auto;
+    padding: 18px;
+    overflow: hidden;
+  }
+
+  .concept-card h2 {
+    font-size: 2.2rem;
+    word-break: break-word;
+  }
+
+  .mega-dial,
+  .orbit-stage,
+  .film-strip {
+    min-height: 260px;
+  }
+
+  .dial-ring {
+    width: min(260px, 72vw);
+  }
+
+  .dial-ring strong {
+    font-size: 2.35rem;
+  }
+
+  .dial-ring small {
+    margin-top: 44px;
+  }
+
+  .dial-hand {
+    height: 84px;
+  }
+
+  .orbit-one {
+    width: 260px;
+    height: 170px;
+  }
+
+  .orbit-two {
+    width: 320px;
+    height: 214px;
+  }
+
+  .orbit-center {
+    width: 126px;
+    height: 126px;
+  }
+}

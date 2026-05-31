@@ -53,6 +53,7 @@ const copy = {
       "Prototype note: votes are stored in your browser for now. Shared public results come next.",
     openEyebrow: "Open project",
     openTitle: "Open source, because arguing about timelines is better with receipts.",
+    conceptsCta: "View UI concepts",
     readmeCta: "Open README",
     footer: "No doom. Just receipts, guesses, and a clock that keeps changing.",
     submitted: "Vote added",
@@ -108,6 +109,7 @@ const copy = {
       "原型说明：现在先把投票存在你的浏览器里，之后再接公开统计。",
     openEyebrow: "开源项目",
     openTitle: "开源做这件事：大家可以带着来源来吵时间线。",
+    conceptsCta: "查看 UI 方案",
     readmeCta: "打开 README",
     footer: "不制造焦虑，只记录证据、猜想和一只会变的钟。",
     submitted: "已加入投票",
@@ -169,6 +171,7 @@ const fallbackFictionTimeline = [
   {
     year: 1997,
     work: "Terminator 2: Judgment Day",
+    workZh: "终结者 2：审判日",
     ai: "Skynet",
     source: { name: "U.S. GAO", url: "https://www.gao.gov/blog/2019/08/29/artificial-intelligence-still-a-long-way-from-judgment-day" },
     title: { en: "Skynet wakes up", zh: "天网觉醒" },
@@ -312,9 +315,9 @@ function renderFictionTimeline() {
       (item) => `
         <article class="fiction-item" tabindex="0">
           <span class="fiction-year">${item.year}</span>
-          <strong>${item.work}</strong>
+          <strong>${language === "zh" ? item.workZh || item.work : item.work}</strong>
           <small>${item.ai}</small>
-          <div class="fiction-popover">
+          <div class="fiction-detail">
             <p class="panel-label">${item.title[language]}</p>
             <p>${item.summary[language]}</p>
             <a href="${item.source.url}" target="_blank" rel="noreferrer">${item.source.name}</a>

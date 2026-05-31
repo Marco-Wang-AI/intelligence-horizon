@@ -2,6 +2,7 @@
   {
     "year": 1997,
     "work": "Terminator 2: Judgment Day",
+    "workZh": "终结者 2：审判日",
     "ai": "Skynet",
     "source": {
       "name": "U.S. GAO",
@@ -19,6 +20,7 @@
   {
     "year": 2001,
     "work": "2001: A Space Odyssey",
+    "workZh": "2001 太空漫游",
     "ai": "HAL 9000",
     "source": {
       "name": "Britannica",
@@ -36,6 +38,7 @@
   {
     "year": 2019,
     "work": "Blade Runner",
+    "workZh": "银翼杀手",
     "ai": "Replicants",
     "source": {
       "name": "Digital Trends",
@@ -53,6 +56,7 @@
   {
     "year": 2035,
     "work": "I, Robot",
+    "workZh": "我，机器人",
     "ai": "VIKI",
     "source": {
       "name": "Tom's Guide",
@@ -70,6 +74,7 @@
   {
     "year": 2038,
     "work": "Detroit: Become Human",
+    "workZh": "底特律：变人",
     "ai": "Androids",
     "source": {
       "name": "TIME",
@@ -87,6 +92,7 @@
   {
     "year": 2052,
     "work": "Westworld",
+    "workZh": "西部世界",
     "ai": "Hosts",
     "source": {
       "name": "Westworld Wiki",
@@ -104,6 +110,7 @@
   {
     "year": 2139,
     "work": "The Matrix",
+    "workZh": "黑客帝国",
     "ai": "The Machines",
     "source": {
       "name": "Matrix Wiki",

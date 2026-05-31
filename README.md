@@ -22,6 +22,14 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Optional one-sentence AGI and ASI definition submissions.
 - Community definition leaderboard.
 
+## UI Concepts
+
+Three visual directions are available at `concepts.html`:
+
+- Dashboard clock.
+- Star-map clock.
+- Timeline film strip.
+
 ## Data Model Draft
 
 Signal entries now live in `data/events.json`. A signal follows this shape:

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clock UI Concepts | 快了钟</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./concepts.css" />
+  </head>
+  <body class="concept-page">
+    <header class="topbar" aria-label="Concept preview header">
+      <a class="brand" href="./index.html" aria-label="Back to Almost O'Clock">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Almost O'Clock</strong>
+          <small>UI concepts / 视觉方案</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Concept navigation">
+        <a href="#dial">仪表盘</a>
+        <a href="#orbit">星图</a>
+        <a href="#film">时间胶片</a>
+        <a href="./index.html">回到首页</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="concept-hero">
+        <p class="eyebrow">Three possible clock directions</p>
+        <h1>快了钟 UI 方案预览</h1>
+        <p>先看气质，不急着做最终版。三个方向都可以继续细化，或者混搭。</p>
+      </section>
+
+      <section class="concept-grid" aria-label="Clock UI concepts">
+        <article class="concept-card concept-dial" id="dial">
+          <div class="concept-copy">
+            <p class="eyebrow">Option 1</p>
+            <h2>仪表盘时钟</h2>
+            <p>最清楚，适合首页。外圈表示接近程度，节点表示专家预测、产品发布、公众投票。</p>
+          </div>
+          <div class="mega-dial" aria-hidden="true">
+            <div class="dial-ring">
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="dial-hand"></span>
+              <strong>2028.2</strong>
+              <small>AGI clock</small>
+            </div>
+          </div>
+          <ul class="concept-notes">
+            <li>信息清晰</li>
+            <li>最容易做响应式</li>
+            <li>后续可接真实事件节点</li>
+          </ul>
+        </article>
+
+        <article class="concept-card concept-orbit" id="orbit">
+          <div class="concept-copy">
+            <p class="eyebrow">Option 2</p>
+            <h2>星图时钟</h2>
+            <p>更有 AI 感和传播性。AGI / ASI 像目标星，事件像轨道上的信号点。</p>
+          </div>
+          <div class="orbit-stage" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit-center">
+              <strong>AGI</strong>
+              <small>2028.2</small>
+            </div>
+            <span class="star s1"></span>
+            <span class="star s2"></span>
+            <span class="star s3"></span>
+            <span class="star s4"></span>
+          </div>
+          <ul class="concept-notes">
+            <li>视觉更特别</li>
+            <li>适合社交截图</li>
+            <li>需要避免过度科幻化</li>
+          </ul>
+        </article>
+
+        <article class="concept-card concept-film" id="film">
+          <div class="concept-copy">
+            <p class="eyebrow">Option 3</p>
+            <h2>时间胶片</h2>
+            <p>把现实预测和科幻彩蛋放在同一条时间带里，内容感最强。</p>
+          </div>
+          <div class="film-strip" aria-hidden="true">
+            <div>
+              <span>1997</span>
+              <strong>Skynet</strong>
+            </div>
+            <div>
+              <span>2028</span>
+              <strong>AGI?</strong>
+            </div>
+            <div>
+              <span>2035</span>
+              <strong>VIKI</strong>
+            </div>
+            <div>
+              <span>2031</span>
+              <strong>ASI?</strong>
+            </div>
+          </div>
+          <ul class="concept-notes">
+            <li>最有故事感</li>
+            <li>适合做专题页</li>
+            <li>首页可能略复杂</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

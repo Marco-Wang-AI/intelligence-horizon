@@ -21,8 +21,8 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#definitions" data-i18n="navDefinitions">Definitions</a>
-        <a href="#fiction" data-i18n="navFiction">Fiction</a>
         <a href="#signals" data-i18n="navSignals">Updates</a>
+        <a href="#fiction" data-i18n="navFiction">Fiction</a>
         <a href="#pulse" data-i18n="navPulse">Vote</a>
         <a href="#open" data-i18n="navOpen">Open</a>
       </nav>
@@ -101,17 +101,6 @@
         </article>
       </section>
 
-      <section class="fiction-section" id="fiction" aria-labelledby="fiction-title">
-        <div class="section-heading">
-          <p class="eyebrow" data-i18n="fictionEyebrow">Sci-fi receipts</p>
-          <h2 id="fiction-title" data-i18n="fictionTitle">Pop culture has been setting AI dates for decades.</h2>
-          <p data-i18n="fictionCopy">
-            A very unserious timeline of when famous stories imagined AI waking up, taking over, or becoming impossible to ignore.
-          </p>
-        </div>
-        <div class="fiction-timeline" id="fiction-timeline" aria-label="Science fiction AI timeline"></div>
-      </section>
-
       <section class="definitions-section" id="definitions" aria-labelledby="definitions-title">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="definitionsEyebrow">Working definitions</p>
@@ -145,6 +134,17 @@
           <h2 data-i18n="signalsTitle">Why did the clock move?</h2>
         </div>
         <div class="signal-list" id="signal-list"></div>
+      </section>
+
+      <section class="fiction-section" id="fiction" aria-labelledby="fiction-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="fictionEyebrow">Sci-fi receipts</p>
+          <h2 id="fiction-title" data-i18n="fictionTitle">Pop culture has been setting AI dates for decades.</h2>
+          <p data-i18n="fictionCopy">
+            A very unserious timeline of when famous stories imagined AI waking up, taking over, or becoming impossible to ignore.
+          </p>
+        </div>
+        <div class="fiction-timeline" id="fiction-timeline" aria-label="Science fiction AI timeline"></div>
       </section>
 
       <section class="split-band" id="pulse">
@@ -229,7 +229,10 @@
           <p class="eyebrow" data-i18n="openEyebrow">Open project</p>
           <h2 data-i18n="openTitle">Open source, because arguing about timelines is better with receipts.</h2>
         </div>
-        <a class="secondary-action" href="./README.md" data-i18n="readmeCta">Open README</a>
+        <div class="open-actions">
+          <a class="primary-action" href="./concepts.html" data-i18n="conceptsCta">View UI concepts</a>
+          <a class="secondary-action" href="./README.md" data-i18n="readmeCta">Open README</a>
+        </div>
       </section>
     </main>
 
