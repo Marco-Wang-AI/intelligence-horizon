@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff8eb" stop-opacity=".10"/>
+      <stop offset=".48" stop-color="#fff8eb" stop-opacity=".24"/>
+      <stop offset=".72" stop-color="#fff8eb" stop-opacity=".82"/>
+      <stop offset="1" stop-color="#fff8eb" stop-opacity=".96"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#12212b" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <image href="cover-background.png" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1200" height="630" fill="url(#shade)"/>
+  <g transform="translate(692 106)" filter="url(#softShadow)">
+    <rect width="408" height="358" rx="34" fill="#fffaf0" opacity=".92"/>
+    <circle cx="56" cy="58" r="18" fill="#f47c4b"/>
+    <circle cx="92" cy="58" r="18" fill="#f4bc52"/>
+    <circle cx="128" cy="58" r="18" fill="#72a8a2"/>
+    <text x="56" y="144" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="#17212b">Almost</text>
+    <text x="56" y="216" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="#17212b">O'Clock</text>
+    <text x="58" y="277" font-family="PingFang SC, Hiragino Sans GB, Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="#2e746f">快了钟</text>
+    <text x="58" y="324" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="22" font-weight="650" fill="#5f6b72">AGI / ASI, minus the doom</text>
+  </g>
+  <g transform="translate(86 502)">
+    <rect width="548" height="54" rx="27" fill="#17212b" opacity=".92"/>
+    <text x="28" y="36" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff8eb">marco-wang-ai.github.io/intelligence-horizon</text>
+  </g>
+</svg>

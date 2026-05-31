@@ -17,98 +17,139 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Concept navigation">
-        <a href="#dial">仪表盘</a>
-        <a href="#orbit">星图</a>
-        <a href="#film">时间胶片</a>
+        <a href="#gauge">信号仪表</a>
+        <a href="#orbit">星图钟</a>
+        <a href="#reel">时间胶片</a>
         <a href="./index.html">回到首页</a>
       </nav>
     </header>
 
     <main>
       <section class="concept-hero">
-        <p class="eyebrow">Three possible clock directions</p>
-        <h1>快了钟 UI 方案预览</h1>
-        <p>先看气质，不急着做最终版。三个方向都可以继续细化，或者混搭。</p>
+        <p class="eyebrow">Three clock directions</p>
+        <h1>三种更像“快了钟”的视觉方案</h1>
+        <p>
+          这版先看第一眼气质：不走末日警报，也不做严肃研究报告，而是做一只会收集预测、吐槽和科幻彩蛋的聪明小钟。
+        </p>
       </section>
 
-      <section class="concept-grid" aria-label="Clock UI concepts">
-        <article class="concept-card concept-dial" id="dial">
+      <section class="concept-stack" aria-label="Clock UI concepts">
+        <article class="concept-card concept-gauge" id="gauge">
           <div class="concept-copy">
-            <p class="eyebrow">Option 1</p>
-            <h2>仪表盘时钟</h2>
-            <p>最清楚，适合首页。外圈表示接近程度，节点表示专家预测、产品发布、公众投票。</p>
-          </div>
-          <div class="mega-dial" aria-hidden="true">
-            <div class="dial-ring">
-              <span class="node n1"></span>
-              <span class="node n2"></span>
-              <span class="node n3"></span>
-              <span class="dial-hand"></span>
-              <strong>2028.2</strong>
-              <small>AGI clock</small>
+            <span class="option-kicker">Option 1</span>
+            <h2>信号仪表盘</h2>
+            <p>最适合直接上首页。一个主钟负责“快了没”，旁边用事件珠子解释为什么拨快或拨慢。</p>
+            <div class="concept-tags">
+              <span>清楚</span>
+              <span>可信</span>
+              <span>容易响应式</span>
             </div>
           </div>
-          <ul class="concept-notes">
-            <li>信息清晰</li>
-            <li>最容易做响应式</li>
-            <li>后续可接真实事件节点</li>
-          </ul>
+          <div class="preview-surface gauge-surface" aria-hidden="true">
+            <div class="gauge-module">
+              <div class="gauge-topline">
+                <span>AGI clock</span>
+                <b>本季度拨快 7 个月</b>
+              </div>
+              <div class="gauge-clock">
+                <span class="gauge-track"></span>
+                <span class="gauge-sweep"></span>
+                <span class="gauge-band"></span>
+                <span class="gauge-hand expert-hand"></span>
+                <span class="gauge-hand public-hand"></span>
+                <span class="gauge-pin p1"></span>
+                <span class="gauge-pin p2"></span>
+                <span class="gauge-pin p3"></span>
+                <span class="gauge-pin p4"></span>
+                <div class="gauge-readout">
+                  <span>
+                    <small>专家预测</small>
+                    <strong>2028.2</strong>
+                  </span>
+                  <span class="public-readout">
+                    <small>大众感受</small>
+                    <strong>2029.0</strong>
+                  </span>
+                </div>
+              </div>
+              <div class="gauge-legend">
+                <span><i class="expert-key"></i>专家预测 2028.2</span>
+                <span><i class="public-key"></i>大众感受 2029.0</span>
+              </div>
+            </div>
+            <div class="gauge-side">
+              <div class="prediction-card">
+                <span>Expert forecast</span>
+                <strong>2028.2</strong>
+                <small>frontier labs + public interviews</small>
+              </div>
+              <div class="prediction-card public">
+                <span>Public take</span>
+                <strong>2029.0</strong>
+                <small>early community votes</small>
+              </div>
+              <div class="signal-rail">
+                <span><b>DH</b> few years <i>-90d</i></span>
+                <span><b>OA</b> knows how <i>-120d</i></span>
+                <span><b>CC</b> agents work <i>-60d</i></span>
+              </div>
+            </div>
+          </div>
+          <p class="concept-verdict">推荐作为 1.0 主方向：信息最直观，能把专家预测、大众感受、拨钟记录自然接起来。</p>
         </article>
 
         <article class="concept-card concept-orbit" id="orbit">
           <div class="concept-copy">
-            <p class="eyebrow">Option 2</p>
-            <h2>星图时钟</h2>
-            <p>更有 AI 感和传播性。AGI / ASI 像目标星，事件像轨道上的信号点。</p>
-          </div>
-          <div class="orbit-stage" aria-hidden="true">
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="orbit-center">
-              <strong>AGI</strong>
-              <small>2028.2</small>
+            <span class="option-kicker">Option 2</span>
+            <h2>星图钟</h2>
+            <p>更有 AI 感。AGI 和 ASI 像两颗目标星，专家、产品、公众投票是沿轨道飞过来的信号。</p>
+            <div class="concept-tags">
+              <span>适合截图</span>
+              <span>更有记忆点</span>
+              <span>轻科幻</span>
             </div>
-            <span class="star s1"></span>
-            <span class="star s2"></span>
-            <span class="star s3"></span>
-            <span class="star s4"></span>
           </div>
-          <ul class="concept-notes">
-            <li>视觉更特别</li>
-            <li>适合社交截图</li>
-            <li>需要避免过度科幻化</li>
-          </ul>
+          <div class="preview-surface orbit-surface" aria-hidden="true">
+            <div class="star-map">
+              <span class="orbit-line o1"></span>
+              <span class="orbit-line o2"></span>
+              <span class="orbit-line o3"></span>
+              <span class="signal-dot d1"></span>
+              <span class="signal-dot d2"></span>
+              <span class="signal-dot d3"></span>
+              <div class="target-star agi-star">
+                <strong>AGI</strong>
+                <small>2028.2</small>
+              </div>
+              <div class="target-star asi-star">
+                <strong>ASI</strong>
+                <small>2031.6</small>
+              </div>
+            </div>
+          </div>
+          <p class="concept-verdict">适合作为 hero 或分享图方向：漂亮，但需要控制信息量，别让它变成“炫技星盘”。</p>
         </article>
 
-        <article class="concept-card concept-film" id="film">
+        <article class="concept-card concept-reel" id="reel">
           <div class="concept-copy">
-            <p class="eyebrow">Option 3</p>
+            <span class="option-kicker">Option 3</span>
             <h2>时间胶片</h2>
-            <p>把现实预测和科幻彩蛋放在同一条时间带里，内容感最强。</p>
-          </div>
-          <div class="film-strip" aria-hidden="true">
-            <div>
-              <span>1997</span>
-              <strong>Skynet</strong>
-            </div>
-            <div>
-              <span>2028</span>
-              <strong>AGI?</strong>
-            </div>
-            <div>
-              <span>2035</span>
-              <strong>VIKI</strong>
-            </div>
-            <div>
-              <span>2031</span>
-              <strong>ASI?</strong>
+            <p>把现实预测和科幻节点放进同一条时间带，像翻一卷“人类对 AI 的想象史”。</p>
+            <div class="concept-tags">
+              <span>故事感强</span>
+              <span>适合彩蛋区</span>
+              <span>传播友好</span>
             </div>
           </div>
-          <ul class="concept-notes">
-            <li>最有故事感</li>
-            <li>适合做专题页</li>
-            <li>首页可能略复杂</li>
-          </ul>
+          <div class="preview-surface reel-surface" aria-hidden="true">
+            <div class="reel-track">
+              <div><span class="mini-symbol hal"></span><b>2001</b><small>HAL</small></div>
+              <div><span class="mini-symbol skynet"></span><b>1997</b><small>Skynet</small></div>
+              <div><span class="mini-symbol agi"></span><b>2028</b><small>AGI?</small></div>
+              <div><span class="mini-symbol matrix"></span><b>2139</b><small>Machines</small></div>
+            </div>
+          </div>
+          <p class="concept-verdict">推荐用于科幻彩蛋模块：它不会抢主钟的戏，但能让页面多一个很好玩的记忆点。</p>
         </article>
       </section>
     </main>

@@ -245,7 +245,8 @@ async function allVotes() {
 
 async function fetchJson(path, fallback) {
   try {
-    const response = await fetch(path);
+    const separator = path.includes("?") ? "&" : "?";
+    const response = await fetch(`${path}${separator}v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`Could not load ${path}`);
     return await response.json();
   } catch {
@@ -288,11 +289,21 @@ async function renderLanguage() {
 function renderSignals() {
   const list = document.querySelector("#signal-list");
   list.innerHTML = events
-    .map(
-      (item) => `
+    .map((item) => {
+      const persona = item.persona || {};
+      return `
         <article class="signal-card">
           <span class="signal-date">${item.date}</span>
+          <div class="signal-avatar ${persona.image ? "has-image" : ""} ${persona.tone || ""} avatar-${persona.avatar || "default"}" aria-hidden="true">
+            ${persona.image ? `<img src="${persona.image}" alt="" loading="lazy" />` : ""}
+            <span>${persona.initials || item.target}</span>
+          </div>
           <div>
+            ${
+              persona.name
+                ? `<p class="signal-person">${persona.name}<span>${persona.nickname?.[language] || ""}</span></p>`
+                : ""
+            }
             <strong>${item.title[language]}</strong>
             <p>${item.body[language]}</p>
             <div class="signal-meta">
@@ -302,8 +313,8 @@ function renderSignals() {
           </div>
           <span class="pill delta ${item.deltaDays > 0 ? "slow" : ""}">${formatDelta(item.deltaDays)}</span>
         </article>
-      `,
-    )
+      `;
+    })
     .join("");
 }
 
@@ -314,6 +325,7 @@ function renderFictionTimeline() {
     .map(
       (item) => `
         <article class="fiction-item" tabindex="0">
+          <span class="fiction-symbol ${item.symbol || ""}" aria-hidden="true"></span>
           <span class="fiction-year">${item.year}</span>
           <strong>${language === "zh" ? item.workZh || item.work : item.work}</strong>
           <small>${item.ai}</small>

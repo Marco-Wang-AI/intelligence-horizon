@@ -16,6 +16,17 @@
       "en": "A frontier-lab leader frames AGI as something to prepare for soon, not someday.",
       "zh": "前沿实验室负责人把 AGI 说成了需要尽快准备的事，而不是很遥远的概念。"
     },
+    "persona": {
+      "initials": "DH",
+      "name": "Demis Hassabis",
+      "nickname": {
+        "en": "the chess-brain optimist",
+        "zh": "棋手型乐观派"
+      },
+      "avatar": "demis",
+      "image": "./assets/avatars/demis-cartoon.png",
+      "tone": "green"
+    },
     "source": {
       "name": "Axios",
       "url": "https://www.axios.com/2026/05/26/deepmind-ceo-demis-hassabis"
@@ -39,6 +50,17 @@
       "en": "A strong public confidence marker, though not the same thing as shipping it.",
       "zh": "这是一个很强的公开信心信号，但还不等于已经真正做出来。"
     },
+    "persona": {
+      "initials": "OA",
+      "name": "OpenAI",
+      "nickname": {
+        "en": "lab confidence meter",
+        "zh": "实验室信心表"
+      },
+      "avatar": "openai",
+      "image": "./assets/avatars/openai-lab-mascot.png",
+      "tone": "blue"
+    },
     "source": {
       "name": "OpenAI / press coverage",
       "url": "https://techcrunch.com/2025/01/05/openai-is-beginning-to-turn-its-attention-to-superintelligence/"
@@ -46,8 +68,8 @@
     "category": "frontier_lab_signal"
   },
   {
-    "id": "coding-agents-daily-tools-2024-2026",
-    "date": "2024-2026",
+    "id": "coding-agents-daily-tools-2026",
+    "date": "2026",
     "target": "AGI",
     "deltaDays": -60,
     "confidence": {
@@ -55,16 +77,27 @@
       "zh": "低"
     },
     "title": {
-      "en": "Coding agents become useful daily tools",
-      "zh": "编码智能体成为日常可用工具"
+      "en": "OpenClaw turns coding agents into a mascot moment",
+      "zh": "OpenClaw 让编码智能体有了“小龙虾时刻”"
     },
     "body": {
-      "en": "Coding agents make autonomy feel less like a demo and more like a daily workflow.",
-      "zh": "编码智能体让“自主执行”不再只是演示，而是开始进入日常工作流。"
+      "en": "Open-source coding agents make autonomy feel less like a demo and more like a daily workflow.",
+      "zh": "开源编码智能体让“自主执行”不再只是演示，而是开始进入日常工作流。"
+    },
+    "persona": {
+      "initials": "OC",
+      "name": "OpenClaw",
+      "nickname": {
+        "en": "the lobster agent",
+        "zh": "龙虾智能体"
+      },
+      "avatar": "agent",
+      "image": "./assets/avatars/coding-agent.png",
+      "tone": "coral"
     },
     "source": {
-      "name": "Product trend",
-      "url": ""
+      "name": "OpenClaw",
+      "url": "https://www.getopenclaw.ai/openclaw-founder"
     },
     "category": "product_capability"
   },
@@ -85,10 +118,157 @@
       "en": "Leaderboards are useful, but the clock should not chase every benchmark headline.",
       "zh": "排行榜有参考价值，但这只钟不能每看到一个榜单标题就跟着乱跳。"
     },
+    "persona": {
+      "initials": "MD",
+      "name": "Method desk",
+      "nickname": {
+        "en": "the brake pedal",
+        "zh": "刹车踏板"
+      },
+      "avatar": "method",
+      "image": "./assets/avatars/method-analyst.png",
+      "tone": "yellow"
+    },
     "source": {
       "name": "Method note",
       "url": ""
     },
     "category": "method_caution"
+  },
+  {
+    "id": "luo-fuli-two-year-agi",
+    "date": "2026-05",
+    "target": "AGI",
+    "deltaDays": -120,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Luo Fuli reportedly expects AGI within two years",
+      "zh": "罗福莉据报道认为 AGI 可能在两年内到来"
+    },
+    "body": {
+      "en": "A direct near-term AGI signal from China's model-builder community, especially notable after the agent wave.",
+      "zh": "这是来自中国模型一线的一条近期期限信号，尤其适合放在智能体浪潮之后观察。"
+    },
+    "persona": {
+      "initials": "LF",
+      "name": "Luo Fuli",
+      "nickname": {
+        "en": "the near-term model scientist",
+        "zh": "近期期限派模型科学家"
+      },
+      "avatar": "luo",
+      "image": "./assets/avatars/luo-fuli.png",
+      "tone": "green"
+    },
+    "source": {
+      "name": "36Kr / Jiemian",
+      "url": "https://www.36kr.com/p/3784899616535048"
+    },
+    "category": "china_expert_prediction"
+  },
+  {
+    "id": "liang-wenfeng-agi-as-goal",
+    "date": "2025-02",
+    "target": "AGI",
+    "deltaDays": -45,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Liang Wenfeng frames AGI as the long-game goal",
+      "zh": "梁文锋把 AGI 放在长期技术目标里"
+    },
+    "body": {
+      "en": "DeepSeek's open-model efficiency and reasoning progress pull the clock forward, even without a precise arrival year.",
+      "zh": "DeepSeek 的开源效率和推理能力进展会把钟往前拨，但它不是一个精确年份预测。"
+    },
+    "persona": {
+      "initials": "LW",
+      "name": "Liang Wenfeng",
+      "nickname": {
+        "en": "the efficiency frontier",
+        "zh": "效率边界派"
+      },
+      "avatar": "liang",
+      "image": "./assets/avatars/liang-wenfeng.png",
+      "tone": "blue"
+    },
+    "source": {
+      "name": "MR Online / GIGAZINE",
+      "url": "https://mronline.org/2025/02/07/interview-with-deepseek-founder-were-done-following/"
+    },
+    "category": "china_frontier_lab_signal"
+  },
+  {
+    "id": "yang-zhilin-agentic-k2",
+    "date": "2025-07",
+    "target": "AGI",
+    "deltaDays": -60,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Yang Zhilin pushes the agentic LLM route",
+      "zh": "杨植麟押注 Agentic LLM 路线"
+    },
+    "body": {
+      "en": "Kimi K2 and agentic model discussions make general-purpose AI feel more like a workflow layer, not only a chat box.",
+      "zh": "Kimi K2 和 Agentic LLM 的讨论，让通用 AI 更像工作流底座，而不只是聊天框。"
+    },
+    "persona": {
+      "initials": "YZ",
+      "name": "Yang Zhilin",
+      "nickname": {
+        "en": "the long-context operator",
+        "zh": "长上下文操盘手"
+      },
+      "avatar": "yang",
+      "image": "./assets/avatars/yang-zhilin.png",
+      "tone": "coral"
+    },
+    "source": {
+      "name": "BAAI / Podwise",
+      "url": "https://hub.baai.ac.cn/view/38119"
+    },
+    "category": "china_product_capability"
+  },
+  {
+    "id": "zhang-peng-asi-caution",
+    "date": "2025-10",
+    "target": "ASI",
+    "deltaDays": 90,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Zhipu's Zhang Peng is cautious on super-AI by 2030",
+      "zh": "智谱张鹏对 2030 前超级 AI 更谨慎"
+    },
+    "body": {
+      "en": "This is a useful counterweight: fast model progress does not automatically mean near-term ASI.",
+      "zh": "这是一条有用的刹车信号：模型进展很快，不等于 ASI 马上就到。"
+    },
+    "persona": {
+      "initials": "ZP",
+      "name": "Zhang Peng",
+      "nickname": {
+        "en": "the ASI brake pedal",
+        "zh": "ASI 刹车踏板"
+      },
+      "avatar": "zhang",
+      "image": "./assets/avatars/zhang-peng.png",
+      "tone": "yellow"
+    },
+    "source": {
+      "name": "ITHome / The Paper",
+      "url": "https://www.ithome.com/0/886/980.htm"
+    },
+    "category": "china_method_caution"
   }
 ]

@@ -4,6 +4,7 @@
     "work": "Terminator 2: Judgment Day",
     "workZh": "终结者 2：审判日",
     "ai": "Skynet",
+    "symbol": "skynet",
     "source": {
       "name": "U.S. GAO",
       "url": "https://www.gao.gov/blog/2019/08/29/artificial-intelligence-still-a-long-way-from-judgment-day"
@@ -22,6 +23,7 @@
     "work": "2001: A Space Odyssey",
     "workZh": "2001 太空漫游",
     "ai": "HAL 9000",
+    "symbol": "hal",
     "source": {
       "name": "Britannica",
       "url": "https://www.britannica.com/topic/HAL-9000"
@@ -40,6 +42,7 @@
     "work": "Blade Runner",
     "workZh": "银翼杀手",
     "ai": "Replicants",
+    "symbol": "blade",
     "source": {
       "name": "Digital Trends",
       "url": "https://www.digitaltrends.com/cool-tech/how-well-did-blade-runner-predict-tech-2019/"
@@ -58,6 +61,7 @@
     "work": "I, Robot",
     "workZh": "我，机器人",
     "ai": "VIKI",
+    "symbol": "robot",
     "source": {
       "name": "Tom's Guide",
       "url": "https://www.tomsguide.com/home/smart-home/heres-what-your-home-robot-will-actually-be-like-by-2035"
@@ -76,6 +80,7 @@
     "work": "Detroit: Become Human",
     "workZh": "底特律：变人",
     "ai": "Androids",
+    "symbol": "detroit",
     "source": {
       "name": "TIME",
       "url": "https://time.com/5250684/detroit-become-human-hands-on/"
@@ -94,6 +99,7 @@
     "work": "Westworld",
     "workZh": "西部世界",
     "ai": "Hosts",
+    "symbol": "maze",
     "source": {
       "name": "Westworld Wiki",
       "url": "https://westworld.fandom.com/wiki/Timeline"
@@ -112,6 +118,7 @@
     "work": "The Matrix",
     "workZh": "黑客帝国",
     "ai": "The Machines",
+    "symbol": "matrix",
     "source": {
       "name": "Matrix Wiki",
       "url": "https://matrix.fandom.com/wiki/Machine_War"

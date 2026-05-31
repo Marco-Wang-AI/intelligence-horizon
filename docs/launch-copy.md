@@ -4,16 +4,17 @@
 
 ### Version 1
 
-Built a small thing: Almost O'Clock.
+Built a tiny bilingual thing: Almost O'Clock.
 
-It tracks AGI / ASI timelines without the doomer fog:
+Not an AI doomsday clock. More like a playful AGI / ASI clock with receipts.
 
+It tracks:
 - expert forecasts
-- product and capability signals
+- product signals
 - crowd guesses
-- one-sentence definitions of AGI and ASI
+- sci-fi AI dates
 
-Not a prophecy. More like a public clock with receipts.
+Vote, disagree, or submit a better signal.
 
 https://marco-wang-ai.github.io/intelligence-horizon/
 
@@ -30,6 +31,25 @@ https://github.com/Marco-Wang-AI/intelligence-horizon
 
 Live site:
 https://marco-wang-ai.github.io/intelligence-horizon/
+
+## 小红书
+
+我做了一个「不吓人的 AGI / ASI 小钟」。
+
+名字叫：快了钟 / Almost O'Clock。
+
+它不是预测未来的水晶球，也不是 AI 末日钟，只是把这些东西放到一起看：
+
+- 专家说 AGI 还有多久
+- 普通人觉得 AGI 还有多久
+- 科幻作品里 AI 都是哪年觉醒的
+- 最近哪些产品和事件让这只钟往前/往后拨了一点
+
+轻松玩一下，也欢迎投票和提建议。
+
+https://marco-wang-ai.github.io/intelligence-horizon/
+
+#AI #AGI #人工智能 #独立开发 #开源项目
 
 ## 朋友圈 / 微信
 
