@@ -296,6 +296,7 @@
         "zh": "加速警报派"
       },
       "avatar": "musk",
+      "image": "./assets/avatars/elon-musk.png",
       "tone": "coral"
     },
     "source": {
@@ -329,6 +330,7 @@
         "zh": "实用主义现实派"
       },
       "avatar": "ng",
+      "image": "./assets/avatars/andrew-ng.png",
       "tone": "blue"
     },
     "source": {
@@ -362,6 +364,7 @@
         "zh": "世界模型怀疑派"
       },
       "avatar": "lecun",
+      "image": "./assets/avatars/yann-lecun.png",
       "tone": "green"
     },
     "source": {
@@ -395,6 +398,7 @@
         "zh": "皮衣算力多头"
       },
       "avatar": "huang",
+      "image": "./assets/avatars/jensen-huang.png",
       "tone": "yellow"
     },
     "source": {

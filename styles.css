@@ -414,6 +414,22 @@ h3 {
   pointer-events: none;
 }
 
+.signal-radar::after {
+  content: "";
+  position: absolute;
+  inset: 7%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 22px,
+    rgba(47, 139, 145, 0.12) 23px 24px,
+    transparent 25px 45px
+  );
+  mask: radial-gradient(circle, transparent 0 18%, black 19% 82%, transparent 83%);
+  opacity: 0.86;
+  pointer-events: none;
+}
+
 .radar-ring,
 .radar-axis,
 .radar-sweep {
@@ -422,6 +438,7 @@ h3 {
 }
 
 .radar-ring {
+  z-index: 1;
   border: 1px solid rgba(47, 139, 145, 0.24);
   border-radius: 50%;
 }
@@ -441,6 +458,7 @@ h3 {
 .radar-axis {
   left: 50%;
   top: 12%;
+  z-index: 1;
   width: 1px;
   height: 76%;
   background: rgba(47, 139, 145, 0.16);
@@ -452,6 +470,7 @@ h3 {
 
 .radar-sweep {
   inset: 0;
+  z-index: 2;
   border-radius: 50%;
   background: conic-gradient(from 316deg, rgba(232, 121, 97, 0.32), rgba(242, 189, 87, 0.13) 34deg, transparent 72deg);
   animation: radar-sweep 8.5s linear infinite;
