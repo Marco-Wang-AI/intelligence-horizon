@@ -270,5 +270,137 @@
       "url": "https://www.ithome.com/0/886/980.htm"
     },
     "category": "china_method_caution"
+  },
+  {
+    "id": "musk-smarter-than-human-2024-04",
+    "date": "2024-04",
+    "target": "ASI",
+    "deltaDays": -150,
+    "confidence": {
+      "en": "low",
+      "zh": "低"
+    },
+    "title": {
+      "en": "Elon Musk says AI could be smarter than any human very soon",
+      "zh": "马斯克称 AI 可能很快超过任何单个人类"
+    },
+    "body": {
+      "en": "A strong acceleration signal, but with low confidence: 'smarter than any one human' is not the same as stable ASI.",
+      "zh": "这是一个很激进的拨快信号，但置信度要低一些：超过单个人类不等于稳定的 ASI。"
+    },
+    "persona": {
+      "initials": "EM",
+      "name": "Elon Musk",
+      "nickname": {
+        "en": "the acceleration alarm bell",
+        "zh": "加速警报派"
+      },
+      "avatar": "musk",
+      "tone": "coral"
+    },
+    "source": {
+      "name": "Ars Technica / Reuters interview coverage",
+      "url": "https://arstechnica.com/information-technology/2024/04/elon-musk-ai-will-be-smarter-than-any-human-around-the-end-of-next-year/"
+    },
+    "category": "asi_acceleration_signal"
+  },
+  {
+    "id": "ng-agi-decades-away-2026-03",
+    "date": "2026-03",
+    "target": "ASI",
+    "deltaDays": 240,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Andrew Ng says true AGI is still many decades away",
+      "zh": "吴恩达认为真正 AGI 仍可能需要很多十年"
+    },
+    "body": {
+      "en": "If true AGI is still many decades away, near-term ASI should get a serious brake.",
+      "zh": "如果真正 AGI 仍要很多十年，那么近期 ASI 就应该明显往后拨。"
+    },
+    "persona": {
+      "initials": "AN",
+      "name": "Andrew Ng",
+      "nickname": {
+        "en": "the practical AI realist",
+        "zh": "实用主义现实派"
+      },
+      "avatar": "ng",
+      "tone": "blue"
+    },
+    "source": {
+      "name": "Fast Company",
+      "url": "https://www.fastcompany.com/91499247/andrew-ng-agi-decades-away-interview"
+    },
+    "category": "asi_caution_signal"
+  },
+  {
+    "id": "lecun-llms-not-agi-2025-02",
+    "date": "2025-02",
+    "target": "ASI",
+    "deltaDays": 180,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Yann LeCun argues current generative AI is not the path to AGI",
+      "zh": "杨乐昆认为当前生成式 AI 不是通向 AGI 的路径"
+    },
+    "body": {
+      "en": "A model-architecture caution signal: if today's LLM path is insufficient for human-level AI, ASI timelines should widen.",
+      "zh": "这是一条架构层面的刹车信号：如果今天的 LLM 路线不足以到达人类级智能，ASI 时间线也应该拉宽。"
+    },
+    "persona": {
+      "initials": "YL",
+      "name": "Yann LeCun",
+      "nickname": {
+        "en": "the world-model skeptic",
+        "zh": "世界模型怀疑派"
+      },
+      "avatar": "lecun",
+      "tone": "green"
+    },
+    "source": {
+      "name": "Heise Online",
+      "url": "https://www.heise.de/en/article/Meta-s-head-of-AI-Yann-LeCun-does-not-believe-in-the-future-of-generative-AI-10276181.html"
+    },
+    "category": "asi_caution_signal"
+  },
+  {
+    "id": "huang-agi-five-years-2024-03",
+    "date": "2024-03",
+    "target": "AGI",
+    "deltaDays": -45,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "Jensen Huang says AGI could arrive within five years under test-based definitions",
+      "zh": "黄仁勋称按测试定义 AGI 可能五年内到来"
+    },
+    "body": {
+      "en": "This is an AGI-forward signal rather than a clean ASI forecast, so it nudges AGI but does not directly set the ASI date.",
+      "zh": "这更像 AGI 拨快信号，不是严格的 ASI 预测，所以它拨动 AGI，而不直接设定 ASI 年份。"
+    },
+    "persona": {
+      "initials": "JH",
+      "name": "Jensen Huang",
+      "nickname": {
+        "en": "the leather-jacket compute bull",
+        "zh": "皮衣算力多头"
+      },
+      "avatar": "huang",
+      "tone": "yellow"
+    },
+    "source": {
+      "name": "Reuters via Investing.com",
+      "url": "https://uk.investing.com/news/stock-market-news/nvidia-ceo-says-ai-could-pass-human-tests-in-five-years-3362688"
+    },
+    "category": "expert_prediction"
   }
 ]

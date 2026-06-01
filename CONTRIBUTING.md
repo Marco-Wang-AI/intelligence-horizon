@@ -2,7 +2,7 @@
 
 [中文贡献说明](./CONTRIBUTING.zh-CN.md)
 
-Thanks for helping move the clock carefully.
+Thanks for helping move the radar carefully.
 
 ## Good Contributions
 
@@ -38,7 +38,7 @@ Short counterargument.
 
 ## Scoring Notes
 
-The clock should not move just because something feels exciting.
+The radar should not move just because something feels exciting.
 
 Useful signals usually include at least one of these:
 
