@@ -1,6 +1,6 @@
-# Almost O'Clock / 快了钟
+# AGI Radar / AGI 小雷达
 
-一个轻松、不吓人的 AGI / ASI 小钟。
+一个轻松、不吓人的 AGI / ASI 小雷达。
 
 [English README](./README.md)
 

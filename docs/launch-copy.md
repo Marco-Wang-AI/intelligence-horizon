@@ -4,16 +4,16 @@
 
 ### Version 1
 
-Built a tiny bilingual thing: Almost O'Clock.
+Built a tiny bilingual thing: AGI Radar.
 
-Not an AI doomsday clock. More like a playful AGI / ASI clock with receipts.
+Not an AI doomsday clock. More like a playful AGI / ASI radar with receipts.
 
 It tracks:
 - expert forecasts
 - product signals
 - crowd guesses
 - sci-fi AI dates
-- a little radar for what just moved the clock
+- a little radar for what just moved the timeline
 
 Vote, disagree, or submit a better signal.
 
@@ -23,9 +23,9 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 
 Everyone keeps asking: are we almost at AGI?
 
-So I made Almost O'Clock, a bilingual AGI / ASI clock.
+So I made AGI Radar, a bilingual AGI / ASI signal tracker.
 
-Vote on the year, argue about the definition, and suggest what should move the clock.
+Vote on the year, argue about the definition, and suggest what should move the radar.
 
 Open source:
 https://github.com/Marco-Wang-AI/intelligence-horizon
@@ -35,17 +35,17 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 
 ## 小红书
 
-我做了一个「不吓人的 AGI / ASI 小钟」。
+我做了一个「不吓人的 AGI / ASI 小雷达」。
 
-名字叫：快了钟 / Almost O'Clock。
+名字叫：AGI 小雷达 / AGI Radar。
 
 它不是预测未来的水晶球，也不是 AI 末日钟，只是把这些东西放到一起看：
 
 - 专家说 AGI 还有多久
 - 普通人觉得 AGI 还有多久
-- 一只会闪的小雷达，看看最近什么信号把钟拨快/拨慢了
+- 一只会闪的小雷达，看看最近什么信号让时间线往前/往后了
 - 科幻作品里 AI 都是哪年觉醒的
-- 最近哪些产品和事件让这只钟往前/往后拨了一点
+- 最近哪些产品和事件让时间线往前/往后了一点
 
 轻松玩一下，也欢迎投票和提建议。
 
@@ -57,7 +57,7 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 
 ### 版本 1
 
-做了一个小项目，叫「快了钟」。
+做了一个小项目，叫「AGI 小雷达」。
 
 它不是 AI 末日钟，也不想制造焦虑。就是想用一个轻松一点的方式，记录大家都在关心的问题：
 
@@ -75,7 +75,7 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 
 以前大家常说 AGI 还有五年，现在越来越多人开始说“两年内”“几年内”。
 
-所以我做了一个轻松版的 AGI / ASI 小钟：快了钟。
+所以我做了一个轻松版的 AGI / ASI 小雷达。
 
 你可以投票预测时间，也可以用一句话定义你心里的 AGI / ASI。
 

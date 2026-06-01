@@ -1,6 +1,6 @@
-# Almost O'Clock / 快了钟
+# AGI Radar / AGI 小雷达
 
-A bilingual, open AGI and ASI clock.
+A bilingual, open AGI and ASI radar.
 
 [中文说明](./README.zh-CN.md)
 
@@ -15,8 +15,8 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 
 - Static bilingual website.
 - Light visual identity.
-- Two radar-style clocks for AGI and ASI signals.
-- Clock notes with direction, confidence, and clock movement.
+- Two radar panels for AGI and ASI signals.
+- Signal notes with direction, confidence, and timeline movement.
 - A sci-fi timeline for fictional AI milestones.
 - Local public-vote prototype stored in the browser.
 - Optional one-sentence AGI and ASI definition submissions.
@@ -91,7 +91,7 @@ Pull requests also have a short checklist so contributors remember sources, bili
 ## Contribution Ideas
 
 - Add a signal with a public source.
-- Debate a clock movement delta.
+- Debate a timeline movement delta.
 - Translate copy.
 - Improve the public-vote questions.
 - Add a backend for public vote collection.

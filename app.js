@@ -5,23 +5,23 @@ const copy = {
     navSignals: "Updates",
     navPulse: "Vote",
     navOpen: "Open",
-    eyebrow: "Almost, not alarming.",
-    heroTitle: "Almost O'Clock",
+    eyebrow: "Signals, not sirens.",
+    heroTitle: "AGI Radar",
     heroCopy:
-      "A lighthearted clock for the question everyone keeps asking: are we almost there?",
+      "A lighthearted radar for the question everyone keeps asking: are we almost there?",
     voteCta: "Add your forecast",
     signalsCta: "See what changed",
-    agiLabel: "AGI clock",
+    agiLabel: "AGI radar",
     expertLabel: "Expert forecast",
     publicLabelShort: "Public take",
-    radarHint: "Signals move toward the center as the clock feels closer.",
+    radarHint: "Signals move toward the center as the timeline gets closer.",
     radarZone: "Almost zone",
     clockPositionLabel: "Signal center",
     clockKeyEarlier: "earlier",
     clockKeyLater: "later",
     agiNote: "A quick compare: expert forecasts vs. public intuition.",
     agiMove: "7 months earlier this quarter",
-    asiLabel: "ASI clock",
+    asiLabel: "ASI radar",
     asiNote: "A wider, more uncertain band for early superintelligence.",
     asiMove: "Still high uncertainty",
     definitionsEyebrow: "Working definitions",
@@ -68,7 +68,7 @@ const copy = {
     conceptsCta: "View UI concepts",
     readmeCta: "Open README",
     clockEventHint: "Tap a bead to see what moved the clock.",
-    footer: "Receipts, guesses, and a clock that keeps changing.",
+    footer: "Receipts, guesses, and a radar that keeps changing.",
     submitted: "Vote added",
   },
   zh: {
@@ -77,23 +77,23 @@ const copy = {
     navSignals: "动态",
     navPulse: "投票",
     navOpen: "开源",
-    eyebrow: "快了，但别慌。",
-    heroTitle: "快了钟",
+    eyebrow: "信号来了，别慌。",
+    heroTitle: "AGI 小雷达",
     heroCopy:
-      "一个轻松的小钟，记录大家都关心的事：AGI / ASI 到底是不是快来了？",
+      "一个轻松的小雷达，记录大家都关心的事：AGI / ASI 到底是不是快来了？",
     voteCta: "加入你的预测",
     signalsCta: "看看为什么变了",
-    agiLabel: "AGI 时钟",
+    agiLabel: "AGI 雷达",
     expertLabel: "专家预测",
     publicLabelShort: "大众感受",
-    radarHint: "信号越靠近中心，代表这只钟越觉得“快了”。",
+    radarHint: "信号越靠近中心，代表时间线越接近“快了”。",
     radarZone: "快了区",
     clockPositionLabel: "信号中心",
     clockKeyEarlier: "往前拨",
     clockKeyLater: "往后拨",
     agiNote: "一边看专家预测，一边看大众感受。",
     agiMove: "本季度拨快 7 个月",
-    asiLabel: "ASI 时钟",
+    asiLabel: "ASI 雷达",
     asiNote: "超级智能更难判断，所以这里的不确定性更高。",
     asiMove: "不确定性仍然很高",
     definitionsEyebrow: "工作定义",
@@ -137,7 +137,7 @@ const copy = {
     conceptsCta: "查看 UI 方案",
     readmeCta: "打开 README",
     clockEventHint: "点一个时间珠，看看这次为什么拨钟。",
-    footer: "记录证据、猜想和一只会变的钟。",
+    footer: "记录证据、猜想和一只会变的小雷达。",
     submitted: "已加入投票",
   },
 };
@@ -266,7 +266,7 @@ function median(values) {
 }
 
 function formatYear(value) {
-  return Number(value).toFixed(1);
+  return String(Math.round(Number(value)));
 }
 
 function formatDelta(days) {

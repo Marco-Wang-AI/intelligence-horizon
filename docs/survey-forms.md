@@ -7,11 +7,11 @@ V1 uses two external forms:
 
 These forms collect responses in their own dashboards. They do not automatically update the website. For launch, export CSV manually when needed; later, connect a database or scheduled import if public live stats become important.
 
-## 中文问卷：快了钟 AGI / ASI 小调查
+## 中文问卷：AGI 小雷达：AGI / ASI 小调查
 
 说明文案：
 
-> 这是「快了钟」的一个轻量小调查。我们想看看大家对 AGI / ASI 到来时间的直觉，以及大家心里对这些词的定义。答案只用于项目展示和后续统计，不需要留下真实姓名。
+> 这是「AGI 小雷达」的一个轻量小调查。我们想看看大家对 AGI / ASI 到来时间的直觉，以及大家心里对这些词的定义。答案只用于项目展示和后续统计，不需要留下真实姓名。
 
 题目：
 
@@ -81,13 +81,13 @@ These forms collect responses in their own dashboards. They do not automatically
 
 结束语：
 
-> 谢谢！这不是严肃预测，只是一只会随着证据和大家直觉变化的小钟。欢迎回到「快了钟」看看大家怎么想。
+> 谢谢！这不是严肃预测，只是一个会随着证据和大家直觉变化的小雷达。欢迎回到「AGI 小雷达」看看大家怎么想。
 
-## English Form: Almost O'Clock AGI / ASI Pulse
+## English Form: AGI Radar: AGI / ASI Pulse
 
 Description:
 
-> Almost O'Clock is a playful AGI / ASI clock. This short survey asks when you think AGI and ASI might arrive, and what these words mean to you. Responses may be used in aggregate on the project website. No real name required.
+> AGI Radar is a playful AGI / ASI signal tracker. This short survey asks when you think AGI and ASI might arrive, and what these words mean to you. Responses may be used in aggregate on the project website. No real name required.
 
 Questions:
 
@@ -153,8 +153,8 @@ Questions:
    - 45+
    - Prefer not to say
 
-10. Optional: what signal, launch, interview, or expert claim should move the clock?
+10. Optional: what signal, launch, interview, or expert claim should move the radar?
 
 Closing message:
 
-> Thanks! This is not a prophecy, just a changing clock with receipts, guesses, and public intuition.
+> Thanks! This is not a prophecy, just a changing radar with receipts, guesses, and public intuition.

@@ -1,4 +1,4 @@
-# Contributing to Almost O'Clock
+# Contributing to AGI Radar
 
 [中文贡献说明](./CONTRIBUTING.zh-CN.md)
 

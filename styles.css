@@ -463,24 +463,31 @@ h3 {
   top: 50%;
   z-index: 4;
   display: grid;
-  gap: 4px;
-  min-width: 128px;
+  gap: 3px;
+  width: min(128px, 45%);
+  aspect-ratio: 1;
+  align-content: center;
   transform: translate(-50%, -50%);
-  border: 1px solid rgba(23, 33, 38, 0.1);
-  border-radius: 18px;
-  padding: 12px 15px;
-  background: rgba(255, 253, 248, 0.92);
+  border-radius: 50%;
+  padding: 12px;
+  background:
+    radial-gradient(circle, rgba(255, 253, 248, 0.74) 0 55%, rgba(255, 253, 248, 0.2) 68%, transparent 72%),
+    radial-gradient(circle, rgba(47, 139, 145, 0.1), transparent 62%);
   text-align: center;
-  box-shadow: 0 14px 34px rgba(34, 48, 54, 0.1);
+  backdrop-filter: blur(2px);
 }
 
 .radar-core small,
 .radar-core span {
   display: block;
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.58rem;
   font-weight: 840;
   text-transform: uppercase;
+}
+
+.radar-core h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
 }
 
 .radar-core span {
@@ -1509,7 +1516,7 @@ footer {
   }
 
   .hero-copy {
-    max-width: 100%;
+    max-width: min(100%, 330px);
     overflow-wrap: anywhere;
   }
 

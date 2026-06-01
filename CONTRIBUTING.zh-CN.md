@@ -1,4 +1,4 @@
-# 参与 Almost O'Clock / 快了钟
+# 参与 AGI Radar / AGI 小雷达
 
 [English version](./CONTRIBUTING.md)
 
