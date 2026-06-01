@@ -5,7 +5,7 @@ const copy = {
     navSignals: "Updates",
     navPulse: "Vote",
     navOpen: "Open",
-    eyebrow: "AGI / ASI, minus the doom",
+    eyebrow: "Almost, not alarming.",
     heroTitle: "Almost O'Clock",
     heroCopy:
       "A lighthearted clock for the question everyone keeps asking: are we almost there?",
@@ -55,7 +55,8 @@ const copy = {
     openTitle: "Open source, because arguing about timelines is better with receipts.",
     conceptsCta: "View UI concepts",
     readmeCta: "Open README",
-    footer: "No doom. Just receipts, guesses, and a clock that keeps changing.",
+    clockEventHint: "Tap a bead to see what moved the clock.",
+    footer: "Receipts, guesses, and a clock that keeps changing.",
     submitted: "Vote added",
   },
   zh: {
@@ -64,7 +65,7 @@ const copy = {
     navSignals: "动态",
     navPulse: "投票",
     navOpen: "开源",
-    eyebrow: "不吓人的 AGI / ASI 小钟",
+    eyebrow: "快了，但别慌。",
     heroTitle: "快了钟",
     heroCopy:
       "一个轻松的小钟，记录大家都关心的事：AGI / ASI 到底是不是快来了？",
@@ -111,7 +112,8 @@ const copy = {
     openTitle: "开源做这件事：大家可以带着来源来吵时间线。",
     conceptsCta: "查看 UI 方案",
     readmeCta: "打开 README",
-    footer: "不制造焦虑，只记录证据、猜想和一只会变的钟。",
+    clockEventHint: "点一个时间珠，看看这次为什么拨钟。",
+    footer: "记录证据、猜想和一只会变的钟。",
     submitted: "已加入投票",
   },
 };
@@ -239,6 +241,20 @@ function formatDelta(days) {
   return language === "zh" ? `${sign}${days} ${unit}` : `${sign}${days} ${unit}`;
 }
 
+function eventTimeValue(event) {
+  if (!event?.date || event.date === "Always") return -Infinity;
+  const parts = String(event.date).split("-").map(Number);
+  const year = Number.isFinite(parts[0]) ? parts[0] : 0;
+  const month = Number.isFinite(parts[1]) ? parts[1] : 12;
+  return year * 100 + month;
+}
+
+function sortedEvents() {
+  return events
+    .slice()
+    .sort((a, b) => eventTimeValue(b) - eventTimeValue(a) || Math.abs(b.deltaDays) - Math.abs(a.deltaDays));
+}
+
 async function allVotes() {
   return starterVotes.concat(await fetchPublicVotes());
 }
@@ -280,6 +296,7 @@ async function renderLanguage() {
   document.querySelectorAll(".lang-button").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === language);
   });
+  renderClockBeads();
   renderSignals();
   await renderDefinitions();
   renderFictionTimeline();
@@ -288,7 +305,7 @@ async function renderLanguage() {
 
 function renderSignals() {
   const list = document.querySelector("#signal-list");
-  list.innerHTML = events
+  list.innerHTML = sortedEvents()
     .map((item) => {
       const persona = item.persona || {};
       return `
@@ -316,6 +333,55 @@ function renderSignals() {
       `;
     })
     .join("");
+}
+
+function clockEventMarkup(item) {
+  const persona = item.persona || {};
+  return `
+    <p class="clock-event-kicker">${item.date} · ${persona.name || item.target}</p>
+    <strong>${item.title[language]}</strong>
+    <span class="pill delta ${item.deltaDays > 0 ? "slow" : ""}">${formatDelta(item.deltaDays)}</span>
+  `;
+}
+
+function renderClockBeads() {
+  ["AGI", "ASI"].forEach((target) => {
+    const lowerTarget = target.toLowerCase();
+    const beadList = document.querySelector(`#${lowerTarget}-beads`);
+    const detail = document.querySelector(`#${lowerTarget}-clock-event`);
+    if (!beadList || !detail) return;
+
+    const targetEvents = sortedEvents()
+      .filter((item) => item.target === target && item.date !== "Always")
+      .slice(0, 5);
+
+    if (!targetEvents.length) {
+      beadList.innerHTML = "";
+      detail.innerHTML = `<p>${copy[language].clockEventHint}</p>`;
+      return;
+    }
+
+    const activeId = beadList.dataset.activeId || targetEvents[0].id;
+    const active = targetEvents.find((item) => item.id === activeId) || targetEvents[0];
+    beadList.dataset.activeId = active.id;
+    beadList.innerHTML = targetEvents
+      .map((item, index) => {
+        const persona = item.persona || {};
+        return `
+          <button
+            class="clock-bead ${item.id === active.id ? "active" : ""} ${item.deltaDays > 0 ? "slow" : "fast"}"
+            type="button"
+            data-target="${target}"
+            data-event-id="${item.id}"
+            style="--bead-index: ${index}"
+            aria-label="${item.date} ${persona.name || item.title[language]}"
+            title="${item.date} · ${persona.name || item.title[language]}"
+          ></button>
+        `;
+      })
+      .join("");
+    detail.innerHTML = clockEventMarkup(active);
+  });
 }
 
 function renderFictionTimeline() {
@@ -377,6 +443,23 @@ document.querySelectorAll(".lang-button").forEach((button) => {
     language = button.dataset.lang;
     renderLanguage();
   });
+});
+
+document.querySelector(".dashboard").addEventListener("click", (event) => {
+  const bead = event.target.closest(".clock-bead");
+  if (!bead) return;
+  const target = bead.dataset.target;
+  const eventId = bead.dataset.eventId;
+  const lowerTarget = target.toLowerCase();
+  const beadList = document.querySelector(`#${lowerTarget}-beads`);
+  const detail = document.querySelector(`#${lowerTarget}-clock-event`);
+  const active = events.find((item) => item.id === eventId);
+  if (!beadList || !detail || !active) return;
+  beadList.dataset.activeId = eventId;
+  beadList.querySelectorAll(".clock-bead").forEach((node) => {
+    node.classList.toggle("active", node === bead);
+  });
+  detail.innerHTML = clockEventMarkup(active);
 });
 
 document.querySelector("#vote-form").addEventListener("submit", async (event) => {

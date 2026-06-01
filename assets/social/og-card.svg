@@ -20,7 +20,7 @@
     <text x="56" y="144" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="#17212b">Almost</text>
     <text x="56" y="216" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="#17212b">O'Clock</text>
     <text x="58" y="277" font-family="PingFang SC, Hiragino Sans GB, Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="#2e746f">快了钟</text>
-    <text x="58" y="324" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="22" font-weight="650" fill="#5f6b72">AGI / ASI, minus the doom</text>
+    <text x="58" y="324" font-family="Inter, Avenir Next, Helvetica, Arial, sans-serif" font-size="22" font-weight="650" fill="#5f6b72">Almost, not alarming.</text>
   </g>
   <g transform="translate(86 502)">
     <rect width="548" height="54" rx="27" fill="#17212b" opacity=".92"/>

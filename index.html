@@ -11,7 +11,7 @@
     <meta property="og:title" content="Almost O'Clock / 快了钟" />
     <meta
       property="og:description"
-      content="A playful AGI / ASI clock with expert signals, public forecasts, and sci-fi receipts."
+      content="Almost, not alarming: a playful AGI / ASI clock with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://marco-wang-ai.github.io/intelligence-horizon/" />
@@ -20,7 +20,7 @@
     <meta name="twitter:title" content="Almost O'Clock / 快了钟" />
     <meta
       name="twitter:description"
-      content="A playful AGI / ASI clock with expert signals, public forecasts, and sci-fi receipts."
+      content="Almost, not alarming: a playful AGI / ASI clock with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta name="twitter:image" content="https://marco-wang-ai.github.io/intelligence-horizon/assets/social/og-card.png" />
     <link rel="stylesheet" href="./styles.css?v=20260531" />
@@ -54,7 +54,7 @@
         </picture>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow" data-i18n="eyebrow">AGI / ASI, minus the doom</p>
+          <p class="eyebrow" data-i18n="eyebrow">Almost, not alarming.</p>
           <h1 id="hero-title" data-i18n="heroTitle">Almost O'Clock</h1>
           <p class="hero-copy" data-i18n="heroCopy">
             A lighthearted clock for the question everyone keeps asking: are we almost there?
@@ -75,6 +75,8 @@
           <div class="clock-ring" style="--progress: 62%" aria-hidden="true">
             <span></span>
           </div>
+          <div class="clock-beads" id="agi-beads" aria-label="AGI clock events"></div>
+          <div class="clock-event" id="agi-clock-event" aria-live="polite"></div>
           <dl class="clock-compare">
             <div>
               <dt data-i18n="expertLabel">Expert forecast</dt>
@@ -99,6 +101,8 @@
           <div class="clock-ring" style="--progress: 38%" aria-hidden="true">
             <span></span>
           </div>
+          <div class="clock-beads" id="asi-beads" aria-label="ASI clock events"></div>
+          <div class="clock-event" id="asi-clock-event" aria-live="polite"></div>
           <dl class="clock-compare">
             <div>
               <dt data-i18n="expertLabel">Expert forecast</dt>
