@@ -17,6 +17,8 @@
         </span>
       </a>
       <nav class="nav-links" aria-label="Concept navigation">
+        <a href="#radar">雷达盘</a>
+        <a href="#melt">日历钟</a>
         <a href="#gauge">信号仪表</a>
         <a href="#orbit">星图钟</a>
         <a href="#reel">时间胶片</a>
@@ -26,14 +28,88 @@
 
     <main>
       <section class="concept-hero">
-        <p class="eyebrow">Three clock directions</p>
-        <h1>三种更像“快了钟”的视觉方案</h1>
+        <p class="eyebrow">Clock directions</p>
+        <h1>更像“快了钟”的视觉方案</h1>
         <p>
           这版先看第一眼气质：不走末日警报，也不做严肃研究报告，而是做一只会收集预测、吐槽和科幻彩蛋的聪明小钟。
         </p>
       </section>
 
       <section class="concept-stack" aria-label="Clock UI concepts">
+        <article class="concept-card concept-radar" id="radar">
+          <div class="concept-copy">
+            <span class="option-kicker">New direction A</span>
+            <h2>雷达信号盘</h2>
+            <p>把“预测”理解成一圈圈靠近中心的信号。专家、产品发布、大众投票都是雷达上的光点，越靠近中心，越像“快了”。</p>
+            <div class="concept-tags">
+              <span>AI 感更强</span>
+              <span>事件天然可点</span>
+              <span>不容易误解成时针分针</span>
+            </div>
+          </div>
+          <div class="preview-surface radar-surface" aria-hidden="true">
+            <div class="radar-shell">
+              <div class="radar-frame">
+                <span class="radar-ring r1"></span>
+                <span class="radar-ring r2"></span>
+                <span class="radar-ring r3"></span>
+                <span class="radar-axis x"></span>
+                <span class="radar-axis y"></span>
+                <span class="radar-sweep"></span>
+                <span class="radar-blip b1"><b>OA</b><i>-120d</i></span>
+                <span class="radar-blip b2"><b>DM</b><i>-90d</i></span>
+                <span class="radar-blip b3"><b>DS</b><i>-45d</i></span>
+                <span class="radar-blip b4 public"><b>Vote</b><i>2029</i></span>
+                <div class="radar-center">
+                  <small>AGI estimate</small>
+                  <strong>2028.2</strong>
+                  <span>almost zone</span>
+                </div>
+              </div>
+              <div class="radar-read">
+                <span><b>专家预测</b><strong>2028.2</strong></span>
+                <span><b>大众感受</b><strong>2029.0</strong></span>
+              </div>
+            </div>
+          </div>
+          <p class="concept-verdict">优点是“事件珠可点击”这件事会变得更自然：每个光点就是一条拨钟记录。缺点是要把色彩做轻，否则容易走向战情室。</p>
+        </article>
+
+        <article class="concept-card concept-melt" id="melt">
+          <div class="concept-copy">
+            <span class="option-kicker">New direction B</span>
+            <h2>日历融化钟</h2>
+            <p>把时间做成一叠被 AI 信号“烤软”的日历页：年份不是冷冰冰的刻度，而是被一次次采访、产品发布和投票轻轻推近。</p>
+            <div class="concept-tags">
+              <span>更轻松</span>
+              <span>更像快了钟</span>
+              <span>适合传播图</span>
+            </div>
+          </div>
+          <div class="preview-surface melt-surface" aria-hidden="true">
+            <div class="melt-calendar">
+              <div class="calendar-stack">
+                <span class="year-card y2026">2026</span>
+                <span class="year-card y2027">2027</span>
+                <span class="year-card y2028">2028</span>
+                <span class="year-card y2029">2029</span>
+                <span class="year-card y2030">2030</span>
+              </div>
+              <div class="melt-face">
+                <small>Almost O'Clock</small>
+                <strong>2028.2</strong>
+                <span>快了，但别慌</span>
+              </div>
+              <div class="melt-notes">
+                <span class="note-card n1">Altman <b>-120d</b></span>
+                <span class="note-card n2">DeepMind <b>-90d</b></span>
+                <span class="note-card n3">Public <b>+0.8y</b></span>
+              </div>
+            </div>
+          </div>
+          <p class="concept-verdict">优点是轻松、有梗，和“快了钟”的名字很贴。缺点是如果做成首页主钟，需要补一点规则感，否则会更像插画而不是可交互组件。</p>
+        </article>
+
         <article class="concept-card concept-gauge" id="gauge">
           <div class="concept-copy">
             <span class="option-kicker">Option 1</span>

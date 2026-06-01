@@ -15,7 +15,7 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 
 - Static bilingual website.
 - Light visual identity.
-- Two horizon clocks: AGI and ASI.
+- Two radar-style clocks for AGI and ASI signals.
 - Clock notes with direction, confidence, and clock movement.
 - A sci-fi timeline for fictional AI milestones.
 - Local public-vote prototype stored in the browser.
@@ -24,8 +24,10 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 
 ## UI Concepts
 
-Three visual directions are available at `concepts.html`:
+Several visual directions are available at `concepts.html`:
 
+- Signal radar.
+- Melting calendar clock.
 - Dashboard clock.
 - Star-map clock.
 - Timeline film strip.

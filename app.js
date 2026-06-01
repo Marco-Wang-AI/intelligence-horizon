@@ -14,9 +14,9 @@ const copy = {
     agiLabel: "AGI clock",
     expertLabel: "Expert forecast",
     publicLabelShort: "Public take",
-    clockPositionLabel: "Countdown progress",
-    clockFar: "far",
-    clockAlmost: "almost",
+    radarHint: "Signals move toward the center as the clock feels closer.",
+    radarZone: "Almost zone",
+    clockPositionLabel: "Signal center",
     clockKeyEarlier: "earlier",
     clockKeyLater: "later",
     agiNote: "A quick compare: expert forecasts vs. public intuition.",
@@ -86,9 +86,9 @@ const copy = {
     agiLabel: "AGI 时钟",
     expertLabel: "专家预测",
     publicLabelShort: "大众感受",
-    clockPositionLabel: "倒计时进度",
-    clockFar: "还远",
-    clockAlmost: "快了",
+    radarHint: "信号越靠近中心，代表这只钟越觉得“快了”。",
+    radarZone: "快了区",
+    clockPositionLabel: "信号中心",
     clockKeyEarlier: "往前拨",
     clockKeyLater: "往后拨",
     agiNote: "一边看专家预测，一边看大众感受。",
@@ -414,6 +414,12 @@ function clockEventMarkup(item) {
 }
 
 function renderClockBeads() {
+  const radarPositions = [
+    { x: 74, y: 27 },
+    { x: 22, y: 38 },
+    { x: 70, y: 71 },
+    { x: 25, y: 76 },
+  ];
   ["AGI", "ASI"].forEach((target) => {
     const lowerTarget = target.toLowerCase();
     const beadList = document.querySelector(`#${lowerTarget}-beads`);
@@ -422,7 +428,7 @@ function renderClockBeads() {
 
     const targetEvents = sortedEvents()
       .filter((item) => item.target === target && item.date !== "Always")
-      .slice(0, 5);
+      .slice(0, 4);
 
     if (!targetEvents.length) {
       beadList.innerHTML = "";
@@ -436,16 +442,19 @@ function renderClockBeads() {
     beadList.innerHTML = targetEvents
       .map((item, index) => {
         const persona = item.persona || {};
+        const position = radarPositions[index % radarPositions.length];
         return `
           <button
             class="clock-bead ${item.id === active.id ? "active" : ""} ${item.deltaDays > 0 ? "slow" : "fast"}"
             type="button"
             data-target="${target}"
             data-event-id="${item.id}"
-            style="--bead-index: ${index}"
+            style="--bead-index: ${index}; --bead-x: ${position.x}%; --bead-y: ${position.y}%"
             aria-label="${item.date} ${persona.name || item.title[language]}"
             title="${item.date} · ${persona.name || item.title[language]}"
-          ></button>
+          >
+            <span>${persona.initials || target}</span>
+          </button>
         `;
       })
       .join("");

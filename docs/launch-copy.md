@@ -13,6 +13,7 @@ It tracks:
 - product signals
 - crowd guesses
 - sci-fi AI dates
+- a little radar for what just moved the clock
 
 Vote, disagree, or submit a better signal.
 
@@ -42,6 +43,7 @@ https://marco-wang-ai.github.io/intelligence-horizon/
 
 - 专家说 AGI 还有多久
 - 普通人觉得 AGI 还有多久
+- 一只会闪的小雷达，看看最近什么信号把钟拨快/拨慢了
 - 科幻作品里 AI 都是哪年觉醒的
 - 最近哪些产品和事件让这只钟往前/往后拨了一点
 

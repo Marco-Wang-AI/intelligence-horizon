@@ -293,8 +293,8 @@ h3 {
 .clock-panel {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 18px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(220px, 1fr);
+  gap: 16px 18px;
   align-content: space-between;
   overflow: hidden;
 }
@@ -327,9 +327,25 @@ h3 {
   text-transform: uppercase;
 }
 
-.clock-panel h2 {
+.clock-heading {
+  align-self: start;
+}
+
+.clock-heading p:not(.panel-label) {
+  max-width: 21rem;
   margin: 0;
-  font-size: clamp(2.7rem, 5vw, 4.4rem);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.clock-panel h2,
+.radar-core h2 {
+  margin: 0;
+  font-size: clamp(2.65rem, 5vw, 4.1rem);
+  line-height: 0.92;
+  font-variant-numeric: tabular-nums;
 }
 
 .clock-compare {
@@ -370,94 +386,109 @@ h3 {
   overflow-wrap: anywhere;
 }
 
-.clock-ring {
+.signal-radar {
   position: relative;
-  width: 126px;
-  height: 126px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(circle, var(--paper-strong) 0 45%, transparent 46%),
-    conic-gradient(var(--teal) var(--progress), #e8eeee 0);
-  box-shadow:
-    inset 0 0 0 1px rgba(23, 33, 38, 0.08),
-    0 18px 42px rgba(47, 139, 145, 0.16);
-}
-
-.asi .clock-ring {
-  background:
-    radial-gradient(circle, var(--paper-strong) 0 45%, transparent 46%),
-    conic-gradient(var(--teal) var(--progress), #e8eeee 0);
-  box-shadow:
-    inset 0 0 0 1px rgba(23, 33, 38, 0.08),
-    0 18px 42px rgba(47, 139, 145, 0.16);
-}
-
-.clock-ring span {
-  position: relative;
-  display: block;
-  width: 78px;
-  height: 78px;
+  grid-row: span 3;
+  justify-self: end;
+  width: min(270px, 100%);
+  aspect-ratio: 1;
+  border: 1px solid rgba(23, 33, 38, 0.08);
   border-radius: 50%;
   background:
-    radial-gradient(circle at center, var(--ink) 0 3px, transparent 4px),
-    repeating-conic-gradient(from -2deg, rgba(23, 33, 38, 0.34) 0 4deg, transparent 4deg 30deg),
-    var(--paper-strong);
-  border: 1px solid var(--line);
+    radial-gradient(circle at center, rgba(255, 253, 248, 0.94) 0 20%, transparent 21%),
+    radial-gradient(circle at center, rgba(47, 139, 145, 0.08) 0 var(--progress), transparent calc(var(--progress) + 1%)),
+    linear-gradient(145deg, rgba(255, 253, 248, 0.9), rgba(240, 247, 244, 0.86));
+  box-shadow:
+    inset 0 0 0 1px rgba(23, 33, 38, 0.04),
+    0 24px 62px rgba(34, 48, 54, 0.12);
+  overflow: hidden;
 }
 
-.clock-ring span::before,
-.clock-ring span::after {
+.signal-radar::before {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: 50%;
-  width: 3px;
-  border-radius: 999px;
-  transform-origin: 50% 100%;
+  inset: 8%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(from -4deg, rgba(23, 33, 38, 0.17) 0 1deg, transparent 1deg 14deg);
+  mask: radial-gradient(circle, transparent 0 71%, black 72%);
+  pointer-events: none;
 }
 
-.clock-ring span::before {
-  height: 25px;
-  background: var(--ink);
-  transform: translateX(-50%) rotate(48deg);
-  animation: tick-hand 18s linear infinite;
-}
-
-.clock-ring span::after {
-  height: 18px;
-  background: var(--teal);
-  transform: translateX(-50%) rotate(312deg);
-  animation: tick-hand 54s linear infinite reverse;
-}
-
-.asi .clock-ring span::after {
-  background: var(--teal);
-}
-
-.ring-label {
+.radar-ring,
+.radar-axis,
+.radar-sweep {
   position: absolute;
-  bottom: -3px;
+  pointer-events: none;
+}
+
+.radar-ring {
+  border: 1px solid rgba(47, 139, 145, 0.24);
+  border-radius: 50%;
+}
+
+.radar-ring.outer {
+  inset: 14%;
+}
+
+.radar-ring.middle {
+  inset: 29%;
+}
+
+.radar-ring.inner {
+  inset: 44%;
+}
+
+.radar-axis {
+  left: 50%;
+  top: 12%;
+  width: 1px;
+  height: 76%;
+  background: rgba(47, 139, 145, 0.16);
+}
+
+.radar-axis.horizontal {
+  transform: rotate(90deg);
+}
+
+.radar-sweep {
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 316deg, rgba(232, 121, 97, 0.32), rgba(242, 189, 87, 0.13) 34deg, transparent 72deg);
+  animation: radar-sweep 8.5s linear infinite;
+}
+
+.radar-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+  min-width: 128px;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(23, 33, 38, 0.1);
+  border-radius: 18px;
+  padding: 12px 15px;
+  background: rgba(255, 253, 248, 0.92);
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(34, 48, 54, 0.1);
+}
+
+.radar-core small,
+.radar-core span {
+  display: block;
   color: var(--muted);
-  font-size: 0.64rem;
-  font-style: normal;
-  font-weight: 820;
-  letter-spacing: 0;
+  font-size: 0.68rem;
+  font-weight: 840;
   text-transform: uppercase;
 }
 
-.ring-far {
-  left: 5px;
-}
-
-.ring-almost {
-  right: 0;
-  color: var(--teal);
+.radar-core span {
+  color: #ad4d38;
 }
 
 .clock-key {
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 12px;
@@ -494,52 +525,116 @@ h3 {
 }
 
 .clock-beads {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  min-height: 32px;
-  margin-top: -6px;
-  padding: 2px;
-}
-
-.clock-beads::before {
-  content: "";
-  flex: 1 1 42px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(23, 33, 38, 0.08), rgba(23, 33, 38, 0.22));
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .clock-bead {
-  position: relative;
-  width: 17px;
-  height: 17px;
-  flex: 0 0 17px;
-  border: 2px solid var(--paper-strong);
+  position: absolute;
+  left: var(--bead-x);
+  top: var(--bead-y);
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border: 1px solid rgba(173, 77, 56, 0.2);
   border-radius: 50%;
-  background: var(--coral);
+  padding: 0;
+  background: rgba(255, 253, 248, 0.9);
   box-shadow:
-    0 0 0 1px rgba(23, 33, 38, 0.12),
-    0 6px 14px rgba(34, 48, 54, 0.12);
+    0 8px 20px rgba(173, 77, 56, 0.1),
+    0 0 0 5px rgba(232, 121, 97, 0.08);
+  color: var(--ink);
   cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  animation: signal-pulse 5.2s ease-in-out infinite;
+  animation-delay: calc(var(--bead-index) * -1.15s);
   transition:
     transform 160ms ease,
     box-shadow 160ms ease,
     background 160ms ease;
 }
 
+.clock-bead::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 6px rgba(232, 121, 97, 0.12);
+}
+
 .clock-bead.slow {
+  border-color: rgba(39, 114, 150, 0.24);
+  box-shadow:
+    0 10px 24px rgba(39, 114, 150, 0.12),
+    0 0 0 5px rgba(92, 168, 214, 0.1);
+}
+
+.clock-bead.slow::before {
   background: var(--blue);
+  box-shadow: 0 0 0 6px rgba(92, 168, 214, 0.14);
+}
+
+.clock-bead span,
+.clock-bead::after {
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
+
+.clock-bead span {
+  font-size: 0.62rem;
+  font-weight: 880;
 }
 
 .clock-bead:hover,
 .clock-bead:focus-visible,
 .clock-bead.active {
-  transform: translateY(-2px) scale(1.18);
+  width: 38px;
+  height: 38px;
+  animation-play-state: paused;
+  transform: translate(-50%, -52%) scale(1.05);
   box-shadow:
-    0 0 0 5px rgba(47, 139, 145, 0.12),
-    0 10px 20px rgba(34, 48, 54, 0.16);
+    0 0 0 7px rgba(47, 139, 145, 0.11),
+    0 12px 22px rgba(34, 48, 54, 0.16);
   outline: 0;
+}
+
+.clock-bead.active {
+  border-color: rgba(47, 139, 145, 0.32);
+  background: rgba(255, 253, 248, 0.96);
+}
+
+@keyframes radar-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 0.48;
+    transform: translate(-50%, -50%) scale(0.86);
+  }
+
+  38% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  58% {
+    opacity: 0.78;
+    transform: translate(-50%, -50%) scale(0.94);
+  }
 }
 
 .clock-event {
@@ -573,15 +668,9 @@ h3 {
   white-space: nowrap;
 }
 
-@keyframes tick-hand {
-  to {
-    transform: translateX(-50%) rotate(408deg);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .clock-ring span::before,
-  .clock-ring span::after {
+  .radar-sweep,
+  .clock-bead {
     animation: none;
   }
 }
@@ -1452,14 +1541,9 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .clock-ring {
-    width: 94px;
-    height: 94px;
-  }
-
-  .clock-ring span {
-    width: 60px;
-    height: 60px;
+  .signal-radar {
+    justify-self: center;
+    width: min(300px, 88vw);
   }
 
   .mini-stats {

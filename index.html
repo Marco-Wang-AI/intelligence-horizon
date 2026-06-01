@@ -68,21 +68,29 @@
 
       <section class="dashboard" aria-label="Horizon dashboard">
         <article class="clock-panel agi">
-          <div>
+          <div class="clock-heading">
             <p class="panel-label" data-i18n="agiLabel">AGI clock</p>
-            <h2 id="agi-date">2028.2</h2>
+            <p data-i18n="radarHint">Signals move toward the center as the clock feels closer.</p>
           </div>
-          <div class="clock-ring" style="--progress: 62%" aria-hidden="true">
-            <span></span>
-            <em class="ring-label ring-far" data-i18n="clockFar">far</em>
-            <em class="ring-label ring-almost" data-i18n="clockAlmost">almost</em>
+          <div class="signal-radar" style="--progress: 62%">
+            <span class="radar-ring outer" aria-hidden="true"></span>
+            <span class="radar-ring middle" aria-hidden="true"></span>
+            <span class="radar-ring inner" aria-hidden="true"></span>
+            <span class="radar-axis horizontal" aria-hidden="true"></span>
+            <span class="radar-axis vertical" aria-hidden="true"></span>
+            <span class="radar-sweep" aria-hidden="true"></span>
+            <div class="radar-core">
+              <small data-i18n="expertLabel">Expert forecast</small>
+              <h2 id="agi-date">2028.2</h2>
+              <span data-i18n="radarZone">Almost zone</span>
+            </div>
+            <div class="clock-beads" id="agi-beads" aria-label="AGI clock events"></div>
           </div>
           <div class="clock-key">
-            <span><i class="position"></i><b data-i18n="clockPositionLabel">Clock position</b></span>
+            <span><i class="position"></i><b data-i18n="clockPositionLabel">Signal center</b></span>
             <span><i class="fast"></i><b data-i18n="clockKeyEarlier">earlier</b></span>
             <span><i class="slow"></i><b data-i18n="clockKeyLater">later</b></span>
           </div>
-          <div class="clock-beads" id="agi-beads" aria-label="AGI clock events"></div>
           <div class="clock-event" id="agi-clock-event" aria-live="polite"></div>
           <dl class="clock-compare">
             <div>
@@ -101,21 +109,29 @@
         </article>
 
         <article class="clock-panel asi">
-          <div>
+          <div class="clock-heading">
             <p class="panel-label" data-i18n="asiLabel">ASI clock</p>
-            <h2 id="asi-date">2031.6</h2>
+            <p data-i18n="radarHint">Signals move toward the center as the clock feels closer.</p>
           </div>
-          <div class="clock-ring" style="--progress: 38%" aria-hidden="true">
-            <span></span>
-            <em class="ring-label ring-far" data-i18n="clockFar">far</em>
-            <em class="ring-label ring-almost" data-i18n="clockAlmost">almost</em>
+          <div class="signal-radar" style="--progress: 38%">
+            <span class="radar-ring outer" aria-hidden="true"></span>
+            <span class="radar-ring middle" aria-hidden="true"></span>
+            <span class="radar-ring inner" aria-hidden="true"></span>
+            <span class="radar-axis horizontal" aria-hidden="true"></span>
+            <span class="radar-axis vertical" aria-hidden="true"></span>
+            <span class="radar-sweep" aria-hidden="true"></span>
+            <div class="radar-core">
+              <small data-i18n="expertLabel">Expert forecast</small>
+              <h2 id="asi-date">2031.6</h2>
+              <span data-i18n="radarZone">Almost zone</span>
+            </div>
+            <div class="clock-beads" id="asi-beads" aria-label="ASI clock events"></div>
           </div>
           <div class="clock-key">
-            <span><i class="position"></i><b data-i18n="clockPositionLabel">Clock position</b></span>
+            <span><i class="position"></i><b data-i18n="clockPositionLabel">Signal center</b></span>
             <span><i class="fast"></i><b data-i18n="clockKeyEarlier">earlier</b></span>
             <span><i class="slow"></i><b data-i18n="clockKeyLater">later</b></span>
           </div>
-          <div class="clock-beads" id="asi-beads" aria-label="ASI clock events"></div>
           <div class="clock-event" id="asi-clock-event" aria-live="polite"></div>
           <dl class="clock-compare">
             <div>

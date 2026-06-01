@@ -21,7 +21,20 @@ Use a small merge script and a GitHub Actions schedule:
 
 This can run weekly or every two weeks.
 
-The only tricky part is Wenjuanxing automation. If the account supports an API or stable export URL, it can be automated. If not, keep Wenjuanxing as a manual CSV upload while automating the Google Sheet side.
+The only tricky part is Wenjuanxing automation. Wenjuanxing now has official AI / automation tooling around OpenAPI, including CLI, MCP Server, and a TypeScript SDK, with API Key based access. Its public help center also documents manual raw-response export from the management backend.
+
+Practical recommendation:
+
+- Google Forms: automate first. Link responses to Google Sheets, then read a published/exported CSV on a GitHub Actions schedule.
+- Wenjuanxing option A: if the account can access OpenAPI, configure `WJX_API_KEY` and use the official CLI/SDK to download responses on the same schedule.
+- Wenjuanxing option B: if OpenAPI access is not available or unstable, keep a manual CSV export step for the Chinese survey and drop the CSV into the repo before running the merge script.
+
+Relevant official docs:
+
+- Wenjuanxing AI kit / OpenAPI tooling: https://www.wjx.cn/help/help.aspx?helpid=905
+- Wenjuanxing manual raw response export: https://www.wjx.cn/help/help.aspx?catid=22&h=1
+- Google Forms response destination: https://support.google.com/docs/answer/2917686
+- Google Forms CSV export: https://support.google.com/docs/answer/139706
 
 ## Future Fully Automatic Version
 
