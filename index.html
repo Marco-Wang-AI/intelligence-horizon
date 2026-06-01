@@ -180,6 +180,19 @@
         </div>
 
         <form class="vote-form" id="vote-form">
+          <div class="external-survey wide-field">
+            <div>
+              <strong data-i18n="externalSurveyTitle">Want your vote counted publicly?</strong>
+              <p data-i18n="externalSurveyCopy">
+                The quick form below is local-only for the prototype. For the launch survey, use the external form so responses are collected in one place.
+              </p>
+            </div>
+            <div class="external-survey-actions">
+              <a class="primary-action survey-link survey-link-primary is-disabled" data-survey="primary" href="#" aria-disabled="true" data-i18n="externalSurveyPrimary">Open English form</a>
+              <a class="secondary-action survey-link survey-link-secondary is-disabled" data-survey="secondary" href="#" aria-disabled="true" data-i18n="externalSurveySecondary">Open Chinese form</a>
+            </div>
+            <small data-i18n="externalSurveyPending">Survey links coming soon</small>
+          </div>
           <label>
             <span data-i18n="formAgi">When do you think AGI arrives?</span>
             <select name="agi" required>

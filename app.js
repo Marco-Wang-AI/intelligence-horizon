@@ -46,6 +46,12 @@ const copy = {
     formWork: "When can AI do 90% of your field's work?",
     formAgiDefinition: "Optional: define AGI in one sentence",
     formAsiDefinition: "Optional: define ASI in one sentence",
+    externalSurveyTitle: "Want your vote counted publicly?",
+    externalSurveyCopy:
+      "The quick form below is local-only for the prototype. For the launch survey, use the external form so responses are collected in one place.",
+    externalSurveyPrimary: "Open English form",
+    externalSurveySecondary: "Open Chinese form",
+    externalSurveyPending: "Survey links coming soon",
     agiDefinitionPlaceholder: "AGI is...",
     asiDefinitionPlaceholder: "ASI is...",
     submitVote: "Submit local vote",
@@ -103,6 +109,12 @@ const copy = {
     formWork: "AI 什么时候能完成你所在领域 90% 的工作？",
     formAgiDefinition: "可选：用一句话定义 AGI",
     formAsiDefinition: "可选：用一句话定义 ASI",
+    externalSurveyTitle: "想让你的投票进入公开统计？",
+    externalSurveyCopy:
+      "下面这个表单目前只存在本地浏览器。正式发布时，请优先填写外部问卷，方便我们统一收集和导出。",
+    externalSurveyPrimary: "打开中文问卷",
+    externalSurveySecondary: "Open English form",
+    externalSurveyPending: "问卷链接待更新",
     agiDefinitionPlaceholder: "AGI 是……",
     asiDefinitionPlaceholder: "ASI 是……",
     submitVote: "提交本地投票",
@@ -116,6 +128,11 @@ const copy = {
     footer: "记录证据、猜想和一只会变的钟。",
     submitted: "已加入投票",
   },
+};
+
+const surveyLinks = {
+  zh: "",
+  en: "",
 };
 
 let language = "en";
@@ -296,11 +313,41 @@ async function renderLanguage() {
   document.querySelectorAll(".lang-button").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === language);
   });
+  renderSurveyLinks();
   renderClockBeads();
   renderSignals();
   await renderDefinitions();
   renderFictionTimeline();
   await updateVotes();
+}
+
+function renderSurveyLinks() {
+  const primary = document.querySelector('[data-survey="primary"]');
+  const secondary = document.querySelector('[data-survey="secondary"]');
+  const pending = document.querySelector("[data-i18n='externalSurveyPending']");
+  if (!primary || !secondary || !pending) return;
+
+  const primaryUrl = language === "zh" ? surveyLinks.zh : surveyLinks.en;
+  const secondaryUrl = language === "zh" ? surveyLinks.en : surveyLinks.zh;
+  [
+    [primary, primaryUrl],
+    [secondary, secondaryUrl],
+  ].forEach(([link, url]) => {
+    if (url) {
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.classList.remove("is-disabled");
+      link.removeAttribute("aria-disabled");
+    } else {
+      link.href = "#";
+      link.removeAttribute("target");
+      link.removeAttribute("rel");
+      link.classList.add("is-disabled");
+      link.setAttribute("aria-disabled", "true");
+    }
+  });
+  pending.hidden = Boolean(primaryUrl && secondaryUrl);
 }
 
 function renderSignals() {
@@ -460,6 +507,12 @@ document.querySelector(".dashboard").addEventListener("click", (event) => {
     node.classList.toggle("active", node === bead);
   });
   detail.innerHTML = clockEventMarkup(active);
+});
+
+document.querySelector("#vote-form").addEventListener("click", (event) => {
+  const disabledSurveyLink = event.target.closest(".survey-link.is-disabled");
+  if (!disabledSurveyLink) return;
+  event.preventDefault();
 });
 
 document.querySelector("#vote-form").addEventListener("submit", async (event) => {

@@ -1098,6 +1098,47 @@ h3 {
   box-shadow: none;
 }
 
+.external-survey {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px 18px;
+  align-items: center;
+  border: 1px solid rgba(47, 139, 145, 0.18);
+  border-radius: var(--radius);
+  background: #f4faf6;
+  padding: 16px;
+}
+
+.external-survey strong,
+.external-survey p,
+.external-survey small {
+  display: block;
+}
+
+.external-survey p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.external-survey small {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.external-survey-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.survey-link.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  pointer-events: auto;
+}
+
 .vote-form label {
   display: grid;
   gap: 8px;
@@ -1234,6 +1275,14 @@ footer {
 
   .vote-form {
     grid-template-columns: 1fr;
+  }
+
+  .external-survey {
+    grid-template-columns: 1fr;
+  }
+
+  .external-survey-actions {
+    justify-content: flex-start;
   }
 
   .open-band,
