@@ -436,6 +436,26 @@ h3 {
   background: var(--teal);
 }
 
+.ring-label {
+  position: absolute;
+  bottom: -3px;
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-style: normal;
+  font-weight: 820;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ring-far {
+  left: 5px;
+}
+
+.ring-almost {
+  right: 0;
+  color: var(--teal);
+}
+
 .clock-key {
   grid-column: 1 / -1;
   display: flex;
@@ -1137,6 +1157,28 @@ h3 {
 .external-survey small {
   grid-column: 1 / -1;
   color: var(--muted);
+}
+
+.survey-embed {
+  grid-column: 1 / -1;
+  min-height: 120px;
+  border: 1px dashed rgba(47, 139, 145, 0.28);
+  border-radius: var(--radius);
+  background: rgba(255, 253, 248, 0.72);
+  overflow: hidden;
+}
+
+.survey-embed p {
+  margin: 0;
+  padding: 18px;
+}
+
+.survey-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 680px;
+  border: 0;
+  background: white;
 }
 
 .external-survey-actions {

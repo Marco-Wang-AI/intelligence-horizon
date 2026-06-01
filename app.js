@@ -14,7 +14,9 @@ const copy = {
     agiLabel: "AGI clock",
     expertLabel: "Expert forecast",
     publicLabelShort: "Public take",
-    clockPositionLabel: "Clock position",
+    clockPositionLabel: "Countdown progress",
+    clockFar: "far",
+    clockAlmost: "almost",
     clockKeyEarlier: "earlier",
     clockKeyLater: "later",
     agiNote: "A quick compare: expert forecasts vs. public intuition.",
@@ -55,6 +57,7 @@ const copy = {
     externalSurveyPrimary: "Open English form",
     externalSurveySecondary: "Open Chinese form",
     externalSurveyPending: "Survey links coming soon",
+    externalSurveyEmbedPending: "Embedded survey appears here after the form links are ready.",
     agiDefinitionPlaceholder: "AGI is...",
     asiDefinitionPlaceholder: "ASI is...",
     submitVote: "Submit local vote",
@@ -83,7 +86,9 @@ const copy = {
     agiLabel: "AGI 时钟",
     expertLabel: "专家预测",
     publicLabelShort: "大众感受",
-    clockPositionLabel: "时钟位置",
+    clockPositionLabel: "倒计时进度",
+    clockFar: "还远",
+    clockAlmost: "快了",
     clockKeyEarlier: "往前拨",
     clockKeyLater: "往后拨",
     agiNote: "一边看专家预测，一边看大众感受。",
@@ -121,6 +126,7 @@ const copy = {
     externalSurveyPrimary: "打开中文问卷",
     externalSurveySecondary: "Open English form",
     externalSurveyPending: "问卷链接待更新",
+    externalSurveyEmbedPending: "问卷链接准备好后，会在这里内嵌显示。",
     agiDefinitionPlaceholder: "AGI 是……",
     asiDefinitionPlaceholder: "ASI 是……",
     submitVote: "提交本地投票",
@@ -137,6 +143,11 @@ const copy = {
 };
 
 const surveyLinks = {
+  zh: "",
+  en: "",
+};
+
+const surveyEmbedLinks = {
   zh: "",
   en: "",
 };
@@ -331,10 +342,12 @@ function renderSurveyLinks() {
   const primary = document.querySelector('[data-survey="primary"]');
   const secondary = document.querySelector('[data-survey="secondary"]');
   const pending = document.querySelector("[data-i18n='externalSurveyPending']");
-  if (!primary || !secondary || !pending) return;
+  const embed = document.querySelector("#survey-embed");
+  if (!primary || !secondary || !pending || !embed) return;
 
   const primaryUrl = language === "zh" ? surveyLinks.zh : surveyLinks.en;
   const secondaryUrl = language === "zh" ? surveyLinks.en : surveyLinks.zh;
+  const embedUrl = language === "zh" ? surveyEmbedLinks.zh : surveyEmbedLinks.en;
   [
     [primary, primaryUrl],
     [secondary, secondaryUrl],
@@ -354,6 +367,9 @@ function renderSurveyLinks() {
     }
   });
   pending.hidden = Boolean(primaryUrl && secondaryUrl);
+  embed.innerHTML = embedUrl
+    ? `<iframe src="${embedUrl}" title="${copy[language].externalSurveyTitle}" loading="lazy"></iframe>`
+    : `<p>${copy[language].externalSurveyEmbedPending}</p>`;
 }
 
 function renderSignals() {
