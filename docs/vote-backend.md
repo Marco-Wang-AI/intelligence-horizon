@@ -2,6 +2,22 @@
 
 The current MVP stores submitted votes in the visitor's browser. That is enough to test the interaction, but it does not create a shared public dataset.
 
+## Fast Launch Survey Bridge
+
+For the first public launch, the fastest practical route is to use two external forms:
+
+- Chinese form: Wenjuanxing / 问卷星
+- English form: Google Forms
+
+Do not auto-route by IP for V1. It adds complexity, can misclassify VPN / roaming users, and makes failures harder to understand. Instead, show two explicit buttons:
+
+- 中文用户填写问卷星
+- Global / English users fill Google Form
+
+This is also easier to explain in launch posts and easier to export as CSV later.
+
+If a single global form becomes necessary, test Wenjuanxing global acceleration first. The tradeoff is that overseas users may still trust Google Forms more, while mainland users may not reliably open Google Forms.
+
 The next backend can be small. Supabase is a good first choice because it gives us a hosted database, row-level security, and a simple browser SDK.
 
 ## Why Not Build a Server Yet?

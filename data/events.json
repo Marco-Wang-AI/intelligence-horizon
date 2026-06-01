@@ -146,18 +146,18 @@
     },
     "title": {
       "en": "Luo Fuli reportedly expects AGI within two years",
-      "zh": "罗福莉据报道认为 AGI 可能在两年内到来"
+      "zh": "罗福莉谈 AGI：时间可能比很多人想得更近"
     },
     "body": {
       "en": "A direct near-term AGI signal from China's model-builder community, especially notable after the agent wave.",
-      "zh": "这是来自中国模型一线的一条近期期限信号，尤其适合放在智能体浪潮之后观察。"
+      "zh": "如果一线模型团队也开始把 AGI 说到“两年左右”这个尺度上，这只钟就值得往前拨一格。"
     },
     "persona": {
       "initials": "LF",
       "name": "Luo Fuli",
       "nickname": {
         "en": "the near-term model scientist",
-        "zh": "近期期限派模型科学家"
+        "zh": "两年尺度观察员"
       },
       "avatar": "luo",
       "image": "./assets/avatars/luo-fuli.png",
