@@ -53,11 +53,23 @@ These forms collect responses in their own dashboards. They do not automatically
    - 2035 以后
    - 不确定
 
-5. 可选：用一句话说说你认为 AGI 是什么。
+5. 下面哪一句最接近你对 AGI 的理解？
+   - AGI 是能在极少人类帮助下，可靠完成大多数有经济价值知识工作的 AI。
+   - AGI 是 AI 能学习新领域、规划项目，并跨领域完成有用工作的时候。
+   - AGI 不是某个基准分数，而是真实世界里的通用、自主能力。
+   - 都不太像，我想自己写一句。
 
-6. 可选：用一句话说说你认为 ASI 是什么。
+6. 可选：如果你选择“自己写一句”，你认为 AGI 是什么？
 
-7. 可选：你的年龄段
+7. 下面哪一句最接近你对 ASI / 超级智能的理解？
+   - ASI 是在几乎所有重要认知任务上，都远强于最优秀人类的 AI。
+   - 当 AI 推动科学、战略和发明的速度快到人类机构跟不上时，ASI 就开始了。
+   - ASI 是智能从工具变成系统级力量的那个节点。
+   - 都不太像，我想自己写一句。
+
+8. 可选：如果你选择“自己写一句”，你认为 ASI 是什么？
+
+9. 可选：你的年龄段
    - 18 岁以下
    - 18-24
    - 25-34
@@ -65,7 +77,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 45+
    - 不想说
 
-8. 可选：你希望我们把哪条新闻、产品发布或专家观点加入「拨钟记录」？
+10. 可选：你希望我们把哪条新闻、产品发布或专家观点加入「拨钟记录」？
 
 结束语：
 
@@ -117,11 +129,23 @@ Questions:
    - After 2035
    - Not sure
 
-5. Optional: define AGI in one sentence.
+5. Which definition is closest to your view of AGI?
+   - AGI is AI that can reliably do most economically valuable knowledge work with minimal human help.
+   - AGI is when AI can learn a new field, plan a project, and finish useful work across domains.
+   - AGI is not one benchmark. It is general, autonomous competence in the real world.
+   - None of these. I want to write my own.
 
-6. Optional: define ASI in one sentence.
+6. Optional: if you chose "write my own", define AGI in one sentence.
 
-7. Optional: age range
+7. Which definition is closest to your view of ASI / superintelligence?
+   - ASI is AI that is far better than the best humans at nearly every important cognitive task.
+   - ASI begins when AI can improve science, strategy, and invention faster than human institutions can follow.
+   - ASI is the point where intelligence becomes a system-level force, not just a tool.
+   - None of these. I want to write my own.
+
+8. Optional: if you chose "write my own", define ASI in one sentence.
+
+9. Optional: age range
    - Under 18
    - 18-24
    - 25-34
@@ -129,7 +153,7 @@ Questions:
    - 45+
    - Prefer not to say
 
-8. Optional: what signal, launch, interview, or expert claim should move the clock?
+10. Optional: what signal, launch, interview, or expert claim should move the clock?
 
 Closing message:
 
