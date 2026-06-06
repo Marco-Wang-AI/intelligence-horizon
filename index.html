@@ -23,7 +23,7 @@
       content="Signals, not sirens: a playful AGI / ASI radar with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta name="twitter:image" content="https://marco-wang-ai.github.io/intelligence-horizon/assets/social/og-card.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260601-agiradar" />
+    <link rel="stylesheet" href="./styles.css?v=20260606-definitions" />
   </head>
   <body>
     <header class="topbar" aria-label="Site header">
@@ -152,13 +152,13 @@
 
       <section class="definitions-section" id="definitions" aria-labelledby="definitions-title">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="definitionsEyebrow">Working definitions</p>
-          <h2 id="definitions-title" data-i18n="definitionsTitle">First, what are we even counting down to?</h2>
+          <p class="eyebrow" data-i18n="definitionsEyebrow">Definition ballot</p>
+          <h2 id="definitions-title" data-i18n="definitionsTitle">Same acronym. Very different finish lines.</h2>
         </div>
         <div class="definition-grid">
           <article class="definition-card">
             <p class="panel-label">AGI</p>
-            <h3 data-i18n="agiDefinitionTitle">Current working definition</h3>
+            <h3 data-i18n="agiDefinitionTitle">Radar baseline</h3>
             <p data-i18n="agiDefinitionCopy">
               Highly autonomous AI that can outperform humans at most economically valuable work.
             </p>
@@ -167,7 +167,7 @@
           </article>
           <article class="definition-card">
             <p class="panel-label">ASI</p>
-            <h3 data-i18n="asiDefinitionTitle">Current working definition</h3>
+            <h3 data-i18n="asiDefinitionTitle">Radar baseline</h3>
             <p data-i18n="asiDefinitionCopy">
               AI that greatly exceeds human cognitive performance in virtually all domains of interest.
             </p>
@@ -282,6 +282,21 @@
             <span data-i18n="formAsiDefinition">Optional: define ASI in one sentence</span>
             <textarea name="asiDefinition" rows="3" maxlength="180" data-i18n-placeholder="asiDefinitionPlaceholder" placeholder="ASI is..."></textarea>
           </label>
+          <label class="wide-field">
+            <span data-i18n="formDisplayName">Optional: display name if your definition makes the leaderboard</span>
+            <input
+              name="displayName"
+              type="text"
+              maxlength="40"
+              autocomplete="nickname"
+              data-i18n-placeholder="formDisplayNamePlaceholder"
+              placeholder="Nickname, handle, or real name"
+            />
+          </label>
+          <label class="wide-field consent-field">
+            <input name="attributionConsent" type="checkbox" value="yes" />
+            <span data-i18n="formAttributionConsent">If my definition is featured, I agree to display this name publicly.</span>
+          </label>
           <button class="primary-action form-button" type="submit" data-i18n="submitVote">Submit local vote</button>
           <p class="form-note" data-i18n="formNote">
             Prototype note: votes are stored in your browser for now. Shared public results come next.
@@ -306,6 +321,6 @@
       <span data-i18n="footer">No doom. Just receipts, guesses, and a radar that keeps changing.</span>
     </footer>
 
-    <script src="./app.js?v=20260601-agiradar"></script>
+    <script src="./app.js?v=20260606-definitions"></script>
   </body>
 </html>

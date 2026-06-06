@@ -806,6 +806,31 @@ h3 {
   font-size: 0.82rem;
 }
 
+.definition-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.definition-meta strong {
+  color: var(--teal);
+  font-size: 0.82rem;
+}
+
+.definition-card .definition-meta a {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 720;
+}
+
+.definition-meta small {
+  margin: 0 0 0 auto;
+}
+
 .fiction-section {
   border-top: 1px solid var(--line);
 }
@@ -1317,7 +1342,8 @@ h3 {
 }
 
 .vote-form select,
-.vote-form textarea {
+.vote-form textarea,
+.vote-form input[type="text"] {
   min-height: 46px;
   width: 100%;
   border: 1px solid var(--line);
@@ -1331,6 +1357,25 @@ h3 {
   min-height: 84px;
   padding: 12px;
   resize: vertical;
+}
+
+.vote-form .consent-field {
+  display: flex;
+  grid-template-columns: none;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 620;
+  line-height: 1.45;
+}
+
+.consent-field input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin: 1px 0 0;
+  accent-color: var(--teal);
 }
 
 .wide-field {

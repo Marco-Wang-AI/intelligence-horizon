@@ -24,15 +24,18 @@ const copy = {
     asiLabel: "ASI radar",
     asiNote: "A wider, more uncertain band for early superintelligence.",
     asiMove: "Still high uncertainty",
-    definitionsEyebrow: "Working definitions",
-    definitionsTitle: "First, what are we even counting down to?",
-    agiDefinitionTitle: "Current working definition",
+    definitionsEyebrow: "Definition ballot",
+    definitionsTitle: "Same acronym. Very different finish lines.",
+    agiDefinitionTitle: "Radar baseline",
     agiDefinitionCopy:
       "Highly autonomous AI that can outperform humans at most economically valuable work.",
-    asiDefinitionTitle: "Current working definition",
+    asiDefinitionTitle: "Radar baseline",
     asiDefinitionCopy:
       "AI that greatly exceeds human cognitive performance in virtually all domains of interest.",
     definitionSource: "Reference",
+    definitionCandidate: "candidate definition",
+    definitionSourceShort: "source",
+    anonymousAuthor: "Anonymous radar watcher",
     fictionEyebrow: "Sci-fi receipts",
     fictionTitle: "Pop culture has been setting AI dates for decades.",
     fictionCopy:
@@ -51,6 +54,9 @@ const copy = {
     formWork: "When can AI do 90% of your field's work?",
     formAgiDefinition: "Optional: define AGI in one sentence",
     formAsiDefinition: "Optional: define ASI in one sentence",
+    formDisplayName: "Optional: display name if your definition makes the leaderboard",
+    formDisplayNamePlaceholder: "Nickname, handle, or real name",
+    formAttributionConsent: "If my definition is featured, I agree to display this name publicly.",
     externalSurveyTitle: "Want your vote counted publicly?",
     externalSurveyCopy:
       "The quick form below is local-only for the prototype. For the launch survey, use the external form so responses are collected in one place.",
@@ -96,13 +102,16 @@ const copy = {
     asiLabel: "ASI 雷达",
     asiNote: "超级智能更难判断，所以这里的不确定性更高。",
     asiMove: "不确定性仍然很高",
-    definitionsEyebrow: "工作定义",
-    definitionsTitle: "先说清楚：我们到底在等什么？",
-    agiDefinitionTitle: "当前工作定义",
+    definitionsEyebrow: "定义投票",
+    definitionsTitle: "同一个缩写，大家心里的终点不太一样。",
+    agiDefinitionTitle: "小雷达当前基准",
     agiDefinitionCopy: "高度自主，并能在大多数有经济价值工作上超过人类的 AI。",
-    asiDefinitionTitle: "当前工作定义",
+    asiDefinitionTitle: "小雷达当前基准",
     asiDefinitionCopy: "在几乎所有重要认知领域都大幅超过人类表现的 AI。",
     definitionSource: "参考来源",
+    definitionCandidate: "候选定义",
+    definitionSourceShort: "出处",
+    anonymousAuthor: "匿名雷达员",
     fictionEyebrow: "科幻彩蛋",
     fictionTitle: "科幻作品早就给 AI 排过时间表。",
     fictionCopy: "一个不太严肃的时间轴：看看电影、游戏和小说里，AI 都是在哪一年开始不太听话的。",
@@ -120,6 +129,9 @@ const copy = {
     formWork: "AI 什么时候能完成你所在领域 90% 的工作？",
     formAgiDefinition: "可选：用一句话定义 AGI",
     formAsiDefinition: "可选：用一句话定义 ASI",
+    formDisplayName: "可选：如果定义上榜，希望展示什么名字？",
+    formDisplayNamePlaceholder: "昵称、网名或真实姓名",
+    formAttributionConsent: "如果我的定义入选，我同意公开展示这个名字。",
     externalSurveyTitle: "想让你的投票进入公开统计？",
     externalSurveyCopy:
       "下面这个表单目前只存在本地浏览器。正式发布时，请优先填写外部问卷，方便我们统一收集和导出。",
@@ -143,8 +155,8 @@ const copy = {
 };
 
 const surveyLinks = {
-  zh: "",
-  en: "",
+  zh: "https://v.wjx.cn/vm/ex19O3e.aspx",
+  en: "https://docs.google.com/forms/d/e/1FAIpQLSdhd8_HYK2I95QHJb2UlD7axd5opnhaHW5CTZKEFxRb_TmPcQ/viewform",
 };
 
 const surveyEmbedLinks = {
@@ -186,19 +198,23 @@ const fallbackDefinitions = {
   agi: [
     {
       text: {
-        en: "AGI is AI that can reliably do most economically valuable knowledge work with minimal human help.",
-        zh: "AGI 是能在极少人类帮助下，可靠完成大多数有经济价值知识工作的 AI。",
+        en: "AGI is a highly autonomous system that outperforms humans at most economically valuable work.",
+        zh: "AGI 是高度自主，并能在大多数有经济价值的工作上超过人类的系统。",
       },
-      votes: 18,
+      author: { en: "OpenAI Charter", zh: "OpenAI 宪章" },
+      source: { name: "OpenAI", url: "https://openai.com/charter/" },
+      votes: 0,
     },
   ],
   asi: [
     {
       text: {
-        en: "ASI is AI that is far better than the best humans at nearly every important cognitive task.",
-        zh: "ASI 是在几乎所有重要认知任务上，都远强于最优秀人类的 AI。",
+        en: "ASI is an intellect that greatly exceeds human cognitive performance across virtually every domain of interest.",
+        zh: "ASI 是在几乎所有重要领域都大幅超过人类认知表现的智能。",
       },
-      votes: 16,
+      author: { en: "Nick Bostrom", zh: "Nick Bostrom" },
+      source: { name: "Nick Bostrom", url: "https://nickbostrom.com/superintelligence" },
+      votes: 0,
     },
   ],
 };
@@ -246,11 +262,25 @@ async function savePublicVote(vote) {
   const votes = localVotes().concat(vote);
   localStorage.setItem("ih_votes", JSON.stringify(votes));
   const definitions = [];
+  const attributedName =
+    vote.attributionConsent && vote.displayName
+      ? vote.displayName
+      : copy[language].anonymousAuthor;
   if (vote.agiDefinition) {
-    definitions.push({ type: "agi", text: { en: vote.agiDefinition, zh: vote.agiDefinition }, votes: 1 });
+    definitions.push({
+      type: "agi",
+      text: { en: vote.agiDefinition, zh: vote.agiDefinition },
+      author: { en: attributedName, zh: attributedName },
+      votes: 1,
+    });
   }
   if (vote.asiDefinition) {
-    definitions.push({ type: "asi", text: { en: vote.asiDefinition, zh: vote.asiDefinition }, votes: 1 });
+    definitions.push({
+      type: "asi",
+      text: { en: vote.asiDefinition, zh: vote.asiDefinition },
+      author: { en: attributedName, zh: attributedName },
+      votes: 1,
+    });
   }
   if (definitions.length) {
     localStorage.setItem("ih_definitions", JSON.stringify(localDefinitions().concat(definitions)));
@@ -267,6 +297,15 @@ function median(values) {
 
 function formatYear(value) {
   return String(Math.round(Number(value)));
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
 
 function formatDelta(days) {
@@ -496,8 +535,22 @@ async function renderDefinitions() {
       .map(
         (definition) => `
           <li>
-            <span>${definition.text[language] || definition.text.en}</span>
-            <small>${Number(definition.votes || 1)} ${copy[language].votesLabel}</small>
+            <span>${escapeHtml(definition.text[language] || definition.text.en)}</span>
+            <div class="definition-meta">
+              <strong>${escapeHtml(
+                definition.author?.[language] || definition.author?.en || copy[language].anonymousAuthor,
+              )}</strong>
+              ${
+                definition.source?.url
+                  ? `<a href="${definition.source.url}" target="_blank" rel="noreferrer">${copy[language].definitionSourceShort}</a>`
+                  : ""
+              }
+              <small>${
+                Number(definition.votes || 0) > 0
+                  ? `${Number(definition.votes)} ${copy[language].votesLabel}`
+                  : copy[language].definitionCandidate
+              }</small>
+            </div>
           </li>
         `,
       )
@@ -549,6 +602,7 @@ document.querySelector("#vote-form").addEventListener("click", (event) => {
 document.querySelector("#vote-form").addEventListener("submit", async (event) => {
   event.preventDefault();
   const form = new FormData(event.currentTarget);
+  const attributionConsent = form.get("attributionConsent") === "yes";
   const nextVote = {
     agi: Number(form.get("agi")),
     asi: Number(form.get("asi")),
@@ -556,6 +610,8 @@ document.querySelector("#vote-form").addEventListener("submit", async (event) =>
     field: String(form.get("field")),
     agiDefinition: String(form.get("agiDefinition") || "").trim(),
     asiDefinition: String(form.get("asiDefinition") || "").trim(),
+    displayName: attributionConsent ? String(form.get("displayName") || "").trim() : "",
+    attributionConsent,
   };
   await savePublicVote(nextVote);
   event.currentTarget.querySelector(".form-button").textContent = copy[language].submitted;

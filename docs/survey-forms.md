@@ -11,7 +11,7 @@ These forms collect responses in their own dashboards. They do not automatically
 
 说明文案：
 
-> 这是「AGI 小雷达」的一个轻量小调查。我们想看看大家对 AGI / ASI 到来时间的直觉，以及大家心里对这些词的定义。答案只用于项目展示和后续统计，不需要留下真实姓名。
+> 这是「AGI 小雷达」的一个轻量小调查。选出你心里的时间，也聊聊你怎么定义 AGI / ASI。答案用于匿名统计和项目展示；昵称完全选填，只有你明确同意时才会随入选定义公开展示。
 
 题目：
 
@@ -54,22 +54,34 @@ These forms collect responses in their own dashboards. They do not automatically
    - 不确定
 
 5. 下面哪一句最接近你对 AGI 的理解？
-   - AGI 是能在极少人类帮助下，可靠完成大多数有经济价值知识工作的 AI。
-   - AGI 是 AI 能学习新领域、规划项目，并跨领域完成有用工作的时候。
-   - AGI 不是某个基准分数，而是真实世界里的通用、自主能力。
+   - OpenAI：高度自主，并能在大多数有经济价值的工作上超过人类。
+   - Demis Hassabis：具备人类拥有的全部认知能力。
+   - Yann LeCun：拥有世界模型和常识，能在陌生情境中预测、推理与规划。
+   - Elon Musk：比最聪明的单个人类更聪明。
+   - 王小川：能够独立完成一次医生问诊。
    - 都不太像，我想自己写一句。
 
 6. 可选：如果你选择“自己写一句”，你认为 AGI 是什么？
 
 7. 下面哪一句最接近你对 ASI / 超级智能的理解？
-   - ASI 是在几乎所有重要认知任务上，都远强于最优秀人类的 AI。
-   - 当 AI 推动科学、战略和发明的速度快到人类机构跟不上时，ASI 就开始了。
-   - ASI 是智能从工具变成系统级力量的那个节点。
+   - Nick Bostrom：在几乎所有重要领域都大幅超过人类认知表现。
+   - OpenAI：比 AGI 强得多，在多数领域超过专家，并能完成一家大型公司的生产活动。
+   - Sam Altman：管理大公司、国家或大型实验室，比任何借助 AI 的人类都做得更好。
+   - Dario Amodei：像“数据中心里的天才之国”，达到诺奖级水平，能自主工作且远快于人类。
+   - Ilya Sutskever / Jan Leike：远比人类聪明，已经超出人类可靠监督能力。
    - 都不太像，我想自己写一句。
 
 8. 可选：如果你选择“自己写一句”，你认为 ASI 是什么？
 
-9. 可选：你的年龄段
+9. 可选：如果你的自定义定义入选排行榜，希望展示什么名字？
+   - 短文本；可填写昵称、网名或真实姓名。
+   - 留空时统一显示为「匿名雷达员」。
+
+10. 可选：公开署名授权
+   - 选项：如果我的自定义定义入选，我同意公开展示上面填写的名字。
+   - 未勾选时，即使填写了名字也按匿名处理。
+
+11. 可选：你的年龄段
    - 18 岁以下
    - 18-24
    - 25-34
@@ -77,7 +89,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 45+
    - 不想说
 
-10. 可选：你希望我们把哪条新闻、产品发布或专家观点加入「拨钟记录」？
+12. 可选：你希望我们把哪条新闻、产品发布或专家观点加入「雷达记录」？
 
 结束语：
 
@@ -87,7 +99,7 @@ These forms collect responses in their own dashboards. They do not automatically
 
 Description:
 
-> AGI Radar is a playful AGI / ASI signal tracker. This short survey asks when you think AGI and ASI might arrive, and what these words mean to you. Responses may be used in aggregate on the project website. No real name required.
+> AGI Radar is a playful AGI / ASI signal tracker. Pick your dates and tell us what these terms mean to you. Responses may appear in aggregate on the project website. A display name is optional and is shown only with your explicit consent.
 
 Questions:
 
@@ -130,22 +142,34 @@ Questions:
    - Not sure
 
 5. Which definition is closest to your view of AGI?
-   - AGI is AI that can reliably do most economically valuable knowledge work with minimal human help.
-   - AGI is when AI can learn a new field, plan a project, and finish useful work across domains.
-   - AGI is not one benchmark. It is general, autonomous competence in the real world.
+   - OpenAI: highly autonomous AI that outperforms humans at most economically valuable work.
+   - Demis Hassabis: AI with the full range of human cognitive capabilities.
+   - Yann LeCun: AI with world models and common sense that can predict, reason, and plan in unfamiliar situations.
+   - Elon Musk: AI smarter than the smartest individual human.
+   - Wang Xiaochuan: AI capable of independently conducting a medical consultation.
    - None of these. I want to write my own.
 
 6. Optional: if you chose "write my own", define AGI in one sentence.
 
 7. Which definition is closest to your view of ASI / superintelligence?
-   - ASI is AI that is far better than the best humans at nearly every important cognitive task.
-   - ASI begins when AI can improve science, strategy, and invention faster than human institutions can follow.
-   - ASI is the point where intelligence becomes a system-level force, not just a tool.
+   - Nick Bostrom: intelligence that greatly exceeds human cognitive performance across virtually every important domain.
+   - OpenAI: AI far beyond AGI, exceeding expert skill in most domains and operating at corporation scale.
+   - Sam Altman: AI that can lead a major company, country, or lab better than any AI-assisted human.
+   - Dario Amodei: a country of Nobel-level geniuses in a datacenter, autonomous and much faster than humans.
+   - Ilya Sutskever / Jan Leike: AI systems much smarter than humans and beyond reliable human supervision.
    - None of these. I want to write my own.
 
 8. Optional: if you chose "write my own", define ASI in one sentence.
 
-9. Optional: age range
+9. Optional: what display name should appear if your definition makes the leaderboard?
+   - Short answer; nickname, handle, or real name.
+   - Blank responses appear as "Anonymous radar watcher."
+
+10. Optional: public attribution consent
+   - Checkbox: If my definition is featured, I agree to display the name above publicly.
+   - Without consent, treat the response as anonymous even if a name was entered.
+
+11. Optional: age range
    - Under 18
    - 18-24
    - 25-34
@@ -153,7 +177,7 @@ Questions:
    - 45+
    - Prefer not to say
 
-10. Optional: what signal, launch, interview, or expert claim should move the radar?
+12. Optional: what signal, launch, interview, or expert claim should move the radar?
 
 Closing message:
 

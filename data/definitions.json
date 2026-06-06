@@ -2,47 +2,155 @@
   "agi": [
     {
       "text": {
-        "en": "AGI is AI that can reliably do most economically valuable knowledge work with minimal human help.",
-        "zh": "AGI 是能在极少人类帮助下，可靠完成大多数有经济价值知识工作的 AI。"
+        "en": "AGI is a highly autonomous system that outperforms humans at most economically valuable work.",
+        "zh": "AGI 是高度自主，并能在大多数有经济价值的工作上超过人类的系统。"
       },
-      "votes": 18
+      "author": {
+        "en": "OpenAI Charter",
+        "zh": "OpenAI 宪章"
+      },
+      "source": {
+        "name": "OpenAI",
+        "url": "https://openai.com/charter/"
+      },
+      "votes": 0
     },
     {
       "text": {
-        "en": "AGI is when AI can learn a new field, plan a project, and finish useful work across domains.",
-        "zh": "AGI 是 AI 能学习新领域、规划项目，并跨领域完成有用工作的时候。"
+        "en": "AGI should exhibit the full range of cognitive capabilities humans possess.",
+        "zh": "AGI 应当具备人类拥有的全部认知能力。"
       },
-      "votes": 14
+      "author": {
+        "en": "Demis Hassabis",
+        "zh": "Demis Hassabis"
+      },
+      "source": {
+        "name": "Big Technology interview",
+        "url": "https://www.bigtechnology.com/p/google-deepmind-ceo-demis-hassabis"
+      },
+      "votes": 0
     },
     {
       "text": {
-        "en": "AGI is not one benchmark. It is general, autonomous competence in the real world.",
-        "zh": "AGI 不是某个基准分数，而是真实世界里的通用、自主能力。"
+        "en": "Human-level AI needs world models and common sense so it can predict, reason, and plan in unfamiliar situations.",
+        "zh": "人类水平的 AI 需要世界模型和常识，才能在陌生情境中预测、推理与规划。"
       },
-      "votes": 11
+      "author": {
+        "en": "Yann LeCun",
+        "zh": "Yann LeCun"
+      },
+      "source": {
+        "name": "Meta AI",
+        "url": "https://ai.meta.com/blog/yann-lecun-advances-in-ai-research/"
+      },
+      "votes": 0
+    },
+    {
+      "text": {
+        "en": "AGI is reached when AI becomes smarter than the smartest individual human.",
+        "zh": "当 AI 比最聪明的单个人类更聪明时，就达到了 AGI。"
+      },
+      "author": {
+        "en": "Elon Musk",
+        "zh": "Elon Musk"
+      },
+      "source": {
+        "name": "Ars Technica interview coverage",
+        "url": "https://arstechnica.com/information-technology/2024/04/elon-musk-ai-will-be-smarter-than-any-human-around-the-end-of-next-year/"
+      },
+      "votes": 0
+    },
+    {
+      "text": {
+        "en": "A practical AGI milestone is an AI doctor capable of conducting a consultation independently.",
+        "zh": "一个实用的 AGI 里程碑，是 AI 能独立完成一次医生问诊。"
+      },
+      "author": {
+        "en": "Wang Xiaochuan",
+        "zh": "王小川"
+      },
+      "source": {
+        "name": "AGI Playground panel",
+        "url": "https://www.ncsti.gov.cn/kjdt/xwjj/202406/t20240615_168048.html"
+      },
+      "votes": 0
     }
   ],
   "asi": [
     {
       "text": {
-        "en": "ASI is AI that is far better than the best humans at nearly every important cognitive task.",
-        "zh": "ASI 是在几乎所有重要认知任务上，都远强于最优秀人类的 AI。"
+        "en": "ASI is an intellect that greatly exceeds human cognitive performance across virtually every domain of interest.",
+        "zh": "ASI 是在几乎所有重要领域都大幅超过人类认知表现的智能。"
       },
-      "votes": 16
+      "author": {
+        "en": "Nick Bostrom",
+        "zh": "Nick Bostrom"
+      },
+      "source": {
+        "name": "How Long Before Superintelligence?",
+        "url": "https://nickbostrom.com/superintelligence"
+      },
+      "votes": 0
     },
     {
       "text": {
-        "en": "ASI begins when AI can improve science, strategy, and invention faster than human institutions can follow.",
-        "zh": "当 AI 推动科学、战略和发明的速度快到人类机构跟不上时，ASI 就开始了。"
+        "en": "Superintelligence is AI dramatically more capable than AGI, exceeding expert skill in most domains and operating at corporation scale.",
+        "zh": "超级智能比 AGI 强得多：在多数领域超过专家，并能完成一家大型公司的生产活动。"
       },
-      "votes": 12
+      "author": {
+        "en": "Sam Altman, Greg Brockman & Ilya Sutskever",
+        "zh": "Sam Altman、Greg Brockman 与 Ilya Sutskever"
+      },
+      "source": {
+        "name": "OpenAI",
+        "url": "https://openai.com/index/governance-of-superintelligence/"
+      },
+      "votes": 0
     },
     {
       "text": {
-        "en": "ASI is the point where intelligence becomes a system-level force, not just a tool.",
-        "zh": "ASI 是智能从工具变成系统级力量的那个节点。"
+        "en": "A candidate threshold is AI that can outperform any AI-assisted human at leading a major company, country, or research lab.",
+        "zh": "一个候选门槛是：AI 管理大公司、国家或大型实验室，比任何借助 AI 的人类都做得更好。"
       },
-      "votes": 9
+      "author": {
+        "en": "Sam Altman",
+        "zh": "Sam Altman"
+      },
+      "source": {
+        "name": "The Atlantic",
+        "url": "https://www.theatlantic.com/technology/2026/02/do-you-feel-agi-yet/685845/"
+      },
+      "votes": 0
+    },
+    {
+      "text": {
+        "en": "Powerful AI is like a country of Nobel-level geniuses in a datacenter, working autonomously and much faster than humans.",
+        "zh": "强大 AI 就像“数据中心里的天才之国”：达到诺奖级水平，能自主工作，并远快于人类。"
+      },
+      "author": {
+        "en": "Dario Amodei",
+        "zh": "Dario Amodei"
+      },
+      "source": {
+        "name": "Machines of Loving Grace",
+        "url": "https://www.darioamodei.com/essay/machines-of-loving-grace"
+      },
+      "votes": 0
+    },
+    {
+      "text": {
+        "en": "Superintelligence means AI systems much smarter than humans, beyond reliable human supervision.",
+        "zh": "超级智能是远比人类聪明、已经超出人类可靠监督能力的 AI 系统。"
+      },
+      "author": {
+        "en": "Ilya Sutskever & Jan Leike",
+        "zh": "Ilya Sutskever 与 Jan Leike"
+      },
+      "source": {
+        "name": "OpenAI Superalignment",
+        "url": "https://openai.com/index/introducing-superalignment/"
+      },
+      "votes": 0
     }
   ]
 }
