@@ -506,7 +506,10 @@ h3 {
 }
 
 .radar-core h2 {
+  width: 100%;
+  min-width: 0;
   font-size: clamp(2rem, 3.2vw, 3rem);
+  text-align: center;
 }
 
 .radar-core span {
