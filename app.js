@@ -50,7 +50,23 @@ const copy = {
     fieldLabel: "your-field median",
     formAgi: "When do you think AGI arrives?",
     formAsi: "When do you think ASI arrives?",
-    formField: "Your field",
+    formField: "Your work or study field",
+    fieldAi: "AI / software / internet",
+    fieldEducation: "Education / research",
+    fieldDesign: "Design / media / content",
+    fieldHealth: "Healthcare / biotech",
+    fieldFinance: "Finance / legal / consulting",
+    fieldEngineering: "Manufacturing / engineering / hardware",
+    fieldPublic: "Government / public service / nonprofit",
+    fieldOther: "Other",
+    year2026Earlier: "2026 or earlier",
+    year2027Earlier: "2027 or earlier",
+    yearAfter2035: "After 2035",
+    yearNotSure: "Not sure",
+    asiNotSure: "Far away / not sure",
+    workAlready: "Already",
+    workAfter2035: "After 2035",
+    workNotSure: "Not sure",
     formWork: "When can AI do 90% of your field's work?",
     formAgiDefinition: "Optional: define AGI in one sentence",
     formAsiDefinition: "Optional: define ASI in one sentence",
@@ -125,7 +141,23 @@ const copy = {
     fieldLabel: "本行业中位数",
     formAgi: "你认为 AGI 什么时候到来？",
     formAsi: "你认为 ASI 什么时候到来？",
-    formField: "你的行业",
+    formField: "你的工作或学习领域",
+    fieldAi: "AI / 软件 / 互联网",
+    fieldEducation: "教育 / 科研",
+    fieldDesign: "设计 / 媒体 / 内容",
+    fieldHealth: "医疗 / 生物科技",
+    fieldFinance: "金融 / 法律 / 咨询",
+    fieldEngineering: "制造业 / 工程 / 硬件",
+    fieldPublic: "政府 / 公共服务 / 非营利",
+    fieldOther: "其他",
+    year2026Earlier: "2026 或更早",
+    year2027Earlier: "2027 或更早",
+    yearAfter2035: "2035 以后",
+    yearNotSure: "不确定",
+    asiNotSure: "可能还很远 / 不确定",
+    workAlready: "已经可以",
+    workAfter2035: "2035 以后",
+    workNotSure: "不确定",
     formWork: "AI 什么时候能完成你所在领域 90% 的工作？",
     formAgiDefinition: "可选：用一句话定义 AGI",
     formAsiDefinition: "可选：用一句话定义 ASI",
@@ -156,7 +188,7 @@ const copy = {
 
 const surveyLinks = {
   zh: "https://v.wjx.cn/vm/ex19O3e.aspx",
-  en: "https://docs.google.com/forms/d/e/1FAIpQLSdhd8_HYK2I95QHJb2UlD7axd5opnhaHW5CTZKEFxRb_TmPcQ/viewform",
+  en: "https://docs.google.com/forms/d/e/1FAIpQLSf48UgkCA7uS5o5hlcC6yK3vB64CC4yPRqEmS7FGbDEDmaMtA/viewform",
 };
 
 const surveyEmbedLinks = {
@@ -293,6 +325,17 @@ function median(values) {
   if (!sorted.length) return 0;
   const mid = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+}
+
+function numericAnswers(votes, key) {
+  return votes
+    .map((vote) => vote[key])
+    .filter((value) => value !== null && value !== undefined && value !== "")
+    .map(Number);
+}
+
+function optionalYear(value) {
+  return value === "unknown" ? null : Number(value);
 }
 
 function formatYear(value) {
@@ -557,9 +600,9 @@ async function renderDefinitions() {
 
 async function updateVotes() {
   const votes = await allVotes();
-  const agiMedian = median(votes.map((vote) => Number(vote.agi)));
-  const asiMedian = median(votes.map((vote) => Number(vote.asi)));
-  const workMedian = median(votes.map((vote) => Number(vote.work)));
+  const agiMedian = median(numericAnswers(votes, "agi"));
+  const asiMedian = median(numericAnswers(votes, "asi"));
+  const workMedian = median(numericAnswers(votes, "work"));
   document.querySelector("#agi-public").textContent = formatYear(agiMedian);
   document.querySelector("#asi-public").textContent = formatYear(asiMedian);
   document.querySelector("#vote-count").textContent = votes.length + 34;
@@ -601,9 +644,9 @@ document.querySelector("#vote-form").addEventListener("submit", async (event) =>
   const form = new FormData(event.currentTarget);
   const attributionConsent = form.get("attributionConsent") === "yes";
   const nextVote = {
-    agi: Number(form.get("agi")),
-    asi: Number(form.get("asi")),
-    work: Number(form.get("work")),
+    agi: optionalYear(form.get("agi")),
+    asi: optionalYear(form.get("asi")),
+    work: optionalYear(form.get("work")),
     field: String(form.get("field")),
     agiDefinition: String(form.get("agiDefinition") || "").trim(),
     asiDefinition: String(form.get("asiDefinition") || "").trim(),

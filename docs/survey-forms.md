@@ -34,17 +34,20 @@ These forms collect responses in their own dashboards. They do not automatically
    - 2035 以后
    - 可能还很远 / 不确定
 
-3. 你所在或最熟悉的领域是？
+3. 你的工作或学习最接近哪个领域？
+   - 在校学生请按所学方向选择最接近的领域。
    - AI / 软件 / 互联网
-   - 教育
+   - 教育 / 科研
    - 设计 / 媒体 / 内容
    - 医疗 / 生物科技
-   - 金融 / 运营 / 咨询
-   - 学生
+   - 金融 / 法律 / 咨询
+   - 制造业 / 工程 / 硬件
+   - 政府 / 公共服务 / 非营利
    - 其他
 
 4. 在你熟悉的领域里，AI 大概什么时候能完成 90% 的工作？
-   - 已经可以 / 2026
+   - 已经可以
+   - 2026
    - 2027
    - 2028
    - 2029
@@ -122,17 +125,20 @@ Questions:
    - After 2035
    - Far away / not sure
 
-3. Which field are you closest to?
+3. Which field is closest to your work or studies?
+   - Students should choose the field closest to their area of study.
    - AI / software / internet
-   - Education
+   - Education / research
    - Design / media / content
    - Healthcare / biotech
-   - Finance / operations / consulting
-   - Student
+   - Finance / legal / consulting
+   - Manufacturing / engineering / hardware
+   - Government / public service / nonprofit
    - Other
 
 4. In your field, when can AI do roughly 90% of the work?
-   - Already / 2026
+   - Already
+   - 2026
    - 2027
    - 2028
    - 2029

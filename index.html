@@ -229,49 +229,53 @@
           <label>
             <span data-i18n="formAgi">When do you think AGI arrives?</span>
             <select name="agi" required>
-              <option value="2026">2026 or earlier</option>
+              <option value="2026" data-i18n="year2026Earlier">2026 or earlier</option>
               <option value="2027">2027</option>
               <option value="2028">2028</option>
               <option value="2029">2029</option>
               <option value="2030">2030</option>
               <option value="2033">2031-2035</option>
-              <option value="2038">After 2035</option>
+              <option value="2038" data-i18n="yearAfter2035">After 2035</option>
+              <option value="unknown" data-i18n="yearNotSure">Not sure</option>
             </select>
           </label>
           <label>
             <span data-i18n="formAsi">When do you think ASI arrives?</span>
             <select name="asi" required>
-              <option value="2027">2027 or earlier</option>
+              <option value="2027" data-i18n="year2027Earlier">2027 or earlier</option>
               <option value="2028">2028</option>
               <option value="2029">2029</option>
               <option value="2030">2030</option>
               <option value="2033">2031-2035</option>
-              <option value="2038">After 2035</option>
-              <option value="2045">Not sure / far away</option>
+              <option value="2038" data-i18n="yearAfter2035">After 2035</option>
+              <option value="unknown" data-i18n="asiNotSure">Far away / not sure</option>
             </select>
           </label>
           <label>
             <span data-i18n="formField">Your field</span>
             <select name="field" required>
-              <option value="ai">AI / software</option>
-              <option value="education">Education</option>
-              <option value="design">Design / media</option>
-              <option value="health">Health / biotech</option>
-              <option value="finance">Finance / operations</option>
-              <option value="student">Student</option>
-              <option value="other">Other</option>
+              <option value="ai" data-i18n="fieldAi">AI / software / internet</option>
+              <option value="education" data-i18n="fieldEducation">Education / research</option>
+              <option value="design" data-i18n="fieldDesign">Design / media / content</option>
+              <option value="health" data-i18n="fieldHealth">Healthcare / biotech</option>
+              <option value="finance" data-i18n="fieldFinance">Finance / legal / consulting</option>
+              <option value="engineering" data-i18n="fieldEngineering">Manufacturing / engineering / hardware</option>
+              <option value="public" data-i18n="fieldPublic">Government / public service / nonprofit</option>
+              <option value="other" data-i18n="fieldOther">Other</option>
             </select>
           </label>
           <label>
             <span data-i18n="formWork">When can AI do 90% of your field's work?</span>
             <select name="work" required>
-              <option value="2026">Already / 2026</option>
+              <option value="2025" data-i18n="workAlready">Already</option>
+              <option value="2026">2026</option>
               <option value="2027">2027</option>
               <option value="2028">2028</option>
               <option value="2029">2029</option>
               <option value="2030">2030</option>
               <option value="2033">2031-2035</option>
-              <option value="2038">After 2035</option>
+              <option value="2038" data-i18n="workAfter2035">After 2035</option>
+              <option value="unknown" data-i18n="workNotSure">Not sure</option>
             </select>
           </label>
           <label class="wide-field">
@@ -321,6 +325,6 @@
       <span data-i18n="footer">No doom. Just receipts, guesses, and a radar that keeps changing.</span>
     </footer>
 
-    <script src="./app.js?v=20260606-definition-links"></script>
+    <script src="./app.js?v=20260606-survey-fields"></script>
   </body>
 </html>
