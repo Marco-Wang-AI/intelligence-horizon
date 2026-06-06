@@ -2,7 +2,7 @@ const copy = {
   en: {
     navDefinitions: "Definitions",
     navFiction: "Fiction",
-    navSignals: "Updates",
+    navSignals: "Radar Log",
     navPulse: "Vote",
     navOpen: "Open",
     eyebrow: "Signals, not sirens.",
@@ -21,11 +21,12 @@ const copy = {
     publicLabelShort: "Public take",
     radarHint: "Signals move toward the center as the timeline gets closer.",
     radarZone: "Almost zone",
-    clockPositionLabel: "Signal center",
-    clockKeyEarlier: "earlier",
-    clockKeyLater: "later",
+    clockPositionLabel: "Radar center",
+    clockKeyEarlier: "closer",
+    clockKeyLater: "farther",
+    radarUnitNote: "Radar meters are a playful relative distance, not a physical measurement.",
     agiNote: "A quick compare: expert forecasts vs. public intuition.",
-    agiMove: "7 months earlier this quarter",
+    agiMove: "The latest signals move the radar closer",
     asiLabel: "ASI radar",
     asiNote: "A wider, more uncertain band for early superintelligence.",
     asiMove: "Still high uncertainty",
@@ -46,7 +47,7 @@ const copy = {
     fictionCopy:
       "A very unserious timeline of when famous stories imagined AI waking up, taking over, or becoming impossible to ignore.",
     signalsEyebrow: "Radar notes",
-    signalsTitle: "Why did the radar move?",
+    signalsTitle: "What changed the distance?",
     pulseEyebrow: "Public take",
     pulseTitle: "Pick a year. Add a definition if you feel brave.",
     pulseCopy:
@@ -55,21 +56,23 @@ const copy = {
     surveyPanelEyebrow: "Two doors, one radar",
     votesLabel: "votes",
     externalSurveyTitle: "Add your signal",
-    externalSurveyCopy: "Both forms ask the same questions. Choose whichever opens more easily for you.",
+    externalSurveyCopy: "Four quick choices, then optional details. Choose whichever form opens more easily for you.",
     externalSurveyPrimary: "Open English form",
     externalSurveySecondary: "打开中文问卷",
-    surveyPrivacyNote: "Anonymous by default. A display name is optional.",
+    surveyPrivacyNote: "About 45 seconds. Anonymous by default; a display name is optional.",
     openEyebrow: "Open project",
-    openTitle: "Open source, because arguing about timelines is better with receipts.",
-    conceptsCta: "View UI concepts",
-    readmeCta: "Open README",
+    openTitle: "A vibe-coded open project. Bring a signal, a source, or a better idea.",
+    openCopy: "Help improve the radar with a sourced event, clearer copy, or a thoughtful pull request.",
+    conceptsCta: "View on GitHub",
+    readmeCta: "Submit a signal",
     clockEventHint: "Tap a signal to see what moved the radar.",
+    signalSourceLabel: "Source",
     footer: "Receipts, guesses, and a radar that keeps changing.",
   },
   zh: {
     navDefinitions: "定义",
     navFiction: "科幻",
-    navSignals: "动态",
+    navSignals: "雷达记录",
     navPulse: "投票",
     navOpen: "开源",
     eyebrow: "信号来了，别慌。",
@@ -88,11 +91,12 @@ const copy = {
     publicLabelShort: "大众感受",
     radarHint: "信号越靠近中心，代表时间线越接近“快了”。",
     radarZone: "快了区",
-    clockPositionLabel: "信号中心",
-    clockKeyEarlier: "往前拨",
-    clockKeyLater: "往后拨",
+    clockPositionLabel: "雷达中心",
+    clockKeyEarlier: "靠近中心",
+    clockKeyLater: "远离中心",
+    radarUnitNote: "“米”是小雷达的相对距离单位，不是物理测量。",
     agiNote: "一边看专家预测，一边看大众感受。",
-    agiMove: "本季度拨快 7 个月",
+    agiMove: "近期信号让雷达整体更靠近中心",
     asiLabel: "ASI 雷达",
     asiNote: "超级智能更难判断，所以这里的不确定性更高。",
     asiMove: "不确定性仍然很高",
@@ -110,7 +114,7 @@ const copy = {
     fictionTitle: "科幻作品早就给 AI 排过时间表。",
     fictionCopy: "一个不太严肃的时间轴：看看电影、游戏和小说里，AI 都是在哪一年开始不太听话的。",
     signalsEyebrow: "雷达记录",
-    signalsTitle: "最近为什么往前或往后？",
+    signalsTitle: "哪些信号改变了距离？",
     pulseEyebrow: "大众感受",
     pulseTitle: "选一个年份，也可以顺手写一句定义。",
     pulseCopy:
@@ -119,15 +123,17 @@ const copy = {
     surveyPanelEyebrow: "两个入口，同一只雷达",
     votesLabel: "票",
     externalSurveyTitle: "加入你的信号",
-    externalSurveyCopy: "两份问卷题目一致，按你的网络环境选择更顺手的入口。",
+    externalSurveyCopy: "四道快速选择题，其他内容都可选填。按网络环境选择更顺手的入口。",
     externalSurveyPrimary: "打开中文问卷",
     externalSurveySecondary: "Open English form",
-    surveyPrivacyNote: "默认匿名；只有你愿意时，入选定义才会展示昵称。",
+    surveyPrivacyNote: "大约 45 秒；默认匿名，只有你愿意时，入选定义才会展示昵称。",
     openEyebrow: "开源项目",
-    openTitle: "开源做这件事：大家可以带着来源来吵时间线。",
-    conceptsCta: "查看 UI 方案",
-    readmeCta: "打开 README",
+    openTitle: "这是一个 vibe coding 出来的开源小项目，也欢迎你一起参与。",
+    openCopy: "可以提交新的信号、补充来源、改文案，或者带来一个更好的想法。",
+    conceptsCta: "查看 GitHub",
+    readmeCta: "提交一个信号",
     clockEventHint: "点一个信号，看看这次为什么移动。",
+    signalSourceLabel: "出处",
     footer: "记录证据、猜想和一只会变的小雷达。",
   },
 };
@@ -148,7 +154,7 @@ const fallbackEvents = [
     id: "fallback-signal",
     date: "2026-05",
     target: "AGI",
-    deltaDays: -90,
+    deltaMeters: -90,
     confidence: { en: "medium", zh: "中" },
     title: {
       en: "DeepMind leadership says society has only a few years to prepare",
@@ -234,10 +240,12 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function formatDelta(days) {
-  const sign = days > 0 ? "+" : "";
-  const unit = language === "zh" ? "天" : Math.abs(days) === 1 ? "day" : "days";
-  return language === "zh" ? `${sign}${days} ${unit}` : `${sign}${days} ${unit}`;
+function formatDelta(meters) {
+  const distance = `${Math.abs(meters)}m`;
+  if (language === "zh") {
+    return meters > 0 ? `远离 ${distance}` : `靠近 ${distance}`;
+  }
+  return meters > 0 ? `${distance} farther` : `${distance} closer`;
 }
 
 function eventTimeValue(event) {
@@ -251,7 +259,7 @@ function eventTimeValue(event) {
 function sortedEvents() {
   return events
     .slice()
-    .sort((a, b) => eventTimeValue(b) - eventTimeValue(a) || Math.abs(b.deltaDays) - Math.abs(a.deltaDays));
+    .sort((a, b) => eventTimeValue(b) - eventTimeValue(a) || Math.abs(b.deltaMeters) - Math.abs(a.deltaMeters));
 }
 
 async function allVotes() {
@@ -325,8 +333,9 @@ function renderSignals() {
   list.innerHTML = sortedEvents()
     .map((item) => {
       const persona = item.persona || {};
-      return `
-        <article class="signal-card">
+      const sourceUrl = item.source?.url ? escapeHtml(item.source.url) : "";
+      const sourceName = escapeHtml(item.source?.name || copy[language].signalSourceLabel);
+      const content = `
           <span class="signal-date">${item.date}</span>
           <div class="signal-avatar ${persona.image ? "has-image" : ""} ${persona.tone || ""} avatar-${persona.avatar || "default"}" aria-hidden="true">
             ${persona.image ? `<img src="${persona.image}" alt="" loading="lazy" />` : ""}
@@ -343,22 +352,27 @@ function renderSignals() {
             <div class="signal-meta">
               <span class="pill">${item.target}</span>
               <span class="pill">${item.confidence[language]}</span>
+              ${sourceUrl ? `<span class="signal-source">${copy[language].signalSourceLabel} · ${sourceName}</span>` : ""}
             </div>
           </div>
-          <span class="pill delta ${item.deltaDays > 0 ? "slow" : ""}">${formatDelta(item.deltaDays)}</span>
-        </article>
+          <span class="pill delta ${item.deltaMeters > 0 ? "farther" : ""}">${formatDelta(item.deltaMeters)}</span>
       `;
+      return sourceUrl
+        ? `<a class="signal-card" href="${sourceUrl}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(item.title[language])} · ${copy[language].signalSourceLabel}: ${sourceName}">${content}</a>`
+        : `<article class="signal-card">${content}</article>`;
     })
     .join("");
 }
 
 function clockEventMarkup(item) {
   const persona = item.persona || {};
-  return `
+  const content = `
     <p class="clock-event-kicker">${item.date} · ${persona.name || item.target}</p>
     <strong>${item.title[language]}</strong>
-    <span class="pill delta ${item.deltaDays > 0 ? "slow" : ""}">${formatDelta(item.deltaDays)}</span>
+    <span class="pill delta ${item.deltaMeters > 0 ? "farther" : ""}">${formatDelta(item.deltaMeters)}</span>
   `;
+  if (!item.source?.url) return content;
+  return `<a class="clock-event-link" href="${escapeHtml(item.source.url)}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(item.title[language])} · ${copy[language].signalSourceLabel}: ${escapeHtml(item.source.name)}">${content}</a>`;
 }
 
 function renderClockBeads() {
@@ -393,15 +407,20 @@ function renderClockBeads() {
         const position = radarPositions[index % radarPositions.length];
         return `
           <button
-            class="clock-bead ${item.id === active.id ? "active" : ""} ${item.deltaDays > 0 ? "slow" : "fast"}"
+            class="clock-bead ${item.id === active.id ? "active" : ""} ${item.deltaMeters > 0 ? "farther" : "closer"}"
             type="button"
             data-target="${target}"
             data-event-id="${item.id}"
             style="--bead-index: ${index}; --bead-x: ${position.x}%; --bead-y: ${position.y}%"
             aria-label="${item.date} ${persona.name || item.title[language]}"
-            title="${item.date} · ${persona.name || item.title[language]}"
+            title="${item.date} · ${persona.name || item.title[language]} · ${formatDelta(item.deltaMeters)}"
           >
-            <span>${persona.initials || target}</span>
+            ${
+              persona.image
+                ? `<img src="${escapeHtml(persona.image)}" alt="" />`
+                : `<span class="clock-bead-fallback">${persona.initials || target}</span>`
+            }
+            <span class="clock-bead-distance">${formatDelta(item.deltaMeters)}</span>
           </button>
         `;
       })

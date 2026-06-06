@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping move the clock carefully. Good signals include public sources, a clear direction, and a reason why the proposed adjustment might be wrong.
+        Thanks for helping improve the radar carefully. Good signals include public sources, a clear direction, and a reason why the proposed movement might be wrong.
   - type: input
     id: signal_title
     attributes:
@@ -48,8 +48,8 @@ body:
     id: delta
     attributes:
       label: Suggested movement
-      description: Use days or months. Keep it modest unless the evidence is very strong.
-      placeholder: "Example: -30 days"
+      description: Use relative radar meters and say whether the signal moves closer or farther. Keep it modest unless the evidence is very strong.
+      placeholder: "Example: 30m closer"
     validations:
       required: true
   - type: dropdown

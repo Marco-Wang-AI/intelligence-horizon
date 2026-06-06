@@ -16,7 +16,7 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Static bilingual website.
 - Light visual identity.
 - Two radar panels for AGI and ASI signals.
-- Signal notes with direction, confidence, and timeline movement.
+- Signal notes with direction, confidence, relative radar distance, and public sources.
 - A sci-fi timeline for fictional AI milestones.
 - Chinese survey via Wenjuanxing and English survey via Google Forms.
 - Optional one-sentence AGI and ASI definition submissions with opt-in attribution.
@@ -49,7 +49,7 @@ Signal entries now live in `data/events.json`. A signal follows this shape:
     "url": "https://example.com/source"
   },
   "target": "AGI",
-  "deltaDays": -90,
+  "deltaMeters": -90,
   "confidence": {
     "en": "medium",
     "zh": "中"
@@ -65,8 +65,8 @@ Starter questions:
 
 - When do you think AGI arrives?
 - When do you think ASI arrives?
-- What field are you in?
-- When can AI do 90% of your field's work?
+- Optional: what field are you in?
+- Optional: when can AI do 90% of your field's work?
 - Optional: define AGI in one sentence.
 - Optional: define ASI in one sentence.
 
@@ -105,3 +105,5 @@ Short launch drafts for X/Twitter and WeChat are in `docs/launch-copy.md`.
 ## Local Preview
 
 Open `index.html` in a browser, or run any static server in this folder.
+
+Version history is documented in [`CHANGELOG.md`](./CHANGELOG.md).

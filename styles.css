@@ -137,16 +137,15 @@ textarea {
 }
 
 .hero-art,
-.hero-art img,
 .hero-overlay {
   position: absolute;
   inset: 0;
 }
 
-.hero-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (min-width: 541px) {
+  .hero-art {
+    background: url("./assets/horizon.png") center / cover no-repeat;
+  }
 }
 
 .hero-overlay {
@@ -283,6 +282,14 @@ h3 {
   padding: 10px 16px;
   box-shadow: 0 10px 28px rgba(34, 48, 54, 0.06);
   color: var(--muted);
+}
+
+.radar-unit-note {
+  grid-column: 1 / -1;
+  margin: -2px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: right;
 }
 
 .radar-status > span {
@@ -593,12 +600,12 @@ h3 {
   box-shadow: 0 0 0 3px rgba(47, 139, 145, 0.1);
 }
 
-.clock-key i.fast {
+.clock-key i.closer {
   background: var(--coral);
   box-shadow: 0 0 0 3px rgba(232, 121, 97, 0.12);
 }
 
-.clock-key i.slow {
+.clock-key i.farther {
   background: var(--blue);
   box-shadow: 0 0 0 3px rgba(92, 168, 214, 0.12);
 }
@@ -616,8 +623,8 @@ h3 {
   top: var(--bead-y);
   display: grid;
   place-items: center;
-  width: 29px;
-  height: 29px;
+  width: 34px;
+  height: 34px;
   border: 1px solid rgba(173, 77, 56, 0.2);
   border-radius: 50%;
   padding: 0;
@@ -650,35 +657,61 @@ h3 {
   box-shadow: 0 0 0 6px rgba(232, 121, 97, 0.12);
 }
 
-.clock-bead.slow {
+.clock-bead.farther {
   border-color: rgba(39, 114, 150, 0.24);
   box-shadow:
     0 10px 24px rgba(39, 114, 150, 0.12),
     0 0 0 5px rgba(92, 168, 214, 0.1);
 }
 
-.clock-bead.slow::before {
+.clock-bead.farther::before {
   background: var(--blue);
   box-shadow: 0 0 0 6px rgba(92, 168, 214, 0.14);
 }
 
-.clock-bead span,
-.clock-bead::after {
+.clock-bead img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.clock-bead-fallback {
   display: block;
+  font-size: 0.62rem;
+  font-weight: 880;
   line-height: 1;
   text-align: center;
 }
 
-.clock-bead span {
-  font-size: 0.62rem;
-  font-weight: 880;
+.clock-bead-distance {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 7px);
+  display: none;
+  width: max-content;
+  border: 1px solid rgba(220, 229, 229, 0.92);
+  border-radius: 999px;
+  padding: 4px 7px;
+  background: rgba(255, 253, 248, 0.96);
+  box-shadow: 0 8px 18px rgba(34, 48, 54, 0.1);
+  color: #ad4d38;
+  font-size: 0.58rem;
+  font-weight: 820;
+  line-height: 1;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.clock-bead.farther .clock-bead-distance {
+  color: #277296;
 }
 
 .clock-bead:hover,
 .clock-bead:focus-visible,
 .clock-bead.active {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   animation-play-state: paused;
   transform: translate(-50%, -52%) scale(1.05);
   box-shadow:
@@ -690,6 +723,10 @@ h3 {
 .clock-bead.active {
   border-color: rgba(47, 139, 145, 0.32);
   background: rgba(255, 253, 248, 0.96);
+}
+
+.clock-bead.active .clock-bead-distance {
+  display: block;
 }
 
 @keyframes radar-sweep {
@@ -726,6 +763,20 @@ h3 {
   border-radius: var(--radius);
   background: rgba(255, 253, 248, 0.72);
   padding: 12px;
+}
+
+.clock-event-link {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px 10px;
+  min-width: 0;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.clock-event-link:focus-visible {
+  outline: 2px solid rgba(47, 139, 145, 0.5);
+  outline-offset: 4px;
 }
 
 .clock-event-kicker,
@@ -1110,6 +1161,12 @@ a.definition-entry:focus-visible::after {
   transform: translateY(-2px);
 }
 
+.signal-card:focus-visible {
+  border-color: rgba(47, 139, 145, 0.42);
+  box-shadow: 0 0 0 3px rgba(47, 139, 145, 0.12);
+  outline: 0;
+}
+
 .signal-date {
   color: var(--muted);
   font-weight: 760;
@@ -1284,6 +1341,15 @@ a.definition-entry:focus-visible::after {
   gap: 8px;
 }
 
+.signal-source {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
 .pill {
   display: inline-flex;
   min-height: 28px;
@@ -1301,7 +1367,7 @@ a.definition-entry:focus-visible::after {
   color: #ad4d38;
 }
 
-.pill.delta.slow {
+.pill.delta.farther {
   background: #eef8ff;
   color: #277296;
 }
@@ -1385,6 +1451,13 @@ a.definition-entry:focus-visible::after {
 
 .open-band h2 {
   max-width: 780px;
+}
+
+.open-band p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .open-actions {
@@ -1523,24 +1596,17 @@ footer {
     white-space: nowrap;
   }
 
-  .hero-content {
-    width: auto;
-    margin: 0 18px;
-  }
-
   .language-switch {
     flex: 0 0 94px;
     width: 94px;
   }
 
   .hero {
-    min-height: 560px;
+    display: none;
   }
 
-  .hero-overlay {
-    background:
-      linear-gradient(180deg, rgba(251, 250, 245, 0.9), rgba(251, 250, 245, 0.56) 58%, var(--paper) 100%),
-      linear-gradient(90deg, rgba(251, 250, 245, 0.9), rgba(251, 250, 245, 0.42));
+  .dashboard {
+    margin-top: 12px;
   }
 
   .hero-copy {
@@ -1549,8 +1615,8 @@ footer {
   }
 
   h1 {
-    font-size: 2.95rem;
-    line-height: 0.95;
+    font-size: 2.45rem;
+    line-height: 1;
   }
 
   .hero-actions {
@@ -1561,6 +1627,10 @@ footer {
 
   .radar-status {
     gap: 8px 18px;
+  }
+
+  .radar-unit-note {
+    text-align: left;
   }
 
   .radar-status > span:not(.status-cadence) {

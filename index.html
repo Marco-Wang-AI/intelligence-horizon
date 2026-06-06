@@ -23,7 +23,7 @@
       content="Signals, not sirens: a playful AGI / ASI radar with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta name="twitter:image" content="https://marco-wang-ai.github.io/intelligence-horizon/assets/social/og-card.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260606-biweekly" />
+    <link rel="stylesheet" href="./styles.css?v=20260607-v11" />
   </head>
   <body>
     <header class="topbar" aria-label="Site header">
@@ -36,7 +36,7 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#definitions" data-i18n="navDefinitions">Definitions</a>
-        <a href="#signals" data-i18n="navSignals">Updates</a>
+        <a href="#signals" data-i18n="navSignals">Radar Log</a>
         <a href="#fiction" data-i18n="navFiction">Fiction</a>
         <a href="#pulse" data-i18n="navPulse">Vote</a>
         <a href="#open" data-i18n="navOpen">Open</a>
@@ -49,9 +49,7 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <picture class="hero-art">
-          <img src="./assets/horizon.png" alt="" />
-        </picture>
+        <div class="hero-art" aria-hidden="true"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
           <p class="eyebrow" data-i18n="eyebrow">Signals, not sirens.</p>
@@ -102,8 +100,8 @@
           </div>
           <div class="clock-key">
             <span><i class="position"></i><b data-i18n="clockPositionLabel">Signal center</b></span>
-            <span><i class="fast"></i><b data-i18n="clockKeyEarlier">earlier</b></span>
-            <span><i class="slow"></i><b data-i18n="clockKeyLater">later</b></span>
+            <span><i class="closer"></i><b data-i18n="clockKeyEarlier">closer</b></span>
+            <span><i class="farther"></i><b data-i18n="clockKeyLater">farther</b></span>
           </div>
           <div class="clock-event" id="agi-clock-event" aria-live="polite"></div>
           <dl class="clock-compare">
@@ -143,8 +141,8 @@
           </div>
           <div class="clock-key">
             <span><i class="position"></i><b data-i18n="clockPositionLabel">Signal center</b></span>
-            <span><i class="fast"></i><b data-i18n="clockKeyEarlier">earlier</b></span>
-            <span><i class="slow"></i><b data-i18n="clockKeyLater">later</b></span>
+            <span><i class="closer"></i><b data-i18n="clockKeyEarlier">closer</b></span>
+            <span><i class="farther"></i><b data-i18n="clockKeyLater">farther</b></span>
           </div>
           <div class="clock-event" id="asi-clock-event" aria-live="polite"></div>
           <dl class="clock-compare">
@@ -162,6 +160,9 @@
             <span data-i18n="asiMove">Still high uncertainty</span>
           </div>
         </article>
+        <p class="radar-unit-note" data-i18n="radarUnitNote">
+          Radar meters are a playful relative distance, not a physical measurement.
+        </p>
       </section>
 
       <section class="definitions-section" id="definitions" aria-labelledby="definitions-title">
@@ -193,8 +194,8 @@
 
       <section class="content-band" id="signals">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="signalsEyebrow">Clock notes</p>
-          <h2 data-i18n="signalsTitle">Why did the radar move?</h2>
+          <p class="eyebrow" data-i18n="signalsEyebrow">Radar notes</p>
+          <h2 data-i18n="signalsTitle">What changed the distance?</h2>
         </div>
         <div class="signal-list" id="signal-list"></div>
       </section>
@@ -239,11 +240,14 @@
       <section class="open-band" id="open">
         <div>
           <p class="eyebrow" data-i18n="openEyebrow">Open project</p>
-          <h2 data-i18n="openTitle">Open source, because arguing about timelines is better with receipts.</h2>
-        </div>
-        <div class="open-actions">
-          <a class="primary-action" href="./concepts.html" data-i18n="conceptsCta">View UI concepts</a>
-          <a class="secondary-action" href="./README.md" data-i18n="readmeCta">Open README</a>
+            <h2 data-i18n="openTitle">A vibe-coded open project. Bring a signal, a source, or a better idea.</h2>
+            <p data-i18n="openCopy">
+              Help improve the radar with a sourced event, clearer copy, or a thoughtful pull request.
+            </p>
+          </div>
+          <div class="open-actions">
+          <a class="primary-action" href="https://github.com/Marco-Wang-AI/intelligence-horizon" target="_blank" rel="noreferrer" data-i18n="conceptsCta">View on GitHub</a>
+          <a class="secondary-action" href="https://github.com/Marco-Wang-AI/intelligence-horizon/issues/new?template=signal-proposal.yml" target="_blank" rel="noreferrer" data-i18n="readmeCta">Submit a signal</a>
         </div>
       </section>
     </main>
@@ -253,6 +257,6 @@
       <span data-i18n="footer">No doom. Just receipts, guesses, and a radar that keeps changing.</span>
     </footer>
 
-    <script src="./app.js?v=20260606-biweekly"></script>
+    <script src="./app.js?v=20260607-v11"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@ Thanks for helping move the radar carefully.
 ## Good Contributions
 
 - Add a public source that changes the AGI or ASI horizon.
-- Propose a different day adjustment for an existing signal.
+- Propose a different closer/farther radar distance for an existing signal.
 - Improve Chinese or English copy.
 - Improve the public-vote question set.
 - Add transparent methodology.
@@ -51,3 +51,5 @@ Useful signals usually include at least one of these:
 ## Tone
 
 This project is curious, playful, and evidence-seeking. It is not trying to make people panic.
+
+Radar meters are a relative project unit, not a physical measurement.

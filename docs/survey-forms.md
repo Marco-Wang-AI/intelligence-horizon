@@ -7,6 +7,8 @@ V1 uses two external forms:
 
 These forms collect responses in their own dashboards. They do not automatically update the website. For launch, export CSV manually when needed; later, connect a database or scheduled import if public live stats become important.
 
+For v1.1, only questions 1, 2, 5, and 7 are required. All other questions are optional. The four required choices should take about 45 seconds.
+
 ## 中文问卷：AGI 小雷达：AGI / ASI 小调查
 
 说明文案：
@@ -15,7 +17,7 @@ These forms collect responses in their own dashboards. They do not automatically
 
 题目：
 
-1. 你认为 AGI 大概什么时候到来？
+1. 【必填】你认为 AGI 大概什么时候到来？
    - 2026 或更早
    - 2027
    - 2028
@@ -25,7 +27,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 2035 以后
    - 不确定
 
-2. 你认为 ASI / 超级智能大概什么时候到来？
+2. 【必填】你认为 ASI / 超级智能大概什么时候到来？
    - 2027 或更早
    - 2028
    - 2029
@@ -34,7 +36,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 2035 以后
    - 可能还很远 / 不确定
 
-3. 你的工作或学习最接近哪个领域？
+3. 【选填】你的工作或学习最接近哪个领域？
    - 在校学生请按所学方向选择最接近的领域。
    - AI / 软件 / 互联网
    - 教育 / 科研
@@ -45,7 +47,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 政府 / 公共服务 / 非营利
    - 其他
 
-4. 在你熟悉的领域里，AI 大概什么时候能完成 90% 的工作？
+4. 【选填】在你熟悉的领域里，AI 大概什么时候能完成 90% 的工作？
    - 已经可以
    - 2026
    - 2027
@@ -56,7 +58,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 2035 以后
    - 不确定
 
-5. 下面哪一句最接近你对 AGI 的理解？
+5. 【必填】下面哪一句最接近你对 AGI 的理解？
    - OpenAI：高度自主，并能在大多数有经济价值的工作上超过人类。
    - 德米斯·哈萨比斯：具备人类拥有的全部认知能力。
    - 杨立昆：拥有世界模型和常识，能在陌生情境中预测、推理与规划。
@@ -64,9 +66,9 @@ These forms collect responses in their own dashboards. They do not automatically
    - 梁文锋：通往 AGI，不只是数学和代码里的自我学习；通过多模态参与人类真实世界的学习，也可能是必要条件。
    - 都不太像，我想自己写一句。
 
-6. 可选：如果你选择“自己写一句”，你认为 AGI 是什么？
+6. 【选填】如果你选择“自己写一句”，你认为 AGI 是什么？
 
-7. 下面哪一句最接近你对 ASI / 超级智能的理解？
+7. 【必填】下面哪一句最接近你对 ASI / 超级智能的理解？
    - 尼克·博斯特罗姆：在几乎所有重要领域都大幅超过人类认知表现。
    - OpenAI：比 AGI 强得多，在多数领域超过专家，并能完成一家大型公司的生产活动。
    - 山姆·奥特曼：管理大公司、国家或大型实验室，比任何借助 AI 的人类都做得更好。
@@ -74,17 +76,17 @@ These forms collect responses in their own dashboards. They do not automatically
    - 伊利亚·苏茨克维 / 扬·莱克：远比人类聪明，已经超出人类可靠监督能力。
    - 都不太像，我想自己写一句。
 
-8. 可选：如果你选择“自己写一句”，你认为 ASI 是什么？
+8. 【选填】如果你选择“自己写一句”，你认为 ASI 是什么？
 
-9. 可选：如果你的自定义定义入选排行榜，希望展示什么名字？
+9. 【选填】如果你的自定义定义入选排行榜，希望展示什么名字？
    - 短文本；可填写昵称、网名或真实姓名。
    - 留空时统一显示为「匿名雷达员」。
 
-10. 可选：公开署名授权
+10. 【选填】公开署名授权
    - 选项：如果我的自定义定义入选，我同意公开展示上面填写的名字。
    - 未勾选时，即使填写了名字也按匿名处理。
 
-11. 可选：你的年龄段
+11. 【选填】你的年龄段
    - 18 岁以下
    - 18-24
    - 25-34
@@ -92,7 +94,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - 45+
    - 不想说
 
-12. 可选：你希望我们把哪条新闻、产品发布或专家观点加入「雷达记录」？
+12. 【选填】你希望我们把哪条新闻、产品发布或专家观点加入「雷达记录」？
 
 结束语：
 
@@ -106,7 +108,7 @@ Description:
 
 Questions:
 
-1. When do you think AGI arrives?
+1. [Required] When do you think AGI arrives?
    - 2026 or earlier
    - 2027
    - 2028
@@ -116,7 +118,7 @@ Questions:
    - After 2035
    - Not sure
 
-2. When do you think ASI / superintelligence arrives?
+2. [Required] When do you think ASI / superintelligence arrives?
    - 2027 or earlier
    - 2028
    - 2029
@@ -125,7 +127,7 @@ Questions:
    - After 2035
    - Far away / not sure
 
-3. Which field is closest to your work or studies?
+3. [Optional] Which field is closest to your work or studies?
    - Students should choose the field closest to their area of study.
    - AI / software / internet
    - Education / research
@@ -136,7 +138,7 @@ Questions:
    - Government / public service / nonprofit
    - Other
 
-4. In your field, when can AI do roughly 90% of the work?
+4. [Optional] In your field, when can AI do roughly 90% of the work?
    - Already
    - 2026
    - 2027
@@ -147,7 +149,7 @@ Questions:
    - After 2035
    - Not sure
 
-5. Which definition is closest to your view of AGI?
+5. [Required] Which definition is closest to your view of AGI?
    - OpenAI: highly autonomous AI that outperforms humans at most economically valuable work.
    - Demis Hassabis: AI with the full range of human cognitive capabilities.
    - Yann LeCun: AI with world models and common sense that can predict, reason, and plan in unfamiliar situations.
@@ -155,9 +157,9 @@ Questions:
    - Liang Wenfeng: AGI may require more than self-learning in math and code; multimodal learning in the real human world may also be necessary.
    - None of these. I want to write my own.
 
-6. Optional: if you chose "write my own", define AGI in one sentence.
+6. [Optional] If you chose "write my own", define AGI in one sentence.
 
-7. Which definition is closest to your view of ASI / superintelligence?
+7. [Required] Which definition is closest to your view of ASI / superintelligence?
    - Nick Bostrom: intelligence that greatly exceeds human cognitive performance across virtually every important domain.
    - OpenAI: AI far beyond AGI, exceeding expert skill in most domains and operating at corporation scale.
    - Sam Altman: AI that can lead a major company, country, or lab better than any AI-assisted human.
@@ -165,17 +167,17 @@ Questions:
    - Ilya Sutskever / Jan Leike: AI systems much smarter than humans and beyond reliable human supervision.
    - None of these. I want to write my own.
 
-8. Optional: if you chose "write my own", define ASI in one sentence.
+8. [Optional] If you chose "write my own", define ASI in one sentence.
 
-9. Optional: what display name should appear if your definition makes the leaderboard?
+9. [Optional] What display name should appear if your definition makes the leaderboard?
    - Short answer; nickname, handle, or real name.
    - Blank responses appear as "Anonymous radar watcher."
 
-10. Optional: public attribution consent
+10. [Optional] Public attribution consent
    - Checkbox: If my definition is featured, I agree to display the name above publicly.
    - Without consent, treat the response as anonymous even if a name was entered.
 
-11. Optional: age range
+11. [Optional] Age range
    - Under 18
    - 18-24
    - 25-34
@@ -183,7 +185,7 @@ Questions:
    - 45+
    - Prefer not to say
 
-12. Optional: what signal, launch, interview, or expert claim should move the radar?
+12. [Optional] What signal, launch, interview, or expert claim should move the radar?
 
 Closing message:
 
