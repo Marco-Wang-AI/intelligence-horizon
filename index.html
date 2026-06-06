@@ -23,7 +23,7 @@
       content="Signals, not sirens: a playful AGI / ASI radar with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta name="twitter:image" content="https://marco-wang-ai.github.io/intelligence-horizon/assets/social/og-card.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260606-definition-links" />
+    <link rel="stylesheet" href="./styles.css?v=20260606-biweekly" />
   </head>
   <body>
     <header class="topbar" aria-label="Site header">
@@ -67,6 +67,20 @@
       </section>
 
       <section class="dashboard" aria-label="Horizon dashboard">
+        <div class="radar-status" aria-label="Radar update schedule">
+          <span class="status-cadence">
+            <i aria-hidden="true"></i>
+            <strong data-i18n="updateCadence">Updated every two weeks</strong>
+          </span>
+          <span>
+            <small data-i18n="currentIssueLabel">Current pulse</small>
+            <time datetime="2026-06-06" data-i18n="currentIssueDate">June 6, 2026</time>
+          </span>
+          <span>
+            <small data-i18n="nextIssueLabel">Next pulse</small>
+            <time datetime="2026-06-20" data-i18n="nextIssueDate">June 20, 2026</time>
+          </span>
+        </div>
         <article class="clock-panel agi">
           <div class="clock-heading">
             <p class="panel-label" data-i18n="agiLabel">AGI radar</p>
@@ -239,6 +253,6 @@
       <span data-i18n="footer">No doom. Just receipts, guesses, and a radar that keeps changing.</span>
     </footer>
 
-    <script src="./app.js?v=20260606-launch-surveys"></script>
+    <script src="./app.js?v=20260606-biweekly"></script>
   </body>
 </html>

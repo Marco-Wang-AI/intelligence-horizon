@@ -21,6 +21,7 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Chinese survey via Wenjuanxing and English survey via Google Forms.
 - Optional one-sentence AGI and ASI definition submissions with opt-in attribution.
 - Community definition leaderboard.
+- A public radar update every two weeks.
 
 ## UI Concepts
 

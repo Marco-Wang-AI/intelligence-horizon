@@ -2,6 +2,8 @@
 
 ## X / Twitter
 
+### English
+
 Vibe-coded, receipt-checked: I made AGI Radar.
 
 A bilingual, open-source radar tracking expert forecasts, product signals, public guesses, and the dates sci-fi gave us years ago.
@@ -9,6 +11,16 @@ A bilingual, open-source radar tracking expert forecasts, product signals, publi
 Not a doomsday clock. Just one question: are we almost there?
 
 Vote here:
+https://marco-wang-ai.github.io/intelligence-horizon/
+
+### 中文
+
+今天 2026.6.6，借个“666”的好彩头，发布一只我和 Codex 手搓的「AGI 小雷达」。
+
+它不算命，也不是 AI 末日钟：看看专家怎么预测、哪些信号拨动了时间线，再投一票留下你心里的 AGI / ASI。
+
+半是 vibe coding，半是查来源。每两周更新一次。
+
 https://marco-wang-ai.github.io/intelligence-horizon/
 
 ## 小红书
