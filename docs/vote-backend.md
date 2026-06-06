@@ -1,6 +1,6 @@
 # Public Pulse Backend Plan
 
-The current MVP stores submitted votes in the visitor's browser. That is enough to test the interaction, but it does not create a shared public dataset.
+The launch version sends visitors to two external surveys. The website itself does not store or submit answers.
 
 ## Fast Launch Survey Bridge
 
@@ -18,7 +18,7 @@ This is also easier to explain in launch posts and easier to export as CSV later
 
 If a single global form becomes necessary, test Wenjuanxing global acceleration first. The tradeoff is that overseas users may still trust Google Forms more, while mainland users may not reliably open Google Forms.
 
-The next backend can be small. Supabase is a good first choice because it gives us a hosted database, row-level security, and a simple browser SDK.
+For the first updates, export both response sets as CSV, normalize the matching bilingual options, and publish aggregate results. The next backend can be small. Supabase is a good first choice because it gives us a hosted database, row-level security, and a simple browser SDK.
 
 ## Why Not Build a Server Yet?
 
@@ -59,25 +59,17 @@ Columns:
 - `language`: text, optional
 - `upvotes`: numeric, default 1
 
-## API Shape
+## Import Shape
 
-The frontend already has two functions that form the backend boundary:
+Keep the option labels aligned across the two surveys, then map both CSV exports into one normalized dataset. The first importer should:
 
-```js
-async function fetchPublicVotes() {
-  return localVotes();
-}
+- Preserve the source form and submission timestamp.
+- Convert year ranges into stable category keys.
+- Keep uncertain answers separate from numeric medians.
+- Publish only aggregate demographic results.
+- Show a submitted display name only when attribution consent is present.
 
-async function savePublicVote(vote) {
-  const votes = localVotes().concat(vote);
-  localStorage.setItem("ih_votes", JSON.stringify(votes));
-  return vote;
-}
-```
-
-When the backend is ready, only these functions should change. The page rendering can stay the same.
-
-Definition submissions follow the same boundary through `savePublicVote()` for now. If the definition leaderboard becomes a real public feature, split that logic into `fetchPublicDefinitions()` and `savePublicDefinition()`.
+When live results become worthwhile, replace the CSV import with a small read-only aggregate API. Definition submissions should remain moderated before appearing on the public leaderboard.
 
 ## Supabase Policy Sketch
 

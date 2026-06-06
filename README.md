@@ -18,8 +18,8 @@ The tone is intentionally friendly rather than apocalyptic. It is inspired by pu
 - Two radar panels for AGI and ASI signals.
 - Signal notes with direction, confidence, and timeline movement.
 - A sci-fi timeline for fictional AI milestones.
-- Local public-vote prototype stored in the browser.
-- Optional one-sentence AGI and ASI definition submissions.
+- Chinese survey via Wenjuanxing and English survey via Google Forms.
+- Optional one-sentence AGI and ASI definition submissions with opt-in attribution.
 - Community definition leaderboard.
 
 ## UI Concepts
@@ -77,7 +77,7 @@ Optional later fields:
 - Confidence level.
 - Free-form reason.
 
-The backend plan is documented in `docs/vote-backend.md`.
+Responses are collected in Wenjuanxing and Google Forms for the first launch. The aggregation plan is documented in `docs/vote-backend.md`.
 
 ## GitHub Participation
 

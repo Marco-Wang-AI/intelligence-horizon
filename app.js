@@ -46,52 +46,20 @@ const copy = {
     pulseTitle: "Pick a year. Add a definition if you feel brave.",
     pulseCopy:
       "Dates are only half the fun. The other half is watching people disagree about what AGI and ASI actually mean.",
+    pulseNote: "The first public snapshot will appear after launch.",
+    surveyPanelEyebrow: "Two doors, one radar",
     votesLabel: "votes",
-    fieldLabel: "your-field median",
-    formAgi: "When do you think AGI arrives?",
-    formAsi: "When do you think ASI arrives?",
-    formField: "Your work or study field",
-    fieldAi: "AI / software / internet",
-    fieldEducation: "Education / research",
-    fieldDesign: "Design / media / content",
-    fieldHealth: "Healthcare / biotech",
-    fieldFinance: "Finance / legal / consulting",
-    fieldEngineering: "Manufacturing / engineering / hardware",
-    fieldPublic: "Government / public service / nonprofit",
-    fieldOther: "Other",
-    year2026Earlier: "2026 or earlier",
-    year2027Earlier: "2027 or earlier",
-    yearAfter2035: "After 2035",
-    yearNotSure: "Not sure",
-    asiNotSure: "Far away / not sure",
-    workAlready: "Already",
-    workAfter2035: "After 2035",
-    workNotSure: "Not sure",
-    formWork: "When can AI do 90% of your field's work?",
-    formAgiDefinition: "Optional: define AGI in one sentence",
-    formAsiDefinition: "Optional: define ASI in one sentence",
-    formDisplayName: "Optional: display name if your definition makes the leaderboard",
-    formDisplayNamePlaceholder: "Nickname, handle, or real name",
-    formAttributionConsent: "If my definition is featured, I agree to display this name publicly.",
-    externalSurveyTitle: "Want your vote counted publicly?",
-    externalSurveyCopy:
-      "The quick form below is local-only for the prototype. For the launch survey, use the external form so responses are collected in one place.",
+    externalSurveyTitle: "Add your signal",
+    externalSurveyCopy: "Both forms ask the same questions. Choose whichever opens more easily for you.",
     externalSurveyPrimary: "Open English form",
-    externalSurveySecondary: "Open Chinese form",
-    externalSurveyPending: "Survey links coming soon",
-    externalSurveyEmbedPending: "Embedded survey appears here after the form links are ready.",
-    agiDefinitionPlaceholder: "AGI is...",
-    asiDefinitionPlaceholder: "ASI is...",
-    submitVote: "Submit local vote",
-    formNote:
-      "Prototype note: votes are stored in your browser for now. Shared public results come next.",
+    externalSurveySecondary: "打开中文问卷",
+    surveyPrivacyNote: "Anonymous by default. A display name is optional.",
     openEyebrow: "Open project",
     openTitle: "Open source, because arguing about timelines is better with receipts.",
     conceptsCta: "View UI concepts",
     readmeCta: "Open README",
     clockEventHint: "Tap a signal to see what moved the radar.",
     footer: "Receipts, guesses, and a radar that keeps changing.",
-    submitted: "Vote added",
   },
   zh: {
     navDefinitions: "定义",
@@ -137,63 +105,26 @@ const copy = {
     pulseTitle: "选一个年份，也可以顺手写一句定义。",
     pulseCopy:
       "只猜时间还不够好玩。AGI、ASI 到底算什么，每个人心里的答案可能都不一样。",
+    pulseNote: "首批投票收集后，这里会更新公开结果。",
+    surveyPanelEyebrow: "两个入口，同一只雷达",
     votesLabel: "票",
-    fieldLabel: "本行业中位数",
-    formAgi: "你认为 AGI 什么时候到来？",
-    formAsi: "你认为 ASI 什么时候到来？",
-    formField: "你的工作或学习领域",
-    fieldAi: "AI / 软件 / 互联网",
-    fieldEducation: "教育 / 科研",
-    fieldDesign: "设计 / 媒体 / 内容",
-    fieldHealth: "医疗 / 生物科技",
-    fieldFinance: "金融 / 法律 / 咨询",
-    fieldEngineering: "制造业 / 工程 / 硬件",
-    fieldPublic: "政府 / 公共服务 / 非营利",
-    fieldOther: "其他",
-    year2026Earlier: "2026 或更早",
-    year2027Earlier: "2027 或更早",
-    yearAfter2035: "2035 以后",
-    yearNotSure: "不确定",
-    asiNotSure: "可能还很远 / 不确定",
-    workAlready: "已经可以",
-    workAfter2035: "2035 以后",
-    workNotSure: "不确定",
-    formWork: "AI 什么时候能完成你所在领域 90% 的工作？",
-    formAgiDefinition: "可选：用一句话定义 AGI",
-    formAsiDefinition: "可选：用一句话定义 ASI",
-    formDisplayName: "可选：如果定义上榜，希望展示什么名字？",
-    formDisplayNamePlaceholder: "昵称、网名或真实姓名",
-    formAttributionConsent: "如果我的定义入选，我同意公开展示这个名字。",
-    externalSurveyTitle: "想让你的投票进入公开统计？",
-    externalSurveyCopy:
-      "下面这个表单目前只存在本地浏览器。正式发布时，请优先填写外部问卷，方便我们统一收集和导出。",
+    externalSurveyTitle: "加入你的信号",
+    externalSurveyCopy: "两份问卷题目一致，按你的网络环境选择更顺手的入口。",
     externalSurveyPrimary: "打开中文问卷",
     externalSurveySecondary: "Open English form",
-    externalSurveyPending: "问卷链接待更新",
-    externalSurveyEmbedPending: "问卷链接准备好后，会在这里内嵌显示。",
-    agiDefinitionPlaceholder: "AGI 是……",
-    asiDefinitionPlaceholder: "ASI 是……",
-    submitVote: "提交本地投票",
-    formNote:
-      "原型说明：现在先把投票存在你的浏览器里，之后再接公开统计。",
+    surveyPrivacyNote: "默认匿名；只有你愿意时，入选定义才会展示昵称。",
     openEyebrow: "开源项目",
     openTitle: "开源做这件事：大家可以带着来源来吵时间线。",
     conceptsCta: "查看 UI 方案",
     readmeCta: "打开 README",
     clockEventHint: "点一个信号，看看这次为什么移动。",
     footer: "记录证据、猜想和一只会变的小雷达。",
-    submitted: "已加入投票",
   },
 };
 
 const surveyLinks = {
   zh: "https://v.wjx.cn/vm/ex19O3e.aspx",
   en: "https://docs.google.com/forms/d/e/1FAIpQLSf48UgkCA7uS5o5hlcC6yK3vB64CC4yPRqEmS7FGbDEDmaMtA/viewform",
-};
-
-const surveyEmbedLinks = {
-  zh: "",
-  en: "",
 };
 
 let language = "en";
@@ -266,60 +197,6 @@ const fallbackFictionTimeline = [
   },
 ];
 
-function localVotes() {
-  try {
-    return JSON.parse(localStorage.getItem("ih_votes") || "[]");
-  } catch {
-    return [];
-  }
-}
-
-function localDefinitions() {
-  try {
-    return JSON.parse(localStorage.getItem("ih_definitions") || "[]");
-  } catch {
-    return [];
-  }
-}
-
-async function fetchPublicVotes() {
-  return localVotes();
-}
-
-async function fetchPublicDefinitions() {
-  return localDefinitions();
-}
-
-async function savePublicVote(vote) {
-  const votes = localVotes().concat(vote);
-  localStorage.setItem("ih_votes", JSON.stringify(votes));
-  const definitions = [];
-  const attributedName =
-    vote.attributionConsent && vote.displayName
-      ? vote.displayName
-      : copy[language].anonymousAuthor;
-  if (vote.agiDefinition) {
-    definitions.push({
-      type: "agi",
-      text: { en: vote.agiDefinition, zh: vote.agiDefinition },
-      author: { en: attributedName, zh: attributedName },
-      votes: 1,
-    });
-  }
-  if (vote.asiDefinition) {
-    definitions.push({
-      type: "asi",
-      text: { en: vote.asiDefinition, zh: vote.asiDefinition },
-      author: { en: attributedName, zh: attributedName },
-      votes: 1,
-    });
-  }
-  if (definitions.length) {
-    localStorage.setItem("ih_definitions", JSON.stringify(localDefinitions().concat(definitions)));
-  }
-  return vote;
-}
-
 function median(values) {
   const sorted = values.filter(Number.isFinite).sort((a, b) => a - b);
   if (!sorted.length) return 0;
@@ -332,10 +209,6 @@ function numericAnswers(votes, key) {
     .map((vote) => vote[key])
     .filter((value) => value !== null && value !== undefined && value !== "")
     .map(Number);
-}
-
-function optionalYear(value) {
-  return value === "unknown" ? null : Number(value);
 }
 
 function formatYear(value) {
@@ -372,7 +245,7 @@ function sortedEvents() {
 }
 
 async function allVotes() {
-  return starterVotes.concat(await fetchPublicVotes());
+  return starterVotes;
 }
 
 async function fetchJson(path, fallback) {
@@ -423,35 +296,18 @@ async function renderLanguage() {
 function renderSurveyLinks() {
   const primary = document.querySelector('[data-survey="primary"]');
   const secondary = document.querySelector('[data-survey="secondary"]');
-  const pending = document.querySelector("[data-i18n='externalSurveyPending']");
-  const embed = document.querySelector("#survey-embed");
-  if (!primary || !secondary || !pending || !embed) return;
+  if (!primary || !secondary) return;
 
   const primaryUrl = language === "zh" ? surveyLinks.zh : surveyLinks.en;
   const secondaryUrl = language === "zh" ? surveyLinks.en : surveyLinks.zh;
-  const embedUrl = language === "zh" ? surveyEmbedLinks.zh : surveyEmbedLinks.en;
   [
     [primary, primaryUrl],
     [secondary, secondaryUrl],
   ].forEach(([link, url]) => {
-    if (url) {
-      link.href = url;
-      link.target = "_blank";
-      link.rel = "noreferrer";
-      link.classList.remove("is-disabled");
-      link.removeAttribute("aria-disabled");
-    } else {
-      link.href = "#";
-      link.removeAttribute("target");
-      link.removeAttribute("rel");
-      link.classList.add("is-disabled");
-      link.setAttribute("aria-disabled", "true");
-    }
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
   });
-  pending.hidden = Boolean(primaryUrl && secondaryUrl);
-  embed.innerHTML = embedUrl
-    ? `<iframe src="${embedUrl}" title="${copy[language].externalSurveyTitle}" loading="lazy"></iframe>`
-    : `<p>${copy[language].externalSurveyEmbedPending}</p>`;
 }
 
 function renderSignals() {
@@ -567,12 +423,10 @@ function renderFictionTimeline() {
 }
 
 async function renderDefinitions() {
-  const publicDefinitions = await fetchPublicDefinitions();
   ["agi", "asi"].forEach((type) => {
     const list = document.querySelector(`#${type}-definition-list`);
     const starter = starterDefinitions[type].map((definition) => ({ ...definition, type }));
-    const items = starter.concat(publicDefinitions.filter((definition) => definition.type === type));
-    list.innerHTML = items
+    list.innerHTML = starter
       .sort((a, b) => Number(b.votes || 0) - Number(a.votes || 0))
       .slice(0, 5)
       .map((definition) => {
@@ -602,11 +456,8 @@ async function updateVotes() {
   const votes = await allVotes();
   const agiMedian = median(numericAnswers(votes, "agi"));
   const asiMedian = median(numericAnswers(votes, "asi"));
-  const workMedian = median(numericAnswers(votes, "work"));
   document.querySelector("#agi-public").textContent = formatYear(agiMedian);
   document.querySelector("#asi-public").textContent = formatYear(asiMedian);
-  document.querySelector("#vote-count").textContent = votes.length + 34;
-  document.querySelector("#field-median").textContent = formatYear(workMedian);
 }
 
 document.querySelectorAll(".lang-button").forEach((button) => {
@@ -631,35 +482,6 @@ document.querySelector(".dashboard").addEventListener("click", (event) => {
     node.classList.toggle("active", node === bead);
   });
   detail.innerHTML = clockEventMarkup(active);
-});
-
-document.querySelector("#vote-form").addEventListener("click", (event) => {
-  const disabledSurveyLink = event.target.closest(".survey-link.is-disabled");
-  if (!disabledSurveyLink) return;
-  event.preventDefault();
-});
-
-document.querySelector("#vote-form").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const form = new FormData(event.currentTarget);
-  const attributionConsent = form.get("attributionConsent") === "yes";
-  const nextVote = {
-    agi: optionalYear(form.get("agi")),
-    asi: optionalYear(form.get("asi")),
-    work: optionalYear(form.get("work")),
-    field: String(form.get("field")),
-    agiDefinition: String(form.get("agiDefinition") || "").trim(),
-    asiDefinition: String(form.get("asiDefinition") || "").trim(),
-    displayName: attributionConsent ? String(form.get("displayName") || "").trim() : "",
-    attributionConsent,
-  };
-  await savePublicVote(nextVote);
-  event.currentTarget.querySelector(".form-button").textContent = copy[language].submitted;
-  setTimeout(() => {
-    event.currentTarget.querySelector(".form-button").textContent = copy[language].submitVote;
-  }, 1400);
-  await renderDefinitions();
-  await updateVotes();
 });
 
 loadData().then(renderLanguage);

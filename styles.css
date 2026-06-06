@@ -249,8 +249,7 @@ h3 {
 
 .primary-action:active,
 .secondary-action:active,
-.lang-button:active,
-.form-button:active {
+.lang-button:active {
   transform: translateY(1px);
 }
 
@@ -276,7 +275,7 @@ h3 {
 .definition-card,
 .fiction-item,
 .signal-card,
-.vote-form,
+.survey-panel,
 .method-grid article {
   border: 1px solid rgba(220, 229, 229, 0.9);
   border-radius: var(--radius);
@@ -764,8 +763,7 @@ h3 {
 .definition-card p,
 .signal-card p,
 .method-grid p,
-.vote-copy p,
-.form-note {
+.vote-copy p {
   color: var(--muted);
   line-height: 1.55;
 }
@@ -1268,164 +1266,47 @@ a.definition-entry:focus-visible::after {
   padding: 18px 0;
 }
 
-.mini-stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+.pulse-note {
+  max-width: 34rem;
   margin-top: 28px;
-}
-
-.mini-stats span {
-  display: block;
   border-top: 1px solid var(--line);
   padding-top: 12px;
-}
-
-.mini-stats strong,
-.mini-stats small {
-  display: block;
-}
-
-.mini-stats strong {
-  font-size: 1.9rem;
-}
-
-.mini-stats small {
   color: var(--muted);
+  line-height: 1.55;
 }
 
-.vote-form {
+.survey-panel {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  padding: 18px;
+  gap: 24px;
+  align-self: stretch;
+  padding: 28px;
   box-shadow: none;
-}
-
-.external-survey {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 14px 18px;
-  align-items: center;
-  border: 1px solid rgba(47, 139, 145, 0.18);
-  border-radius: var(--radius);
   background: #f4faf6;
-  padding: 16px;
 }
 
-.external-survey strong,
-.external-survey p,
-.external-survey small {
-  display: block;
+.survey-panel h3 {
+  margin: 6px 0 10px;
+  font-size: 1.45rem;
 }
 
-.external-survey p {
-  margin: 6px 0 0;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.external-survey small {
-  grid-column: 1 / -1;
-  color: var(--muted);
-}
-
-.survey-embed {
-  grid-column: 1 / -1;
-  min-height: 120px;
-  border: 1px dashed rgba(47, 139, 145, 0.28);
-  border-radius: var(--radius);
-  background: rgba(255, 253, 248, 0.72);
-  overflow: hidden;
-}
-
-.survey-embed p {
+.survey-panel p {
+  max-width: 38rem;
   margin: 0;
-  padding: 18px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-.survey-embed iframe {
+.survey-panel small {
   display: block;
-  width: 100%;
-  min-height: 680px;
-  border: 0;
-  background: white;
+  border-top: 1px solid rgba(47, 139, 145, 0.18);
+  padding-top: 14px;
+  color: var(--muted);
 }
 
-.external-survey-actions {
+.survey-panel-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: flex-end;
-}
-
-.survey-link.is-disabled {
-  cursor: not-allowed;
-  opacity: 0.48;
-  pointer-events: auto;
-}
-
-.vote-form label {
-  display: grid;
-  gap: 8px;
-  color: var(--ink);
-  font-weight: 760;
-}
-
-.vote-form select,
-.vote-form textarea,
-.vote-form input[type="text"] {
-  min-height: 46px;
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: white;
-  color: var(--ink);
-  padding: 0 12px;
-}
-
-.vote-form textarea {
-  min-height: 84px;
-  padding: 12px;
-  resize: vertical;
-}
-
-.vote-form .consent-field {
-  display: flex;
-  grid-template-columns: none;
-  gap: 10px;
-  align-items: flex-start;
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-weight: 620;
-  line-height: 1.45;
-}
-
-.consent-field input {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-  margin: 1px 0 0;
-  accent-color: var(--teal);
-}
-
-.wide-field {
-  grid-column: 1 / -1;
-}
-
-.form-button,
-.form-note {
-  grid-column: 1 / -1;
-}
-
-.form-button {
-  width: fit-content;
-  cursor: pointer;
-}
-
-.form-note {
-  margin-bottom: 0;
-  font-size: 0.92rem;
 }
 
 .method {
@@ -1519,16 +1400,8 @@ footer {
     width: fit-content;
   }
 
-  .vote-form {
-    grid-template-columns: 1fr;
-  }
-
-  .external-survey {
-    grid-template-columns: 1fr;
-  }
-
-  .external-survey-actions {
-    justify-content: flex-start;
+  .survey-panel {
+    padding: 22px;
   }
 
   .open-band,
@@ -1648,7 +1521,13 @@ footer {
     width: min(300px, 88vw);
   }
 
-  .mini-stats {
-    grid-template-columns: 1fr;
+  .survey-panel-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .survey-panel-actions a {
+    justify-content: center;
+    width: 100%;
   }
 }
