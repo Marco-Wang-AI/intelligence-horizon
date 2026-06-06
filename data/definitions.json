@@ -62,16 +62,16 @@
     },
     {
       "text": {
-        "en": "A practical AGI milestone is an AI doctor capable of conducting a consultation independently.",
-        "zh": "一个实用的 AGI 里程碑，是 AI 能独立完成一次医生问诊。"
+        "en": "The path to AGI may require more than self-learning in math and code; multimodal learning in the real human world may also be necessary.",
+        "zh": "通往 AGI，不只是数学和代码里的自我学习；通过多模态参与人类真实世界的学习，也可能是必要条件。"
       },
       "author": {
-        "en": "Wang Xiaochuan",
-        "zh": "王小川"
+        "en": "Liang Wenfeng",
+        "zh": "梁文锋"
       },
       "source": {
-        "name": "AGI Playground panel",
-        "url": "https://www.ncsti.gov.cn/kjdt/xwjj/202406/t20240615_168048.html"
+        "name": "Waves interview (TechNews transcript)",
+        "url": "https://technews.tw/2025/01/29/deepseek-founder-interview-2/"
       },
       "votes": 0
     }

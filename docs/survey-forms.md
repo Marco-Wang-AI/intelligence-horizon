@@ -58,7 +58,7 @@ These forms collect responses in their own dashboards. They do not automatically
    - Demis Hassabis：具备人类拥有的全部认知能力。
    - Yann LeCun：拥有世界模型和常识，能在陌生情境中预测、推理与规划。
    - Elon Musk：比最聪明的单个人类更聪明。
-   - 王小川：能够独立完成一次医生问诊。
+   - 梁文锋：通往 AGI，不只是数学和代码里的自我学习；通过多模态参与人类真实世界的学习，也可能是必要条件。
    - 都不太像，我想自己写一句。
 
 6. 可选：如果你选择“自己写一句”，你认为 AGI 是什么？
@@ -146,7 +146,7 @@ Questions:
    - Demis Hassabis: AI with the full range of human cognitive capabilities.
    - Yann LeCun: AI with world models and common sense that can predict, reason, and plan in unfamiliar situations.
    - Elon Musk: AI smarter than the smartest individual human.
-   - Wang Xiaochuan: AI capable of independently conducting a medical consultation.
+   - Liang Wenfeng: AGI may require more than self-learning in math and code; multimodal learning in the real human world may also be necessary.
    - None of these. I want to write my own.
 
 6. Optional: if you chose "write my own", define AGI in one sentence.
