@@ -212,7 +212,7 @@ const fallbackDefinitions = {
         en: "ASI is an intellect that greatly exceeds human cognitive performance across virtually every domain of interest.",
         zh: "ASI 是在几乎所有重要领域都大幅超过人类认知表现的智能。",
       },
-      author: { en: "Nick Bostrom", zh: "Nick Bostrom" },
+      author: { en: "Nick Bostrom", zh: "尼克·博斯特罗姆" },
       source: { name: "Nick Bostrom", url: "https://nickbostrom.com/superintelligence" },
       votes: 0,
     },
@@ -532,28 +532,25 @@ async function renderDefinitions() {
     list.innerHTML = items
       .sort((a, b) => Number(b.votes || 0) - Number(a.votes || 0))
       .slice(0, 5)
-      .map(
-        (definition) => `
-          <li>
-            <span>${escapeHtml(definition.text[language] || definition.text.en)}</span>
+      .map((definition) => {
+        const content = `
+            <span class="definition-copy">${escapeHtml(definition.text[language] || definition.text.en)}</span>
             <div class="definition-meta">
               <strong>${escapeHtml(
                 definition.author?.[language] || definition.author?.en || copy[language].anonymousAuthor,
               )}</strong>
-              ${
-                definition.source?.url
-                  ? `<a href="${definition.source.url}" target="_blank" rel="noreferrer">${copy[language].definitionSourceShort}</a>`
-                  : ""
-              }
               <small>${
                 Number(definition.votes || 0) > 0
                   ? `${Number(definition.votes)} ${copy[language].votesLabel}`
                   : copy[language].definitionCandidate
               }</small>
             </div>
-          </li>
-        `,
-      )
+        `;
+        const entry = definition.source?.url
+          ? `<a class="definition-entry" href="${escapeHtml(definition.source.url)}" target="_blank" rel="noreferrer" title="${escapeHtml(definition.source.name || copy[language].definitionSource)}">${content}</a>`
+          : `<div class="definition-entry">${content}</div>`;
+        return `<li>${entry}</li>`;
+      })
       .join("");
   });
 }

@@ -775,7 +775,7 @@ h3 {
   font-size: 1.1rem;
 }
 
-.definition-card a {
+.definition-card > a {
   display: inline-flex;
   width: fit-content;
   margin: 2px 0 20px;
@@ -799,7 +799,7 @@ h3 {
   display: block;
 }
 
-.definition-list span {
+.definition-list .definition-copy {
   line-height: 1.45;
 }
 
@@ -824,14 +824,42 @@ h3 {
   font-size: 0.82rem;
 }
 
-.definition-card .definition-meta a {
-  margin: 0;
-  font-size: 0.78rem;
-  font-weight: 720;
-}
-
 .definition-meta small {
   margin: 0 0 0 auto;
+}
+
+.definition-entry {
+  position: relative;
+  display: block;
+  margin: -6px -8px;
+  padding: 6px 28px 6px 8px;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+a.definition-entry::after {
+  content: "↗";
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  color: var(--teal);
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+a.definition-entry:hover,
+a.definition-entry:focus-visible {
+  background: rgba(47, 139, 145, 0.07);
+  transform: translateY(-1px);
+}
+
+a.definition-entry:hover::after,
+a.definition-entry:focus-visible::after {
+  opacity: 1;
 }
 
 .fiction-section {
