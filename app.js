@@ -17,37 +17,47 @@ const copy = {
     nextIssueLabel: "Next pulse",
     nextIssueDate: "June 20, 2026",
     agiLabel: "AGI radar",
+    agiExpansion: "General artificial intelligence",
+    asiExpansion: "Artificial superintelligence",
     expertLabel: "Expert forecast",
     publicLabelShort: "Public take",
-    radarHint: "Signals move toward the center as the timeline gets closer.",
-    radarZone: "Almost zone",
-    clockPositionLabel: "Radar center",
+    agiRadarHint:
+      "The year at the radar center is the current expert forecast for AGI; the distance below each portrait shows whether that signal pulls the forecast closer or pushes it farther away.",
+    asiRadarHint:
+      "The year at the radar center is the current expert forecast for ASI; the distance below each portrait shows whether that signal pulls the forecast closer or pushes it farther away.",
+    mobileUpdateSummary: "Biweekly · Current: Jun 6 · Next: Jun 20",
+    radarVoteCta: "Add your forecast",
+    clockPositionLabel: "Forecast center",
     clockKeyEarlier: "closer",
     clockKeyLater: "farther",
-    radarUnitNote: "Radar meters are a playful relative distance, not a physical measurement.",
+    radarUnitNote: "Radar meters show relative signal weight, not physical distance or a precise time calculation.",
     agiNote: "A quick compare: expert forecasts vs. public intuition.",
-    agiMove: "The latest signals move the radar closer",
+    agiMove: "Taken together, recent signals have shifted the AGI forecast a little earlier",
     asiLabel: "ASI radar",
     asiNote: "A wider, more uncertain band for early superintelligence.",
     asiMove: "Still high uncertainty",
     definitionsEyebrow: "Definition ballot",
-    definitionsTitle: "Same acronym. Very different finish lines.",
-    agiDefinitionTitle: "Radar baseline",
+    definitionsTitle: "Same acronym. Very different meanings.",
+    agiDefinitionTitle: "Current radar definition",
     agiDefinitionCopy:
       "Highly autonomous AI that can outperform humans at most economically valuable work.",
-    asiDefinitionTitle: "Radar baseline",
+    asiDefinitionTitle: "Current radar definition",
     asiDefinitionCopy:
       "AI that greatly exceeds human cognitive performance in virtually all domains of interest.",
     definitionSource: "Reference",
     definitionCandidate: "candidate definition",
     definitionSourceShort: "source",
+    definitionUpdateNote:
+      "The current definitions are reviewed every two weeks using the vote results; leading candidates may enter the next radar update.",
     anonymousAuthor: "Anonymous radar watcher",
     fictionEyebrow: "Sci-fi receipts",
-    fictionTitle: "Pop culture has been setting AI dates for decades.",
+    fictionTitle: "Science fiction has its own AI timeline.",
     fictionCopy:
-      "A very unserious timeline of when famous stories imagined AI waking up, taking over, or becoming impossible to ignore.",
+      "See when films, games, and novels expected AI's big moments, then compare their dates with today's radar.",
     signalsEyebrow: "Radar notes",
     signalsTitle: "What changed the distance?",
+    agiSignalsLabel: "AGI signals",
+    asiSignalsLabel: "ASI signals",
     pulseEyebrow: "Public take",
     pulseTitle: "Pick a year. Add a definition if you feel brave.",
     pulseCopy:
@@ -87,34 +97,41 @@ const copy = {
     nextIssueLabel: "下期",
     nextIssueDate: "2026 年 6 月 20 日",
     agiLabel: "AGI 雷达",
+    agiExpansion: "通用人工智能",
+    asiExpansion: "超级人工智能",
     expertLabel: "专家预测",
     publicLabelShort: "大众感受",
-    radarHint: "信号越靠近中心，代表时间线越接近“快了”。",
-    radarZone: "快了区",
-    clockPositionLabel: "雷达中心",
+    agiRadarHint: "雷达中心年份，是专家目前预测 AGI 到来的时间；头像下方的距离，表示这条信号让预测更近还是更远。",
+    asiRadarHint: "雷达中心年份，是专家目前预测 ASI 到来的时间；头像下方的距离，表示这条信号让预测更近还是更远。",
+    mobileUpdateSummary: "双周更新 · 本期 6 月 6 日 · 下期 6 月 20 日",
+    radarVoteCta: "投下你的预测",
+    clockPositionLabel: "预测中心",
     clockKeyEarlier: "靠近中心",
     clockKeyLater: "远离中心",
-    radarUnitNote: "“米”是小雷达的相对距离单位，不是物理测量。",
+    radarUnitNote: "这里的“米”只表示信号影响的相对大小，不是物理距离，也不是精确的时间计算。",
     agiNote: "一边看专家预测，一边看大众感受。",
-    agiMove: "近期信号让雷达整体更靠近中心",
+    agiMove: "综合近期信号，AGI 的预测时间又提前了一点",
     asiLabel: "ASI 雷达",
     asiNote: "超级智能更难判断，所以这里的不确定性更高。",
     asiMove: "不确定性仍然很高",
     definitionsEyebrow: "定义投票",
-    definitionsTitle: "同一个缩写，大家心里的终点不太一样。",
-    agiDefinitionTitle: "小雷达当前基准",
+    definitionsTitle: "同一个缩写，大家说的可能不是同一件事。",
+    agiDefinitionTitle: "小雷达当前定义",
     agiDefinitionCopy: "高度自主，并能在大多数有经济价值工作上超过人类的 AI。",
-    asiDefinitionTitle: "小雷达当前基准",
+    asiDefinitionTitle: "小雷达当前定义",
     asiDefinitionCopy: "在几乎所有重要认知领域都大幅超过人类表现的 AI。",
     definitionSource: "参考来源",
     definitionCandidate: "候选定义",
     definitionSourceShort: "出处",
+    definitionUpdateNote: "当前定义每两周根据投票更新；排名靠前的候选，会进入下一期小雷达。",
     anonymousAuthor: "匿名雷达员",
     fictionEyebrow: "科幻彩蛋",
-    fictionTitle: "科幻作品早就给 AI 排过时间表。",
-    fictionCopy: "一个不太严肃的时间轴：看看电影、游戏和小说里，AI 都是在哪一年开始不太听话的。",
+    fictionTitle: "科幻作品，也有自己的 AI 时间表。",
+    fictionCopy: "看看经典电影、游戏和小说把 AI 的关键时刻安排在哪一年，再和今天的小雷达对照一下。",
     signalsEyebrow: "雷达记录",
     signalsTitle: "哪些信号改变了距离？",
+    agiSignalsLabel: "AGI 信号",
+    asiSignalsLabel: "ASI 信号",
     pulseEyebrow: "大众感受",
     pulseTitle: "选一个年份，也可以顺手写一句定义。",
     pulseCopy:
@@ -148,6 +165,8 @@ let events = [];
 let starterVotes = [];
 let starterDefinitions = { agi: [], asi: [] };
 let fictionTimeline = [];
+const radarAutoTimers = new Map();
+const radarAutoDelays = new Map();
 
 const fallbackEvents = [
   {
@@ -241,10 +260,11 @@ function escapeHtml(value) {
 }
 
 function formatDelta(meters) {
-  const distance = `${Math.abs(meters)}m`;
   if (language === "zh") {
+    const distance = `${Math.abs(meters)} 米`;
     return meters > 0 ? `远离 ${distance}` : `靠近 ${distance}`;
   }
+  const distance = `${Math.abs(meters)}m`;
   return meters > 0 ? `${distance} farther` : `${distance} closer`;
 }
 
@@ -330,8 +350,7 @@ function renderSurveyLinks() {
 
 function renderSignals() {
   const list = document.querySelector("#signal-list");
-  list.innerHTML = sortedEvents()
-    .map((item) => {
+  const renderSignalCard = (item) => {
       const persona = item.persona || {};
       const sourceUrl = item.source?.url ? escapeHtml(item.source.url) : "";
       const sourceName = escapeHtml(item.source?.name || copy[language].signalSourceLabel);
@@ -360,6 +379,23 @@ function renderSignals() {
       return sourceUrl
         ? `<a class="signal-card" href="${sourceUrl}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(item.title[language])} · ${copy[language].signalSourceLabel}: ${sourceName}">${content}</a>`
         : `<article class="signal-card">${content}</article>`;
+  };
+
+  list.innerHTML = ["AGI", "ASI"]
+    .map((target) => {
+      const label = target === "AGI" ? copy[language].agiSignalsLabel : copy[language].asiSignalsLabel;
+      const cards = sortedEvents()
+        .filter((item) => item.target === target)
+        .map(renderSignalCard)
+        .join("");
+      return `
+        <section class="signal-column" aria-label="${label}">
+          <div class="signal-column-heading">
+            <strong>${label}</strong>
+          </div>
+          <div class="signal-column-list">${cards}</div>
+        </section>
+      `;
     })
     .join("");
 }
@@ -378,9 +414,9 @@ function clockEventMarkup(item) {
 function renderClockBeads() {
   const radarPositions = [
     { x: 74, y: 27 },
-    { x: 22, y: 38 },
     { x: 70, y: 71 },
     { x: 25, y: 76 },
+    { x: 22, y: 38 },
   ];
   ["AGI", "ASI"].forEach((target) => {
     const lowerTarget = target.toLowerCase();
@@ -411,7 +447,7 @@ function renderClockBeads() {
             type="button"
             data-target="${target}"
             data-event-id="${item.id}"
-            style="--bead-index: ${index}; --bead-x: ${position.x}%; --bead-y: ${position.y}%"
+            style="--bead-index: ${index}; --bead-x: ${position.x}%; --bead-y: ${position.y}%; --distance-shift: ${position.x <= 25 ? "14px" : "0px"}"
             aria-label="${item.date} ${persona.name || item.title[language]}"
             title="${item.date} · ${persona.name || item.title[language]} · ${formatDelta(item.deltaMeters)}"
           >
@@ -426,7 +462,67 @@ function renderClockBeads() {
       })
       .join("");
     detail.innerHTML = clockEventMarkup(active);
+    startRadarAutoFocus(target, targetEvents);
   });
+}
+
+function setActiveRadarEvent(target, eventId) {
+  const lowerTarget = target.toLowerCase();
+  const beadList = document.querySelector(`#${lowerTarget}-beads`);
+  const detail = document.querySelector(`#${lowerTarget}-clock-event`);
+  const active = events.find((item) => item.id === eventId);
+  if (!beadList || !detail || !active) return;
+
+  beadList.dataset.activeId = eventId;
+  beadList.querySelectorAll(".clock-bead").forEach((node) => {
+    node.classList.toggle("active", node.dataset.eventId === eventId);
+  });
+  detail.innerHTML = clockEventMarkup(active);
+}
+
+function startRadarAutoFocus(target, targetEvents) {
+  clearInterval(radarAutoTimers.get(target));
+  clearTimeout(radarAutoDelays.get(target));
+  if (
+    targetEvents.length < 2 ||
+    !window.matchMedia("(max-width: 540px)").matches ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  const beadList = document.querySelector(`#${target.toLowerCase()}-beads`);
+  const sweep = beadList?.closest(".signal-radar")?.querySelector(".radar-sweep");
+  if (!beadList || !sweep) return;
+
+  sweep.style.animation = "none";
+  void sweep.offsetWidth;
+  sweep.style.animation = "";
+  beadList.querySelectorAll(".clock-bead").forEach((node) => node.classList.remove("active"));
+
+  const firstDelay = window.setTimeout(() => {
+    if (Date.now() < Number(beadList.dataset.manualHoldUntil || 0)) return;
+    setActiveRadarEvent(target, beadList.dataset.activeId || targetEvents[0].id);
+  }, 450);
+  radarAutoDelays.set(target, firstDelay);
+
+  const timer = window.setInterval(() => {
+    if (!window.matchMedia("(max-width: 540px)").matches) return;
+    if (Date.now() < Number(beadList.dataset.manualHoldUntil || 0)) return;
+    const currentIndex = Math.max(
+      0,
+      targetEvents.findIndex((item) => item.id === beadList.dataset.activeId),
+    );
+    const next = targetEvents[(currentIndex + 1) % targetEvents.length];
+    clearTimeout(radarAutoDelays.get(target));
+    const delay = window.setTimeout(() => {
+      if (Date.now() < Number(beadList.dataset.manualHoldUntil || 0)) return;
+      setActiveRadarEvent(target, next.id);
+    }, 450);
+    radarAutoDelays.set(target, delay);
+  }, 2125);
+
+  radarAutoTimers.set(target, timer);
 }
 
 function renderFictionTimeline() {
@@ -501,16 +597,10 @@ document.querySelector(".dashboard").addEventListener("click", (event) => {
   if (!bead) return;
   const target = bead.dataset.target;
   const eventId = bead.dataset.eventId;
-  const lowerTarget = target.toLowerCase();
-  const beadList = document.querySelector(`#${lowerTarget}-beads`);
-  const detail = document.querySelector(`#${lowerTarget}-clock-event`);
-  const active = events.find((item) => item.id === eventId);
-  if (!beadList || !detail || !active) return;
-  beadList.dataset.activeId = eventId;
-  beadList.querySelectorAll(".clock-bead").forEach((node) => {
-    node.classList.toggle("active", node === bead);
-  });
-  detail.innerHTML = clockEventMarkup(active);
+  const beadList = document.querySelector(`#${target.toLowerCase()}-beads`);
+  if (!beadList) return;
+  beadList.dataset.manualHoldUntil = String(Date.now() + 6000);
+  setActiveRadarEvent(target, eventId);
 });
 
 loadData().then(renderLanguage);

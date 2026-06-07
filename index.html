@@ -23,7 +23,7 @@
       content="Signals, not sirens: a playful AGI / ASI radar with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta name="twitter:image" content="https://marco-wang-ai.github.io/intelligence-horizon/assets/social/og-card.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260607-v11" />
+    <link rel="stylesheet" href="./styles.css?v=20260607-v11-11" />
   </head>
   <body>
     <header class="topbar" aria-label="Site header">
@@ -64,7 +64,7 @@
         </div>
       </section>
 
-      <section class="dashboard" aria-label="Horizon dashboard">
+      <section class="dashboard" aria-label="AGI and ASI radar dashboard">
         <div class="radar-status" aria-label="Radar update schedule">
           <span class="status-cadence">
             <i aria-hidden="true"></i>
@@ -79,11 +79,16 @@
             <time datetime="2026-06-20" data-i18n="nextIssueDate">June 20, 2026</time>
           </span>
         </div>
+        <div class="radar-track">
         <article class="clock-panel agi">
           <div class="clock-heading">
-            <p class="panel-label" data-i18n="agiLabel">AGI radar</p>
-            <p data-i18n="radarHint">Signals move toward the center as the timeline gets closer.</p>
+            <p class="panel-label">
+              <span data-i18n="agiLabel">AGI radar</span>
+              <em data-i18n="agiExpansion">General artificial intelligence</em>
+            </p>
+            <p data-i18n="agiRadarHint">The year at the radar center is the current expert forecast for AGI; the distance below each portrait shows whether that signal pulls the forecast closer or pushes it farther away.</p>
           </div>
+          <p class="panel-update-mobile" data-i18n="mobileUpdateSummary">Biweekly · Current: Jun 6 · Next: Jun 20</p>
           <div class="signal-radar" style="--progress: 62%">
             <span class="radar-ring outer" aria-hidden="true"></span>
             <span class="radar-ring middle" aria-hidden="true"></span>
@@ -94,12 +99,11 @@
             <div class="radar-core">
               <small data-i18n="expertLabel">Expert forecast</small>
               <h2 id="agi-date">2028</h2>
-              <span data-i18n="radarZone">Almost zone</span>
             </div>
             <div class="clock-beads" id="agi-beads" aria-label="AGI radar events"></div>
           </div>
           <div class="clock-key">
-            <span><i class="position"></i><b data-i18n="clockPositionLabel">Signal center</b></span>
+            <span><i class="position"></i><b data-i18n="clockPositionLabel">Forecast center</b></span>
             <span><i class="closer"></i><b data-i18n="clockKeyEarlier">closer</b></span>
             <span><i class="farther"></i><b data-i18n="clockKeyLater">farther</b></span>
           </div>
@@ -114,16 +118,20 @@
               <dd id="agi-public">2028</dd>
             </div>
           </dl>
+          <a class="radar-vote-link" href="#pulse" data-i18n="radarVoteCta">Add your forecast</a>
           <p class="panel-note" data-i18n="agiNote">A quick compare: expert forecasts vs. public intuition.</p>
           <div class="movement faster">
-            <span data-i18n="agiMove">7 months earlier this quarter</span>
+            <span data-i18n="agiMove">Taken together, recent signals have shifted the AGI forecast a little earlier</span>
           </div>
         </article>
 
         <article class="clock-panel asi">
           <div class="clock-heading">
-            <p class="panel-label" data-i18n="asiLabel">ASI radar</p>
-            <p data-i18n="radarHint">Signals move toward the center as the timeline gets closer.</p>
+            <p class="panel-label">
+              <span data-i18n="asiLabel">ASI radar</span>
+              <em data-i18n="asiExpansion">Artificial superintelligence</em>
+            </p>
+            <p data-i18n="asiRadarHint">The year at the radar center is the current expert forecast for ASI; the distance below each portrait shows whether that signal pulls the forecast closer or pushes it farther away.</p>
           </div>
           <div class="signal-radar" style="--progress: 38%">
             <span class="radar-ring outer" aria-hidden="true"></span>
@@ -135,12 +143,11 @@
             <div class="radar-core">
               <small data-i18n="expertLabel">Expert forecast</small>
               <h2 id="asi-date">2032</h2>
-              <span data-i18n="radarZone">Almost zone</span>
             </div>
             <div class="clock-beads" id="asi-beads" aria-label="ASI radar events"></div>
           </div>
           <div class="clock-key">
-            <span><i class="position"></i><b data-i18n="clockPositionLabel">Signal center</b></span>
+            <span><i class="position"></i><b data-i18n="clockPositionLabel">Forecast center</b></span>
             <span><i class="closer"></i><b data-i18n="clockKeyEarlier">closer</b></span>
             <span><i class="farther"></i><b data-i18n="clockKeyLater">farther</b></span>
           </div>
@@ -152,28 +159,33 @@
             </div>
             <div>
               <dt data-i18n="publicLabelShort">Public take</dt>
-              <dd id="asi-public">2031.0</dd>
+              <dd id="asi-public">2033</dd>
             </div>
           </dl>
+          <a class="radar-vote-link" href="#pulse" data-i18n="radarVoteCta">Add your forecast</a>
           <p class="panel-note" data-i18n="asiNote">A wider, more uncertain band for early superintelligence.</p>
           <div class="movement slower">
             <span data-i18n="asiMove">Still high uncertainty</span>
           </div>
         </article>
+        </div>
         <p class="radar-unit-note" data-i18n="radarUnitNote">
-          Radar meters are a playful relative distance, not a physical measurement.
+          Radar meters show relative signal weight, not physical distance or a precise time calculation.
         </p>
       </section>
 
       <section class="definitions-section" id="definitions" aria-labelledby="definitions-title">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="definitionsEyebrow">Definition ballot</p>
-          <h2 id="definitions-title" data-i18n="definitionsTitle">Same acronym. Very different finish lines.</h2>
+          <h2 id="definitions-title" data-i18n="definitionsTitle">Same acronym. Very different meanings.</h2>
+          <p class="definition-update-note" data-i18n="definitionUpdateNote">
+            The current definitions are reviewed every two weeks using the vote results; leading candidates may enter the next radar update.
+          </p>
         </div>
         <div class="definition-grid">
           <article class="definition-card">
             <p class="panel-label">AGI</p>
-            <h3 data-i18n="agiDefinitionTitle">Radar baseline</h3>
+            <h3 data-i18n="agiDefinitionTitle">Current radar definition</h3>
             <p data-i18n="agiDefinitionCopy">
               Highly autonomous AI that can outperform humans at most economically valuable work.
             </p>
@@ -182,7 +194,7 @@
           </article>
           <article class="definition-card">
             <p class="panel-label">ASI</p>
-            <h3 data-i18n="asiDefinitionTitle">Radar baseline</h3>
+            <h3 data-i18n="asiDefinitionTitle">Current radar definition</h3>
             <p data-i18n="asiDefinitionCopy">
               AI that greatly exceeds human cognitive performance in virtually all domains of interest.
             </p>
@@ -203,9 +215,9 @@
       <section class="fiction-section" id="fiction" aria-labelledby="fiction-title">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="fictionEyebrow">Sci-fi receipts</p>
-          <h2 id="fiction-title" data-i18n="fictionTitle">Pop culture has been setting AI dates for decades.</h2>
+          <h2 id="fiction-title" data-i18n="fictionTitle">Science fiction has its own AI timeline.</h2>
           <p data-i18n="fictionCopy">
-            A very unserious timeline of when famous stories imagined AI waking up, taking over, or becoming impossible to ignore.
+            See when films, games, and novels expected AI's big moments, then compare their dates with today's radar.
           </p>
         </div>
         <div class="fiction-timeline" id="fiction-timeline" aria-label="Science fiction AI timeline"></div>
@@ -257,6 +269,6 @@
       <span data-i18n="footer">No doom. Just receipts, guesses, and a radar that keeps changing.</span>
     </footer>
 
-    <script src="./app.js?v=20260607-v11"></script>
+    <script src="./app.js?v=20260607-v11-11"></script>
   </body>
 </html>
