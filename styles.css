@@ -1234,6 +1234,45 @@ a.definition-entry:focus-visible::after {
   outline: 0;
 }
 
+.signal-balance-card {
+  display: grid;
+  gap: 8px;
+  min-height: 156px;
+  align-content: center;
+  border: 1px dashed rgba(47, 139, 145, 0.32);
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, rgba(244, 250, 246, 0.9), rgba(255, 248, 237, 0.72)),
+    var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.signal-balance-card strong {
+  font-size: 1rem;
+}
+
+.signal-balance-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.48;
+}
+
+.signal-balance-card span {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(47, 139, 145, 0.11);
+  color: var(--teal);
+  font-weight: 850;
+  font-size: 0.8rem;
+}
+
+.signal-balance-card:hover {
+  border-color: rgba(47, 139, 145, 0.5);
+}
+
 .signal-date {
   color: var(--muted);
   font-weight: 760;

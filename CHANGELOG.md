@@ -9,6 +9,8 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 #### Added
 
 - Add the Cloudflare Web Analytics snippet so the public site can report page views and visits.
+- Add two sourced ASI radar signals: OpenAI's superintelligence governance note and Leopold Aschenbrenner's Situational Awareness narrative.
+- Add a lightweight signal-submission card to balance uneven AGI / ASI radar-log columns.
 
 ## [1.1.0] - 2026-06-07
 

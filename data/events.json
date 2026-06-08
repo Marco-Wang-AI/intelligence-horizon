@@ -238,6 +238,73 @@
     "category": "china_method_caution"
   },
   {
+    "id": "openai-superintelligence-governance-2023-05",
+    "date": "2023-05",
+    "target": "ASI",
+    "deltaMeters": -60,
+    "confidence": {
+      "en": "medium",
+      "zh": "中"
+    },
+    "title": {
+      "en": "OpenAI says superintelligence needs special governance",
+      "zh": "OpenAI 称超级智能需要特殊治理"
+    },
+    "body": {
+      "en": "OpenAI frames superintelligence as systems dramatically more capable than AGI, possibly exceeding expert skill across most domains.",
+      "zh": "OpenAI 把超级智能描述成远强于 AGI 的系统，可能在多数领域超过专家水平。"
+    },
+    "persona": {
+      "initials": "OA",
+      "name": "OpenAI",
+      "nickname": {
+        "en": "the superintelligence governance desk",
+        "zh": "超级智能治理台"
+      },
+      "avatar": "openai",
+      "image": "./assets/avatars/openai-lab-mascot.png",
+      "tone": "blue"
+    },
+    "source": {
+      "name": "OpenAI",
+      "url": "https://openai.com/index/governance-of-superintelligence/"
+    },
+    "category": "asi_governance_signal"
+  },
+  {
+    "id": "aschenbrenner-situational-awareness-2024-06",
+    "date": "2024-06",
+    "target": "ASI",
+    "deltaMeters": -75,
+    "confidence": {
+      "en": "low",
+      "zh": "低"
+    },
+    "title": {
+      "en": "Situational Awareness popularizes a fast superintelligence arc",
+      "zh": "《Situational Awareness》传播了快速通向超级智能的叙事"
+    },
+    "body": {
+      "en": "A widely discussed acceleration narrative: AGI could automate AI research and compress the path toward superintelligence. Representative, but speculative.",
+      "zh": "这是一条传播很广的加速叙事：AGI 可能自动化 AI 研究，把通向超级智能的时间压缩。代表性强，但推测性也强。"
+    },
+    "persona": {
+      "initials": "LA",
+      "name": "Leopold Aschenbrenner",
+      "nickname": {
+        "en": "the situational-awareness hawk",
+        "zh": "态势感知派"
+      },
+      "avatar": "aschenbrenner",
+      "tone": "yellow"
+    },
+    "source": {
+      "name": "Situational Awareness",
+      "url": "https://situational-awareness.ai/"
+    },
+    "category": "asi_acceleration_narrative"
+  },
+  {
     "id": "musk-smarter-than-human-2024-04",
     "date": "2024-04",
     "target": "ASI",

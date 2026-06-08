@@ -77,6 +77,9 @@ const copy = {
     readmeCta: "Submit a signal",
     clockEventHint: "Tap a signal to see what moved the radar.",
     signalSourceLabel: "Source",
+    signalSubmitTitle: "Got a better signal?",
+    signalSubmitCopy: "This side is shorter for now. Send a sourced ASI or AGI signal and help rebalance the radar.",
+    signalSubmitCta: "Submit a signal",
     footer: "Receipts, guesses, and a radar that keeps changing.",
   },
   zh: {
@@ -151,6 +154,9 @@ const copy = {
     readmeCta: "提交一个信号",
     clockEventHint: "点一个信号，看看这次为什么移动。",
     signalSourceLabel: "出处",
+    signalSubmitTitle: "有更好的信号吗？",
+    signalSubmitCopy: "这一栏暂时更短。欢迎提交有来源的 AGI / ASI 信号，一起把雷达补得更准。",
+    signalSubmitCta: "提交信号",
     footer: "记录证据、猜想和一只会变的小雷达。",
   },
 };
@@ -350,6 +356,13 @@ function renderSurveyLinks() {
 
 function renderSignals() {
   const list = document.querySelector("#signal-list");
+  const sorted = sortedEvents();
+  const counts = {
+    AGI: sorted.filter((item) => item.target === "AGI").length,
+    ASI: sorted.filter((item) => item.target === "ASI").length,
+  };
+  const maxCount = Math.max(counts.AGI, counts.ASI);
+  const submitSignalUrl = "https://github.com/Marco-Wang-AI/intelligence-horizon/issues/new?template=signal-proposal.yml";
   const renderSignalCard = (item) => {
       const persona = item.persona || {};
       const sourceUrl = item.source?.url ? escapeHtml(item.source.url) : "";
@@ -384,16 +397,24 @@ function renderSignals() {
   list.innerHTML = ["AGI", "ASI"]
     .map((target) => {
       const label = target === "AGI" ? copy[language].agiSignalsLabel : copy[language].asiSignalsLabel;
-      const cards = sortedEvents()
+      const cards = sorted
         .filter((item) => item.target === target)
         .map(renderSignalCard)
         .join("");
+      const backfill =
+        counts[target] < maxCount
+          ? `<a class="signal-balance-card" href="${submitSignalUrl}" target="_blank" rel="noreferrer">
+              <strong>${copy[language].signalSubmitTitle}</strong>
+              <p>${copy[language].signalSubmitCopy}</p>
+              <span>${copy[language].signalSubmitCta}</span>
+            </a>`
+          : "";
       return `
         <section class="signal-column" aria-label="${label}">
           <div class="signal-column-heading">
             <strong>${label}</strong>
           </div>
-          <div class="signal-column-list">${cards}</div>
+          <div class="signal-column-list">${cards}${backfill}</div>
         </section>
       `;
     })
