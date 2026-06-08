@@ -71,6 +71,10 @@
 
 首发阶段的数据分别收集在问卷星和 Google Forms，汇总与后端计划写在 `docs/vote-backend.md`。
 
+## 隐私与访问统计
+
+网站使用 Cloudflare Web Analytics 查看聚合访问数据，例如页面浏览量、访问次数、来源网站、国家地区、设备和浏览器。项目不会用统计工具识别单个访问者。
+
 ## 如何参与
 
 你可以通过 GitHub issue 或 pull request 参与：

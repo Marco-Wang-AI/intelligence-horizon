@@ -80,6 +80,10 @@ Optional later fields:
 
 Responses are collected in Wenjuanxing and Google Forms for the first launch. The aggregation plan is documented in `docs/vote-backend.md`.
 
+## Privacy and Analytics
+
+This site uses Cloudflare Web Analytics to understand aggregate traffic, such as page views, visits, referrers, countries, devices, and browsers. The project does not use analytics to identify individual visitors.
+
 ## GitHub Participation
 
 This repo includes issue templates for:
