@@ -6,6 +6,10 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 
 ## [Unreleased]
 
+#### Added
+
+- Add the Cloudflare Web Analytics snippet so the public site can report page views and visits.
+
 ## [1.1.0] - 2026-06-07
 
 #### Changed
