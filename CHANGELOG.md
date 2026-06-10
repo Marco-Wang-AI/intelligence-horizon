@@ -12,6 +12,8 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Add two sourced ASI radar signals: Ilya Sutskever's Safe Superintelligence lab and Leopold Aschenbrenner's Situational Awareness narrative.
 - Add a lightweight signal-submission card to balance uneven AGI / ASI radar-log columns.
 - Refresh the Demis Hassabis avatar with DeepMind and Nobel Prize visual cues.
+- Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.
+- Add a radar-log avatar preview lightbox with copy and download actions while keeping the rest of each card linked to its public source.
 
 ## [1.1.0] - 2026-06-07
 

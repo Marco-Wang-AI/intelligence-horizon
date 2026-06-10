@@ -80,6 +80,12 @@ const copy = {
     signalSubmitTitle: "Got a better signal?",
     signalSubmitCopy: "This side is shorter for now. Send a sourced ASI or AGI signal and help rebalance the radar.",
     signalSubmitCta: "Submit a signal",
+    avatarPreviewEyebrow: "Avatar preview",
+    avatarPreviewLabel: "View avatar",
+    avatarCopyLink: "Copy image link",
+    avatarCopied: "Copied",
+    avatarDownload: "Download",
+    avatarClose: "Close avatar preview",
     footer: "Receipts, guesses, and a radar that keeps changing.",
   },
   zh: {
@@ -157,6 +163,12 @@ const copy = {
     signalSubmitTitle: "有更好的信号吗？",
     signalSubmitCopy: "这一栏暂时更短。欢迎提交有来源的 AGI / ASI 信号，一起把雷达补得更准。",
     signalSubmitCta: "提交信号",
+    avatarPreviewEyebrow: "头像预览",
+    avatarPreviewLabel: "查看头像大图",
+    avatarCopyLink: "复制图片链接",
+    avatarCopied: "已复制",
+    avatarDownload: "下载头像",
+    avatarClose: "关闭头像预览",
     footer: "记录证据、猜想和一只会变的小雷达。",
   },
 };
@@ -265,6 +277,10 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function absoluteUrl(path) {
+  return new URL(path, window.location.href).href;
+}
+
 function formatDelta(meters) {
   if (language === "zh") {
     const distance = `${Math.abs(meters)} 米`;
@@ -326,6 +342,9 @@ async function renderLanguage() {
     const key = node.dataset.i18nPlaceholder;
     node.setAttribute("placeholder", copy[language][key] || node.getAttribute("placeholder"));
   });
+  document.querySelectorAll("[data-avatar-close]").forEach((node) => {
+    node.setAttribute("aria-label", copy[language].avatarClose);
+  });
   document.querySelectorAll(".lang-button").forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === language);
   });
@@ -367,30 +386,45 @@ function renderSignals() {
       const persona = item.persona || {};
       const sourceUrl = item.source?.url ? escapeHtml(item.source.url) : "";
       const sourceName = escapeHtml(item.source?.name || copy[language].signalSourceLabel);
+      const personaName = persona.name || item.title[language] || item.target;
+      const avatarLabel = `${copy[language].avatarPreviewLabel}: ${personaName}`;
+      const avatarMarkup = persona.image
+        ? `<button
+            class="signal-avatar has-image ${persona.tone || ""} avatar-${persona.avatar || "default"}"
+            type="button"
+            data-avatar-preview
+            data-avatar-src="${escapeHtml(persona.image)}"
+            data-avatar-name="${escapeHtml(personaName)}"
+            data-avatar-label="${escapeHtml(persona.nickname?.[language] || item.title[language] || "")}"
+            aria-label="${escapeHtml(avatarLabel)}"
+          >
+            <img src="${escapeHtml(persona.image)}" alt="" loading="lazy" />
+            <span>${escapeHtml(persona.initials || item.target)}</span>
+          </button>`
+        : `<div class="signal-avatar ${persona.tone || ""} avatar-${persona.avatar || "default"}" aria-hidden="true">
+            <span>${escapeHtml(persona.initials || item.target)}</span>
+          </div>`;
       const content = `
           <span class="signal-date">${item.date}</span>
-          <div class="signal-avatar ${persona.image ? "has-image" : ""} ${persona.tone || ""} avatar-${persona.avatar || "default"}" aria-hidden="true">
-            ${persona.image ? `<img src="${persona.image}" alt="" loading="lazy" />` : ""}
-            <span>${persona.initials || item.target}</span>
-          </div>
-          <div>
+          ${avatarMarkup}
+          <div class="signal-card-body">
             ${
               persona.name
-                ? `<p class="signal-person">${persona.name}<span>${persona.nickname?.[language] || ""}</span></p>`
+                ? `<p class="signal-person">${escapeHtml(persona.name)}<span>${escapeHtml(persona.nickname?.[language] || "")}</span></p>`
                 : ""
             }
-            <strong>${item.title[language]}</strong>
-            <p>${item.body[language]}</p>
+            <strong>${escapeHtml(item.title[language])}</strong>
+            <p>${escapeHtml(item.body[language])}</p>
             <div class="signal-meta">
-              <span class="pill">${item.target}</span>
-              <span class="pill">${item.confidence[language]}</span>
+              <span class="pill">${escapeHtml(item.target)}</span>
+              <span class="pill">${escapeHtml(item.confidence[language])}</span>
               ${sourceUrl ? `<span class="signal-source">${copy[language].signalSourceLabel} · ${sourceName}</span>` : ""}
             </div>
           </div>
           <span class="pill delta ${item.deltaMeters > 0 ? "farther" : ""}">${formatDelta(item.deltaMeters)}</span>
       `;
       return sourceUrl
-        ? `<a class="signal-card" href="${sourceUrl}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(item.title[language])} · ${copy[language].signalSourceLabel}: ${sourceName}">${content}</a>`
+        ? `<article class="signal-card signal-card-linked">${content}<a class="signal-card-source" href="${sourceUrl}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(item.title[language])} · ${copy[language].signalSourceLabel}: ${sourceName}"></a></article>`
         : `<article class="signal-card">${content}</article>`;
   };
 
@@ -606,6 +640,76 @@ async function updateVotes() {
   document.querySelector("#asi-public").textContent = formatYear(asiMedian);
 }
 
+function closeAvatarLightbox() {
+  const lightbox = document.querySelector("#avatar-lightbox");
+  if (!lightbox) return;
+  lightbox.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function openAvatarLightbox(trigger) {
+  const lightbox = document.querySelector("#avatar-lightbox");
+  const image = document.querySelector("#avatar-lightbox-image");
+  const title = document.querySelector("#avatar-lightbox-title");
+  const subtitle = document.querySelector("#avatar-lightbox-subtitle");
+  const download = document.querySelector("#avatar-download");
+  const copyButton = document.querySelector("#avatar-copy-link");
+  const closeButton = document.querySelector(".avatar-lightbox-close");
+  if (!lightbox || !image || !title || !subtitle || !download || !copyButton) return;
+
+  const src = trigger.dataset.avatarSrc;
+  const imageUrl = absoluteUrl(src);
+  const name = trigger.dataset.avatarName || "Radar portrait";
+  const label = trigger.dataset.avatarLabel || "";
+  image.src = imageUrl;
+  image.alt = name;
+  title.textContent = name;
+  subtitle.textContent = label;
+  download.href = imageUrl;
+  download.download = `${name.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/gi, "-").replace(/^-|-$/g, "") || "radar-avatar"}.png`;
+  copyButton.textContent = copy[language].avatarCopyLink;
+  lightbox.hidden = false;
+  document.body.classList.add("modal-open");
+  closeButton?.focus();
+}
+
+function setupAvatarLightbox() {
+  document.addEventListener("click", async (event) => {
+    const closeTrigger = event.target.closest("[data-avatar-close]");
+    if (closeTrigger) {
+      closeAvatarLightbox();
+      return;
+    }
+
+    const trigger = event.target.closest("[data-avatar-preview]");
+    if (trigger) {
+      event.preventDefault();
+      event.stopPropagation();
+      openAvatarLightbox(trigger);
+      return;
+    }
+
+    const copyButton = event.target.closest("#avatar-copy-link");
+    if (copyButton) {
+      const image = document.querySelector("#avatar-lightbox-image");
+      if (!image?.src) return;
+      try {
+        await navigator.clipboard.writeText(image.src);
+        copyButton.textContent = copy[language].avatarCopied;
+        window.setTimeout(() => {
+          copyButton.textContent = copy[language].avatarCopyLink;
+        }, 1400);
+      } catch {
+        copyButton.textContent = image.src;
+      }
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeAvatarLightbox();
+  });
+}
+
 document.querySelectorAll(".lang-button").forEach((button) => {
   button.addEventListener("click", () => {
     language = button.dataset.lang;
@@ -624,4 +728,5 @@ document.querySelector(".dashboard").addEventListener("click", (event) => {
   setActiveRadarEvent(target, eventId);
 });
 
+setupAvatarLightbox();
 loadData().then(renderLanguage);
