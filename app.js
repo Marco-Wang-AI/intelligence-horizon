@@ -466,6 +466,20 @@ function clockEventMarkup(item) {
   return `<a class="clock-event-link" href="${escapeHtml(item.source.url)}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(item.title[language])} · ${copy[language].signalSourceLabel}: ${escapeHtml(item.source.name)}">${content}</a>`;
 }
 
+function radarEventsForTarget(target) {
+  const targetEvents = sortedEvents().filter((item) => item.target === target && item.date !== "Always");
+  const featured = targetEvents.slice(0, 4);
+  if (target === "AGI") {
+    const yangIndex = featured.findIndex((item) => item.id === "yang-zhilin-agentic-k2");
+    const liang = targetEvents.find((item) => item.id === "liang-wenfeng-agi-as-goal");
+    const alreadyFeatured = featured.some((item) => item.id === "liang-wenfeng-agi-as-goal");
+    if (yangIndex !== -1 && liang && !alreadyFeatured) {
+      featured[yangIndex] = liang;
+    }
+  }
+  return featured;
+}
+
 function renderClockBeads() {
   const radarPositions = [
     { x: 74, y: 27 },
@@ -479,9 +493,7 @@ function renderClockBeads() {
     const detail = document.querySelector(`#${lowerTarget}-clock-event`);
     if (!beadList || !detail) return;
 
-    const targetEvents = sortedEvents()
-      .filter((item) => item.target === target && item.date !== "Always")
-      .slice(0, 4);
+    const targetEvents = radarEventsForTarget(target);
 
     if (!targetEvents.length) {
       beadList.innerHTML = "";
