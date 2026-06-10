@@ -13,6 +13,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Add a lightweight signal-submission card to balance uneven AGI / ASI radar-log columns.
 - Refresh the Demis Hassabis avatar with DeepMind, Nobel Prize, AlphaFold, AlphaGo, and neural-network visual cues.
 - Rename Demis Hassabis' radar tag to "the game-to-science builder" and feature Liang Wenfeng in the AGI radar scan.
+- Rename Liang Wenfeng's radar tag to "the open-source efficiency frontier".
 - Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.
 - Add a radar-log avatar preview lightbox with copy and download actions while keeping the rest of each card linked to its public source.
 
