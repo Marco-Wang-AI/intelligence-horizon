@@ -238,38 +238,37 @@
     "category": "china_method_caution"
   },
   {
-    "id": "openai-superintelligence-governance-2023-05",
-    "date": "2023-05",
+    "id": "sutskever-ssi-2024-06",
+    "date": "2024-06",
     "target": "ASI",
-    "deltaMeters": -60,
+    "deltaMeters": -45,
     "confidence": {
       "en": "medium",
       "zh": "中"
     },
     "title": {
-      "en": "OpenAI says superintelligence needs special governance",
-      "zh": "OpenAI 称超级智能需要特殊治理"
+      "en": "Ilya Sutskever starts SSI as a straight-shot superintelligence lab",
+      "zh": "伊利亚创办 SSI，直奔安全超级智能"
     },
     "body": {
-      "en": "OpenAI frames superintelligence as systems dramatically more capable than AGI, possibly exceeding expert skill across most domains.",
-      "zh": "OpenAI 把超级智能描述成远强于 AGI 的系统，可能在多数领域超过专家水平。"
+      "en": "SSI makes safe superintelligence its only goal and product roadmap. It pulls the ASI radar closer, but the safety-first framing keeps the signal measured.",
+      "zh": "SSI 把安全超级智能作为唯一目标和产品路线图。这会让 ASI 雷达靠近一点，但“安全优先”的语境让它不该被算成激进加速信号。"
     },
     "persona": {
-      "initials": "OA",
-      "name": "OpenAI",
+      "initials": "IS",
+      "name": "Ilya Sutskever",
       "nickname": {
-        "en": "the superintelligence governance desk",
-        "zh": "超级智能治理台"
+        "en": "the safety-first superintelligence builder",
+        "zh": "安全超级智能派"
       },
-      "avatar": "openai",
-      "image": "./assets/avatars/openai-lab-mascot.png",
+      "avatar": "sutskever",
       "tone": "blue"
     },
     "source": {
-      "name": "OpenAI",
-      "url": "https://openai.com/index/governance-of-superintelligence/"
+      "name": "Safe Superintelligence Inc.",
+      "url": "https://ssi.inc/"
     },
-    "category": "asi_governance_signal"
+    "category": "asi_safety_lab_signal"
   },
   {
     "id": "aschenbrenner-situational-awareness-2024-06",
