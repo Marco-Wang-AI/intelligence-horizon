@@ -11,7 +11,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Add the Cloudflare Web Analytics snippet so the public site can report page views and visits.
 - Add two sourced ASI radar signals: Ilya Sutskever's Safe Superintelligence lab and Leopold Aschenbrenner's Situational Awareness narrative.
 - Add a lightweight signal-submission card to balance uneven AGI / ASI radar-log columns.
-- Refresh the Demis Hassabis avatar with DeepMind and Nobel Prize visual cues.
+- Refresh the Demis Hassabis avatar with DeepMind, Nobel Prize, AlphaFold, and subtle AlphaGo visual cues.
 - Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.
 - Add a radar-log avatar preview lightbox with copy and download actions while keeping the rest of each card linked to its public source.
 

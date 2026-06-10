@@ -11,7 +11,7 @@
 - 接入 Cloudflare Web Analytics 统计代码，用于查看线上站点访问量和访问次数。
 - 新增两条有来源的 ASI 雷达信号：伊利亚·苏茨克维创办 Safe Superintelligence，以及 Leopold Aschenbrenner 的《Situational Awareness》叙事。
 - 增加轻量的信号提交卡片，在 AGI / ASI 雷达记录数量不均时平衡版式。
-- 更新 Demis Hassabis 头像，加入 DeepMind 与诺贝尔奖相关视觉元素。
+- 更新 Demis Hassabis 头像，加入 DeepMind、诺贝尔奖、AlphaFold 和 AlphaGo 相关视觉元素。
 - 更新梁文锋头像，加入 DeepSeek、开源节流和 AGI 目标相关视觉元素。
 - 为雷达记录头像增加大图预览弹窗，支持复制图片链接和下载，同时卡片其他区域仍跳转公开来源。
 
