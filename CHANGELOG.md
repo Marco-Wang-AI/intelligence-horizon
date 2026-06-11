@@ -15,6 +15,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Rename Demis Hassabis' radar tag to "the game-to-science builder" and feature Liang Wenfeng in the AGI radar scan.
 - Rename Liang Wenfeng's radar tag to "the open-source efficiency frontier".
 - Refresh Luo Fuli's avatar with subtle DeepSeek and Xiaomi MiMo reasoning cues, and rename her radar tag to "the MiMo reasoning lead".
+- Rename Zhang Peng's radar tag to "the GLM long-run builder".
 - Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.
 - Add a radar-log avatar preview lightbox with copy and download actions while keeping the rest of each card linked to its public source.
 
