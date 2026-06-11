@@ -43,27 +43,27 @@
       "zh": "中"
     },
     "title": {
-      "en": "OpenAI says it knows how to build traditionally understood AGI",
-      "zh": "OpenAI 称已知道如何构建传统意义上的 AGI"
+      "en": "Sam Altman says OpenAI knows how to build traditionally understood AGI",
+      "zh": "Sam Altman 称 OpenAI 已知道如何构建传统意义上的 AGI"
     },
     "body": {
       "en": "A strong public confidence marker, though not the same thing as shipping it.",
       "zh": "这是一个很强的公开信心信号，但还不等于已经真正做出来。"
     },
     "persona": {
-      "initials": "OA",
-      "name": "OpenAI",
+      "initials": "SA",
+      "name": "Sam Altman",
       "nickname": {
-        "en": "lab confidence meter",
-        "zh": "实验室信心表"
+        "en": "the lab-to-world operator",
+        "zh": "把 ChatGPT 推向世界的操盘手"
       },
-      "avatar": "openai",
+      "avatar": "sam",
       "image": "./assets/avatars/openai-lab-mascot.png",
       "tone": "blue"
     },
     "source": {
-      "name": "OpenAI / press coverage",
-      "url": "https://techcrunch.com/2025/01/05/openai-is-beginning-to-turn-its-attention-to-superintelligence/"
+      "name": "Sam Altman",
+      "url": "https://blog.samaltman.com/reflections"
     },
     "category": "frontier_lab_signal"
   },
