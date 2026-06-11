@@ -19,6 +19,7 @@
     "persona": {
       "initials": "DH",
       "name": "Demis Hassabis",
+      "nameZh": "德米斯·哈萨比斯",
       "nickname": {
         "en": "the game-to-science builder",
         "zh": "把游戏做成智能引擎的人"
@@ -44,7 +45,7 @@
     },
     "title": {
       "en": "Sam Altman says OpenAI knows how to build traditionally understood AGI",
-      "zh": "Sam Altman 称 OpenAI 已知道如何构建传统意义上的 AGI"
+      "zh": "山姆·奥特曼称 OpenAI 已知道如何构建传统意义上的 AGI"
     },
     "body": {
       "en": "A strong public confidence marker, though not the same thing as shipping it.",
@@ -53,6 +54,7 @@
     "persona": {
       "initials": "SA",
       "name": "Sam Altman",
+      "nameZh": "山姆·奥特曼",
       "nickname": {
         "en": "the lab-to-world operator",
         "zh": "把 ChatGPT 推向世界的操盘手"
@@ -78,7 +80,7 @@
     },
     "title": {
       "en": "Peter Steinberger's OpenClaw turns coding agents into a mascot moment",
-      "zh": "Peter Steinberger 的 OpenClaw 让编码智能体有了“小龙虾时刻”"
+      "zh": "彼得·斯坦伯格的 OpenClaw 让编码智能体有了“小龙虾时刻”"
     },
     "body": {
       "en": "Open-source coding agents make autonomy feel less like a demo and more like a daily workflow.",
@@ -87,6 +89,7 @@
     "persona": {
       "initials": "PS",
       "name": "Peter Steinberger",
+      "nameZh": "彼得·斯坦伯格",
       "nickname": {
         "en": "OpenClaw creator",
         "zh": "OpenClaw 创始人"
@@ -121,6 +124,7 @@
     "persona": {
       "initials": "LF",
       "name": "Luo Fuli",
+      "nameZh": "罗福莉",
       "nickname": {
         "en": "the MiMo reasoning lead",
         "zh": "MiMo 推理引擎手"
@@ -155,6 +159,7 @@
     "persona": {
       "initials": "LW",
       "name": "Liang Wenfeng",
+      "nameZh": "梁文锋",
       "nickname": {
         "en": "the open-source efficiency frontier",
         "zh": "开源节流派"
@@ -189,6 +194,7 @@
     "persona": {
       "initials": "YZ",
       "name": "Yang Zhilin",
+      "nameZh": "杨植麟",
       "nickname": {
         "en": "the long-context operator",
         "zh": "长上下文操盘手"
@@ -223,6 +229,7 @@
     "persona": {
       "initials": "ZP",
       "name": "Zhang Peng",
+      "nameZh": "张鹏",
       "nickname": {
         "en": "the GLM long-run builder",
         "zh": "清华 GLM 长跑者"
@@ -257,6 +264,7 @@
     "persona": {
       "initials": "IS",
       "name": "Ilya Sutskever",
+      "nameZh": "伊利亚·苏茨克维",
       "nickname": {
         "en": "the safety-first superintelligence builder",
         "zh": "安全超级智能派"
@@ -291,6 +299,7 @@
     "persona": {
       "initials": "LA",
       "name": "Leopold Aschenbrenner",
+      "nameZh": "利奥波德·阿申布伦纳",
       "nickname": {
         "en": "the situational-awareness hawk",
         "zh": "态势感知派"
@@ -325,6 +334,7 @@
     "persona": {
       "initials": "EM",
       "name": "Elon Musk",
+      "nameZh": "埃隆·马斯克",
       "nickname": {
         "en": "the acceleration alarm bell",
         "zh": "加速警报派"
@@ -359,6 +369,7 @@
     "persona": {
       "initials": "AN",
       "name": "Andrew Ng",
+      "nameZh": "吴恩达",
       "nickname": {
         "en": "the practical AI realist",
         "zh": "实用主义现实派"
@@ -393,6 +404,7 @@
     "persona": {
       "initials": "YL",
       "name": "Yann LeCun",
+      "nameZh": "杨立昆",
       "nickname": {
         "en": "the world-model skeptic",
         "zh": "世界模型怀疑派"
@@ -427,6 +439,7 @@
     "persona": {
       "initials": "JH",
       "name": "Jensen Huang",
+      "nameZh": "黄仁勋",
       "nickname": {
         "en": "the leather-jacket compute bull",
         "zh": "皮衣算力多头"

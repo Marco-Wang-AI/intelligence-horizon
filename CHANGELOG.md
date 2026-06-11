@@ -20,6 +20,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Refresh the Sam Altman avatar with OpenAI / ChatGPT, YC, and global diffusion visual cues.
 - Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.
 - Add a radar-log avatar preview lightbox with copy and download actions while keeping the rest of each card linked to its public source.
+- Localize radar persona names in the Chinese interface so Chinese titles and cards no longer mix in English names.
 
 ## [1.1.0] - 2026-06-07
 

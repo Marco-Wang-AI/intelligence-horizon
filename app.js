@@ -290,6 +290,11 @@ function formatDelta(meters) {
   return meters > 0 ? `${distance} farther` : `${distance} closer`;
 }
 
+function personaDisplayName(persona, fallback = "") {
+  if (!persona) return fallback;
+  return language === "zh" ? persona.nameZh || persona.name || fallback : persona.name || fallback;
+}
+
 function eventTimeValue(event) {
   if (!event?.date || event.date === "Always") return -Infinity;
   const parts = String(event.date).split("-").map(Number);
@@ -386,7 +391,7 @@ function renderSignals() {
       const persona = item.persona || {};
       const sourceUrl = item.source?.url ? escapeHtml(item.source.url) : "";
       const sourceName = escapeHtml(item.source?.name || copy[language].signalSourceLabel);
-      const personaName = persona.name || item.title[language] || item.target;
+      const personaName = personaDisplayName(persona, item.title[language] || item.target);
       const avatarLabel = `${copy[language].avatarPreviewLabel}: ${personaName}`;
       const avatarMarkup = persona.image
         ? `<button
@@ -409,8 +414,8 @@ function renderSignals() {
           ${avatarMarkup}
           <div class="signal-card-body">
             ${
-              persona.name
-                ? `<p class="signal-person">${escapeHtml(persona.name)}<span>${escapeHtml(persona.nickname?.[language] || "")}</span></p>`
+              personaName
+                ? `<p class="signal-person">${escapeHtml(personaName)}<span>${escapeHtml(persona.nickname?.[language] || "")}</span></p>`
                 : ""
             }
             <strong>${escapeHtml(item.title[language])}</strong>
@@ -457,8 +462,9 @@ function renderSignals() {
 
 function clockEventMarkup(item) {
   const persona = item.persona || {};
+  const personaName = personaDisplayName(persona, item.target);
   const content = `
-    <p class="clock-event-kicker">${item.date} · ${persona.name || item.target}</p>
+    <p class="clock-event-kicker">${item.date} · ${personaName}</p>
     <strong>${item.title[language]}</strong>
     <span class="pill delta ${item.deltaMeters > 0 ? "farther" : ""}">${formatDelta(item.deltaMeters)}</span>
   `;
@@ -507,6 +513,7 @@ function renderClockBeads() {
     beadList.innerHTML = targetEvents
       .map((item, index) => {
         const persona = item.persona || {};
+        const personaName = personaDisplayName(persona, item.title[language]);
         const position = radarPositions[index % radarPositions.length];
         return `
           <button
@@ -515,8 +522,8 @@ function renderClockBeads() {
             data-target="${target}"
             data-event-id="${item.id}"
             style="--bead-index: ${index}; --bead-x: ${position.x}%; --bead-y: ${position.y}%; --distance-shift: ${position.x <= 25 ? "14px" : "0px"}"
-            aria-label="${item.date} ${persona.name || item.title[language]}"
-            title="${item.date} · ${persona.name || item.title[language]} · ${formatDelta(item.deltaMeters)}"
+            aria-label="${item.date} ${personaName}"
+            title="${item.date} · ${personaName} · ${formatDelta(item.deltaMeters)}"
           >
             ${
               persona.image
