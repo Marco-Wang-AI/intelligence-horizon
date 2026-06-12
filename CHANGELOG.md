@@ -21,6 +21,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.
 - Add a radar-log avatar preview lightbox with copy and download actions while keeping the rest of each card linked to its public source.
 - Localize radar persona names in the Chinese interface so Chinese titles and cards no longer mix in English names.
+- Refresh Yang Zhilin's avatar with Tsinghua, Kimi, long-context orbit, and AGI moonshot cues, and rename his radar tag to "the long-context moonshotter".
 
 ## [1.1.0] - 2026-06-07
 
