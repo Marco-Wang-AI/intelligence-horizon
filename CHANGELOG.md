@@ -23,6 +23,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Localize radar persona names in the Chinese interface so Chinese titles and cards no longer mix in English names.
 - Refresh Yang Zhilin's avatar with Tsinghua, Kimi, long-context orbit, and AGI moonshot cues, and rename his radar tag to "the long-context moonshotter".
 - Refresh Peter Steinberger's OpenClaw avatar with AGENT, Codex, lobster, and PDF-tool visual cues, and rename his radar tag to "The Clawdfather".
+- Refresh Ilya Sutskever's avatar with SSI, alignment, and deep-learning visual cues, and rename his radar tag to "the Alignment Gatekeeper".
 
 ## [1.1.0] - 2026-06-07
 
