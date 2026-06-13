@@ -393,12 +393,14 @@ function renderSignals() {
       const sourceName = escapeHtml(item.source?.name || copy[language].signalSourceLabel);
       const personaName = personaDisplayName(persona, item.title[language] || item.target);
       const avatarLabel = `${copy[language].avatarPreviewLabel}: ${personaName}`;
+      const avatarFullSrc = persona.imageFull || persona.image;
       const avatarMarkup = persona.image
         ? `<button
             class="signal-avatar has-image ${persona.tone || ""} avatar-${persona.avatar || "default"}"
             type="button"
             data-avatar-preview
             data-avatar-src="${escapeHtml(persona.image)}"
+            data-avatar-full-src="${escapeHtml(avatarFullSrc)}"
             data-avatar-name="${escapeHtml(personaName)}"
             data-avatar-label="${escapeHtml(persona.nickname?.[language] || item.title[language] || "")}"
             aria-label="${escapeHtml(avatarLabel)}"
@@ -666,6 +668,34 @@ function closeAvatarLightbox() {
   document.body.classList.remove("modal-open");
 }
 
+async function copyTextToClipboard(text) {
+  if (!text) return false;
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Fall back to a temporary text area for browsers that block clipboard writes.
+    }
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+  textarea.style.top = "0";
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    return document.execCommand("copy");
+  } catch {
+    return false;
+  } finally {
+    textarea.remove();
+  }
+}
+
 function openAvatarLightbox(trigger) {
   const lightbox = document.querySelector("#avatar-lightbox");
   const image = document.querySelector("#avatar-lightbox-image");
@@ -676,7 +706,7 @@ function openAvatarLightbox(trigger) {
   const closeButton = document.querySelector(".avatar-lightbox-close");
   if (!lightbox || !image || !title || !subtitle || !download || !copyButton) return;
 
-  const src = trigger.dataset.avatarSrc;
+  const src = trigger.dataset.avatarFullSrc || trigger.dataset.avatarSrc;
   const imageUrl = absoluteUrl(src);
   const name = trigger.dataset.avatarName || "Radar portrait";
   const label = trigger.dataset.avatarLabel || "";
@@ -712,13 +742,13 @@ function setupAvatarLightbox() {
     if (copyButton) {
       const image = document.querySelector("#avatar-lightbox-image");
       if (!image?.src) return;
-      try {
-        await navigator.clipboard.writeText(image.src);
+      const copied = await copyTextToClipboard(image.src);
+      if (copied) {
         copyButton.textContent = copy[language].avatarCopied;
         window.setTimeout(() => {
           copyButton.textContent = copy[language].avatarCopyLink;
         }, 1400);
-      } catch {
+      } else {
         copyButton.textContent = image.src;
       }
     }

@@ -26,6 +26,7 @@
       },
       "avatar": "demis",
       "image": "./assets/avatars/demis-cartoon.png",
+      "imageFull": "./assets/avatar-originals/demis-cartoon.png",
       "tone": "green"
     },
     "source": {
@@ -61,6 +62,7 @@
       },
       "avatar": "sam",
       "image": "./assets/avatars/openai-lab-mascot.png",
+      "imageFull": "./assets/avatar-originals/openai-lab-mascot.png",
       "tone": "blue"
     },
     "source": {
@@ -96,6 +98,7 @@
       },
       "avatar": "agent",
       "image": "./assets/avatars/coding-agent.png",
+      "imageFull": "./assets/avatar-originals/coding-agent.png",
       "tone": "coral"
     },
     "source": {
@@ -131,6 +134,7 @@
       },
       "avatar": "luo",
       "image": "./assets/avatars/luo-fuli.png",
+      "imageFull": "./assets/avatar-originals/luo-fuli.png",
       "tone": "green"
     },
     "source": {
@@ -166,6 +170,7 @@
       },
       "avatar": "liang",
       "image": "./assets/avatars/liang-wenfeng.png",
+      "imageFull": "./assets/avatar-originals/liang-wenfeng.png",
       "tone": "blue"
     },
     "source": {
@@ -201,6 +206,7 @@
       },
       "avatar": "yang",
       "image": "./assets/avatars/yang-zhilin.png",
+      "imageFull": "./assets/avatar-originals/yang-zhilin.png",
       "tone": "coral"
     },
     "source": {
@@ -236,6 +242,7 @@
       },
       "avatar": "fei-fei",
       "image": "./assets/avatars/fei-fei-li.png",
+      "imageFull": "./assets/avatar-originals/fei-fei-li.png",
       "tone": "green"
     },
     "source": {
@@ -271,6 +278,7 @@
       },
       "avatar": "sutskever",
       "image": "./assets/avatars/ilya-sutskever.png",
+      "imageFull": "./assets/avatar-originals/ilya-sutskever.png",
       "tone": "blue"
     },
     "source": {
@@ -306,6 +314,7 @@
       },
       "avatar": "hinton",
       "image": "./assets/avatars/geoffrey-hinton.png",
+      "imageFull": "./assets/avatar-originals/geoffrey-hinton.png",
       "tone": "yellow"
     },
     "source": {
@@ -341,6 +350,7 @@
       },
       "avatar": "musk",
       "image": "./assets/avatars/elon-musk.png",
+      "imageFull": "./assets/avatar-originals/elon-musk.png",
       "tone": "coral"
     },
     "source": {
@@ -376,6 +386,7 @@
       },
       "avatar": "ng",
       "image": "./assets/avatars/andrew-ng.png",
+      "imageFull": "./assets/avatar-originals/andrew-ng.png",
       "tone": "blue"
     },
     "source": {
@@ -411,6 +422,7 @@
       },
       "avatar": "lecun",
       "image": "./assets/avatars/yann-lecun.png",
+      "imageFull": "./assets/avatar-originals/yann-lecun.png",
       "tone": "green"
     },
     "source": {
@@ -446,6 +458,7 @@
       },
       "avatar": "huang",
       "image": "./assets/avatars/jensen-huang.png",
+      "imageFull": "./assets/avatar-originals/jensen-huang.png",
       "tone": "yellow"
     },
     "source": {
