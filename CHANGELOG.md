@@ -26,6 +26,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Refresh Peter Steinberger's OpenClaw avatar with AGENT, Codex, lobster, and PDF-tool visual cues, and rename his radar tag to "The Clawdfather".
 - Refresh Ilya Sutskever's avatar with SSI, alignment, and deep-learning visual cues, and rename his radar tag to "the Alignment Gatekeeper".
 - Replace Leopold Aschenbrenner's narrative ASI signal with Geoffrey Hinton, and add Hinton's neural-net pathfinder avatar.
+- Refresh Yann LeCun's avatar with LeNet, FAIR, and AMI world-model cues, and rename his radar tag to "the world-model contrarian".
 
 ## [1.1.0] - 2026-06-07
 
