@@ -15,7 +15,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Rename Demis Hassabis' radar tag to "the game-to-science builder" and feature Liang Wenfeng in the AGI radar scan.
 - Rename Liang Wenfeng's radar tag to "the open-source efficiency frontier".
 - Refresh Luo Fuli's avatar with subtle DeepSeek and Xiaomi MiMo reasoning cues, and rename her radar tag to "the MiMo reasoning lead".
-- Rename Zhang Peng's radar tag to "the GLM long-run builder".
+- Replace Zhang Peng's ASI caution signal with Fei-Fei Li's human-agency ASI signal and add her pixels-to-worlds avatar.
 - Attribute the OpenAI AGI confidence signal to Sam Altman and rename his radar tag to "the lab-to-world operator".
 - Refresh the Sam Altman avatar with OpenAI / ChatGPT, YC, and global diffusion visual cues.
 - Refresh the Liang Wenfeng avatar with DeepSeek, open-source, efficiency, and AGI target visual cues.

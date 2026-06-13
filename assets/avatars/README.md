@@ -10,6 +10,7 @@ Current set:
 - `coding-agent.png`
 - `demis-cartoon.png`
 - `elon-musk.png`
+- `fei-fei-li.png`
 - `geoffrey-hinton.png`
 - `ilya-sutskever.png`
 - `jensen-huang.png`
@@ -19,4 +20,3 @@ Current set:
 - `openai-lab-mascot.png`
 - `yang-zhilin.png`
 - `yann-lecun.png`
-- `zhang-peng.png`
