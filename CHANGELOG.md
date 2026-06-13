@@ -9,7 +9,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 #### Added
 
 - Add the Cloudflare Web Analytics snippet so the public site can report page views and visits.
-- Add two sourced ASI radar signals: Ilya Sutskever's Safe Superintelligence lab and Leopold Aschenbrenner's Situational Awareness narrative.
+- Add two sourced ASI radar signals: Ilya Sutskever's Safe Superintelligence lab and Geoffrey Hinton's AI-risk warning.
 - Add a lightweight signal-submission card to balance uneven AGI / ASI radar-log columns.
 - Refresh the Demis Hassabis avatar with DeepMind, Nobel Prize, AlphaFold, AlphaGo, and neural-network visual cues.
 - Rename Demis Hassabis' radar tag to "the game-to-science builder" and feature Liang Wenfeng in the AGI radar scan.
@@ -24,6 +24,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Refresh Yang Zhilin's avatar with Tsinghua, Kimi, long-context orbit, and AGI moonshot cues, and rename his radar tag to "the long-context moonshotter".
 - Refresh Peter Steinberger's OpenClaw avatar with AGENT, Codex, lobster, and PDF-tool visual cues, and rename his radar tag to "The Clawdfather".
 - Refresh Ilya Sutskever's avatar with SSI, alignment, and deep-learning visual cues, and rename his radar tag to "the Alignment Gatekeeper".
+- Replace Leopold Aschenbrenner's narrative ASI signal with Geoffrey Hinton, and add Hinton's neural-net pathfinder avatar.
 
 ## [1.1.0] - 2026-06-07
 

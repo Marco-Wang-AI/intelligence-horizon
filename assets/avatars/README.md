@@ -10,9 +10,9 @@ Current set:
 - `coding-agent.png`
 - `demis-cartoon.png`
 - `elon-musk.png`
+- `geoffrey-hinton.png`
 - `ilya-sutskever.png`
 - `jensen-huang.png`
-- `leopold-aschenbrenner.png`
 - `liang-wenfeng.png`
 - `luo-fuli.png`
 - `method-analyst.png`

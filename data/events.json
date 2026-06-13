@@ -280,39 +280,39 @@
     "category": "asi_safety_lab_signal"
   },
   {
-    "id": "aschenbrenner-situational-awareness-2024-06",
-    "date": "2024-06",
+    "id": "hinton-ai-risk-warning-2025-06",
+    "date": "2025-06",
     "target": "ASI",
-    "deltaMeters": -75,
+    "deltaMeters": -90,
     "confidence": {
-      "en": "low",
-      "zh": "低"
+      "en": "medium",
+      "zh": "中"
     },
     "title": {
-      "en": "Situational Awareness popularizes a fast superintelligence arc",
-      "zh": "《Situational Awareness》传播了快速通向超级智能的叙事"
+      "en": "Geoffrey Hinton warns AI could outrun human control",
+      "zh": "杰弗里·辛顿提醒 AI 可能超出人类控制"
     },
     "body": {
-      "en": "A widely discussed acceleration narrative: AGI could automate AI research and compress the path toward superintelligence. Representative, but speculative.",
-      "zh": "这是一条传播很广的加速叙事：AGI 可能自动化 AI 研究，把通向超级智能的时间压缩。代表性强，但推测性也强。"
+      "en": "When a neural-net pioneer and longtime mentor warns about AI risk, the ASI question feels less like sci-fi and more like a real alignment problem.",
+      "zh": "当神经网络引路人开始公开讨论 AI 风险，ASI 就不再只是科幻叙事，而更像现实中的对齐问题。"
     },
     "persona": {
-      "initials": "LA",
-      "name": "Leopold Aschenbrenner",
-      "nameZh": "利奥波德·阿申布伦纳",
+      "initials": "GH",
+      "name": "Geoffrey Hinton",
+      "nameZh": "杰弗里·辛顿",
       "nickname": {
-        "en": "the situational-awareness hawk",
-        "zh": "态势感知派"
+        "en": "the neural-net pathfinder",
+        "zh": "神经网络引路人"
       },
-      "avatar": "aschenbrenner",
-      "image": "./assets/avatars/leopold-aschenbrenner.png",
+      "avatar": "hinton",
+      "image": "./assets/avatars/geoffrey-hinton.png",
       "tone": "yellow"
     },
     "source": {
-      "name": "Situational Awareness",
-      "url": "https://situational-awareness.ai/"
+      "name": "University of Toronto",
+      "url": "https://www.utoronto.ca/news/geoffrey-hinton-discusses-promise-and-perils-ai-toronto-tech-week"
     },
-    "category": "asi_acceleration_narrative"
+    "category": "asi_risk_warning"
   },
   {
     "id": "musk-smarter-than-human-2024-04",
