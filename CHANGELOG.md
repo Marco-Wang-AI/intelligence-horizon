@@ -9,6 +9,8 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 #### Added
 
 - Add the Cloudflare Web Analytics snippet so the public site can report page views and visits.
+- Add an internal analytics test mode and `test.html` entry point so production testing does not pollute public traffic metrics.
+- Add a weekly Cloudflare Analytics report script that saves local Markdown summaries under `reports/analytics/`.
 - Add two sourced ASI radar signals: Ilya Sutskever's Safe Superintelligence lab and Geoffrey Hinton's AI-risk warning.
 - Add a lightweight signal-submission card to balance uneven AGI / ASI radar-log columns.
 - Refresh the Demis Hassabis avatar with DeepMind, Nobel Prize, AlphaFold, AlphaGo, and neural-network visual cues.

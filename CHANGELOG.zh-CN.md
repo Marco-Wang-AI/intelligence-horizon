@@ -9,6 +9,8 @@
 #### 新增
 
 - 接入 Cloudflare Web Analytics 统计代码，用于查看线上站点访问量和访问次数。
+- 新增内部测试访问入口 `test.html`，测试链接不会加载 Cloudflare 统计脚本，避免污染正式访问数据。
+- 新增每周 Cloudflare 访问统计脚本，可将访问量、来源、地区、设备和性能指标保存为本地 Markdown 周报。
 - 新增两条有来源的 ASI 雷达信号：伊利亚·苏茨克维创办 Safe Superintelligence，以及杰弗里·辛顿对 AI 风险的提醒。
 - 增加轻量的信号提交卡片，在 AGI / ASI 雷达记录数量不均时平衡版式。
 - 更新德米斯·哈萨比斯头像，加入 DeepMind、诺贝尔奖、AlphaFold、AlphaGo 和神经网络相关视觉元素。
