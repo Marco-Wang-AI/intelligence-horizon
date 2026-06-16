@@ -2,6 +2,7 @@
 screenshots/
 node_modules/
 dist/
+reports/
 
 # Local reference photos used for avatar generation. Keep them off GitHub.
 *.jpg

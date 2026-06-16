@@ -39,6 +39,22 @@ body.modal-open {
   overflow: hidden;
 }
 
+.test-mode-badge {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 80;
+  padding: 8px 12px;
+  border: 1px solid rgba(23, 33, 38, 0.14);
+  border-radius: 999px;
+  background: rgba(23, 33, 38, 0.9);
+  color: #fffdf8;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;

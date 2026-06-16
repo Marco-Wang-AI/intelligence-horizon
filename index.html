@@ -23,12 +23,33 @@
       content="Signals, not sirens: a playful AGI / ASI radar with expert signals, public forecasts, and sci-fi receipts."
     />
     <meta name="twitter:image" content="https://marco-wang-ai.github.io/intelligence-horizon/assets/social/og-card.png" />
-    <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token":"ea422e77b6584bcb885e4d849419b080"}'
-    ></script>
+    <!-- Cloudflare Web Analytics; disabled for internal test links. -->
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const isInternalTest =
+          params.has("test") ||
+          params.get("internal_test") === "1" ||
+          params.get("utm_source") === "internal_test";
+
+        if (isInternalTest) {
+          document.documentElement.dataset.analytics = "off";
+          document.addEventListener("DOMContentLoaded", () => {
+            const badge = document.createElement("div");
+            badge.className = "test-mode-badge";
+            badge.textContent = "Analytics test mode";
+            document.body.appendChild(badge);
+          });
+          return;
+        }
+
+        const beacon = document.createElement("script");
+        beacon.defer = true;
+        beacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        beacon.dataset.cfBeacon = '{"token":"ea422e77b6584bcb885e4d849419b080"}';
+        document.head.appendChild(beacon);
+      })();
+    </script>
     <!-- End Cloudflare Web Analytics -->
     <link rel="stylesheet" href="./styles.css?v=20260610-avatar-preview" />
   </head>
