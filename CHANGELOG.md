@@ -31,7 +31,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Refresh Yann LeCun's avatar with LeNet, FAIR, AMI, and JEPA world-model cues, and rename his radar tag to "the world-model contrarian".
 - Refresh Elon Musk's avatar with Tesla Roadster, xAI, GPU compute, and SpaceX cues, and rename his radar tag to "the first-principles engineer".
 - Refresh Andrew Ng's avatar with Coursera, DeepLearning.AI, Google Brain, and Baidu AI cues, and rename his radar tag to "the AI educator at scale".
-- Refresh Jensen Huang's avatar with CUDA, DGX-1, gaming GPU, Taiwan night-market, and early-work visual cues, and rename his radar tag to "the AI compute architect".
+- Refresh Jensen Huang's avatar with CUDA, DGX-1, gaming GPU, Taiwan night-market, and early-work visual cues, and rename his radar tag to "the Leather-Jacket Visionary".
 
 ## [1.1.0] - 2026-06-07
 
