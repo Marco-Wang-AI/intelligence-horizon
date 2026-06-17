@@ -457,8 +457,8 @@
         "zh": "AI 算力架构师"
       },
       "avatar": "huang",
-      "image": "./assets/avatars/jensen-huang.png?v=20260617-compute",
-      "imageFull": "./assets/avatar-originals/jensen-huang.png?v=20260617-compute",
+      "image": "./assets/avatars/jensen-huang.png?v=20260617-cuda-dgx",
+      "imageFull": "./assets/avatar-originals/jensen-huang.png?v=20260617-cuda-dgx",
       "tone": "yellow"
     },
     "source": {

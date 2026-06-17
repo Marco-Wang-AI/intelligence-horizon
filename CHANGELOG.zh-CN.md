@@ -32,7 +32,7 @@
 - 更新杨立昆头像，加入 LeNet、FAIR、AMI 和 JEPA 世界模型相关视觉元素，并将雷达标签更新为“世界模型反共识派 / the world-model contrarian”。
 - 更新埃隆·马斯克头像，加入 Tesla Roadster、xAI、GPU 算力和 SpaceX 相关视觉元素，并将雷达标签更新为“第一性工程师 / the first-principles engineer”。
 - 更新吴恩达头像，加入 Coursera、DeepLearning.AI、Google Brain 和百度 AI 相关视觉元素，并将雷达标签更新为“AI 布道者 / the AI educator at scale”。
-- 更新黄仁勋头像，加入 CUDA、GPU、AI Factory 和 NVLink 算力基础设施相关视觉元素，并将雷达标签更新为“AI 算力架构师 / the AI compute architect”。
+- 更新黄仁勋头像，加入 CUDA、DGX-1、游戏显卡、台湾夜市和早年打工相关视觉元素，并将雷达标签更新为“AI 算力架构师 / the AI compute architect”。
 
 ## [1.1.0] - 2026-06-07
 
