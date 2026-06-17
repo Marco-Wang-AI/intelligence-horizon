@@ -385,8 +385,8 @@
         "zh": "AI 布道者"
       },
       "avatar": "ng",
-      "image": "./assets/avatars/andrew-ng.png",
-      "imageFull": "./assets/avatar-originals/andrew-ng.png",
+      "image": "./assets/avatars/andrew-ng.png?v=20260617-education",
+      "imageFull": "./assets/avatar-originals/andrew-ng.png?v=20260617-education",
       "tone": "blue"
     },
     "source": {
