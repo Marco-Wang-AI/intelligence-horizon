@@ -29,7 +29,7 @@
 - 更新彼得·斯坦伯格头像，加入 AGENT、Codex、小龙虾和 PDF 工具相关视觉元素，并将雷达标签更新为“小龙虾智能体布道者 / The Clawdfather”。
 - 更新伊利亚·苏茨克维头像，加入 SSI、对齐和深度学习相关视觉元素，并将雷达标签更新为“超级智能守门人 / the Alignment Gatekeeper”。
 - 将利奥波德·阿申布伦纳的 ASI 叙事信号替换为杰弗里·辛顿，并加入“神经网络引路人”头像。
-- 更新杨立昆头像，加入 LeNet、FAIR 和 AMI 世界模型相关视觉元素，并将雷达标签更新为“世界模型反共识派 / the world-model contrarian”。
+- 更新杨立昆头像，加入 LeNet、FAIR、AMI 和 JEPA 世界模型相关视觉元素，并将雷达标签更新为“世界模型反共识派 / the world-model contrarian”。
 - 更新埃隆·马斯克头像，加入 Tesla Roadster、xAI、GPU 算力和 SpaceX 相关视觉元素，并将雷达标签更新为“第一性工程师 / the first-principles engineer”。
 
 ## [1.1.0] - 2026-06-07
