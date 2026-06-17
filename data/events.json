@@ -453,12 +453,12 @@
       "name": "Jensen Huang",
       "nameZh": "黄仁勋",
       "nickname": {
-        "en": "the leather-jacket compute bull",
-        "zh": "皮衣算力多头"
+        "en": "the AI compute architect",
+        "zh": "AI 算力架构师"
       },
       "avatar": "huang",
-      "image": "./assets/avatars/jensen-huang.png",
-      "imageFull": "./assets/avatar-originals/jensen-huang.png",
+      "image": "./assets/avatars/jensen-huang.png?v=20260617-compute",
+      "imageFull": "./assets/avatar-originals/jensen-huang.png?v=20260617-compute",
       "tone": "yellow"
     },
     "source": {
