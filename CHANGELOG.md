@@ -29,6 +29,7 @@ All notable changes to AGI Radar / AGI 小雷达 are documented here.
 - Refresh Ilya Sutskever's avatar with SSI, alignment, and deep-learning visual cues, and rename his radar tag to "the Alignment Gatekeeper".
 - Replace Leopold Aschenbrenner's narrative ASI signal with Geoffrey Hinton, and add Hinton's neural-net pathfinder avatar.
 - Refresh Yann LeCun's avatar with LeNet, FAIR, and AMI world-model cues, and rename his radar tag to "the world-model contrarian".
+- Refresh Elon Musk's avatar with Tesla Roadster, xAI, GPU compute, and SpaceX cues, and rename his radar tag to "the first-principles engineer".
 
 ## [1.1.0] - 2026-06-07
 
