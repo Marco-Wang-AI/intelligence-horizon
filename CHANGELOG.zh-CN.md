@@ -31,6 +31,7 @@
 - 将利奥波德·阿申布伦纳的 ASI 叙事信号替换为杰弗里·辛顿，并加入“神经网络引路人”头像。
 - 更新杨立昆头像，加入 LeNet、FAIR、AMI 和 JEPA 世界模型相关视觉元素，并将雷达标签更新为“世界模型反共识派 / the world-model contrarian”。
 - 更新埃隆·马斯克头像，加入 Tesla Roadster、xAI、GPU 算力和 SpaceX 相关视觉元素，并将雷达标签更新为“第一性工程师 / the first-principles engineer”。
+- 更新吴恩达头像，加入 Coursera、DeepLearning.AI、Google Brain 和百度 AI 相关视觉元素，并将雷达标签更新为“AI 布道者 / the AI educator at scale”。
 
 ## [1.1.0] - 2026-06-07
 
